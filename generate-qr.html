@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Walaiti Food – QR Code Standee Generator</title>
+  <title>Walaiti Food – Official QR Code & Table Standee</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
@@ -14,157 +14,128 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
     }
-    .qr-container {
-      max-width: 500px;
+    .qr-page-container {
+      max-width: 650px;
       width: 100%;
       text-align: center;
     }
-    .back-link {
+    .back-nav-btn {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.08);
       color: var(--gold);
-      font-size: 0.9rem;
-      margin-bottom: 1.5rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      transition: all 0.2s ease;
     }
-    /* QR Standee Card */
-    .qr-standee {
-      background: linear-gradient(145deg, #181818, #0e0e0e);
-      border: 2px solid var(--gold);
+    .back-nav-btn:hover {
+      background: var(--gold);
+      color: #000;
+      transform: translateY(-2px);
+    }
+    /* Standee Image Display */
+    .standee-preview-card {
+      background: #141414;
+      border: 1px solid rgba(212, 160, 23, 0.35);
       border-radius: 24px;
-      padding: 2.5rem 1.8rem;
-      box-shadow: 0 10px 40px rgba(212, 160, 23, 0.25);
-      position: relative;
+      padding: 1.5rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
       margin-bottom: 2rem;
     }
-    .standee-header {
-      margin-bottom: 1.5rem;
-    }
-    .standee-logo {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin: 0 auto 0.8rem;
-      border: 2px solid var(--gold);
-    }
-    .standee-title {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      color: var(--gold);
-      margin-bottom: 0.2rem;
-    }
-    .standee-sub {
-      font-size: 0.85rem;
-      color: #bbb;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-    .qr-white-box {
-      background: #ffffff;
-      padding: 1.2rem;
+    .standee-preview-card img {
+      max-width: 100%;
+      height: auto;
       border-radius: 16px;
-      display: inline-block;
-      margin: 0.5rem 0 1.2rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-      position: relative;
-    }
-    .qr-white-box img {
-      display: block;
+      box-shadow: 0 4px 25px rgba(212, 160, 23, 0.2);
       margin: 0 auto;
     }
-    .standee-instructions {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 0.3rem;
+    .standee-download-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
     }
-    .standee-tagline {
-      font-size: 0.8rem;
-      color: var(--gray);
-    }
-    .qr-controls {
+    .qr-info-box {
       background: #1a1a1a;
       border: 1px solid #333;
       border-radius: 16px;
       padding: 1.5rem;
       text-align: left;
+      margin-top: 1.5rem;
     }
-    .qr-controls label {
-      display: block;
-      font-size: 0.85rem;
+    .qr-info-box h3 {
+      font-size: 1.1rem;
       color: var(--gold);
-      font-weight: 600;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
     }
-    .qr-controls input {
-      width: 100%;
-      padding: 0.7rem 1rem;
-      border-radius: 8px;
-      border: 1px solid #444;
-      background: #111;
-      color: #fff;
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
+    .qr-info-box p {
+      font-size: 0.85rem;
+      color: #aaa;
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
     }
-    .btn-action-group {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
+    .live-url-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #000;
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      word-break: break-all;
     }
   </style>
 </head>
 <body>
-  <div class="qr-container">
-    <a href="index.html" class="back-link">
-      <i class="fa-solid fa-arrow-left"></i> Back to Digital Menu
+  <div class="qr-page-container">
+    <a href="index.html" class="back-nav-btn">
+      <i class="fa-solid fa-arrow-left"></i> Back to Live Digital Menu
     </a>
 
-    <!-- Standee Printable Card -->
-    <div class="qr-standee" id="standeeCard">
-      <div class="standee-header">
-        <img src="logo.png" alt="Walaiti Food Logo" class="standee-logo" />
-        <h2 class="standee-title">Walaiti Food</h2>
-        <p class="standee-sub">Pizza &amp; Café · 100% Pure Veg</p>
-      </div>
+    <h1 style="font-family: var(--font-heading); color: var(--gold); font-size: 2.2rem; margin-bottom: 0.5rem;">
+      Walaiti Food Table QR Standee
+    </h1>
+    <p style="color: #aaa; font-size: 0.95rem; margin-bottom: 2rem;">
+      Ready to print or save. Point your phone camera at this QR code to open the live menu instantly.
+    </p>
 
-      <div class="qr-white-box">
-        <img id="qrImage" src="" width="220" height="220" alt="Walaiti Food QR Code" />
-      </div>
+    <!-- Preview Card showing actual standee -->
+    <div class="standee-preview-card">
+      <img src="walaiti_table_standee.png" alt="Walaiti Food Luxury Table Standee" />
 
-      <p class="standee-instructions">Scan with phone camera to view Menu</p>
-      <p class="standee-tagline">Model Town &amp; Adarsh Nagar · Jalandhar</p>
+      <div class="standee-download-actions">
+        <a href="walaiti_table_standee.png" download="walaiti-food-table-standee.png" class="btn btn-gold">
+          <i class="fa-solid fa-download"></i> Download Table Standee Card
+        </a>
+        <a href="walaiti_qr_code.png" download="walaiti-food-qr-code.png" class="btn btn-outline-gold">
+          <i class="fa-solid fa-qrcode"></i> Download QR Code Only
+        </a>
+        <button onclick="window.print()" class="btn btn-gold-sm">
+          <i class="fa-solid fa-print"></i> Print Standee
+        </button>
+      </div>
     </div>
 
-    <!-- Controls -->
-    <div class="qr-controls">
-      <label for="qrUrlInput">Landing Page URL (Target for QR):</label>
-      <input type="text" id="qrUrlInput" value="https://palakcode9720.github.io/walaiti-food-qr/" />
-
-      <div class="btn-action-group">
-        <button onclick="updateQR()" class="btn btn-gold" style="flex:1;">
-          <i class="fa-solid fa-rotate"></i> Update QR
-        </button>
-        <a id="downloadQrBtn" href="#" download="walaiti-food-qr.png" class="btn btn-outline-gold" style="flex:1; justify-content:center;">
-          <i class="fa-solid fa-download"></i> Save QR Code
-        </a>
-      </div>
-      <button onclick="window.print()" class="btn btn-gold-sm" style="width:100%; margin-top:0.8rem; justify-content:center;">
-        <i class="fa-solid fa-print"></i> Print Table Standee
-      </button>
+    <!-- Live URL Info -->
+    <div class="qr-info-box">
+      <h3><i class="fa-solid fa-circle-check" style="color: #2ECC71;"></i> 100% Tested &amp; Working</h3>
+      <p>This QR code directly opens your live Vercel website:</p>
+      <a href="https://walaiti-food-qr.vercel.app" target="_blank" class="live-url-pill">
+        <i class="fa-solid fa-globe"></i> https://walaiti-food-qr.vercel.app
+      </a>
+      <p style="margin-top: 1rem; font-size: 0.8rem; color: #777;">
+        Guests scanning this at either Model Town or Adarsh Nagar outlet will instantly see the full digital menu, prices, phone numbers, and WhatsApp ordering.
+      </p>
     </div>
   </div>
-
-  <script>
-    function updateQR() {
-      const url = document.getElementById('qrUrlInput').value.trim();
-      if (!url) return;
-      const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(url)}&color=000000&bgcolor=ffffff&qzone=2&format=png`;
-      document.getElementById('qrImage').src = qrApiUrl;
-      document.getElementById('downloadQrBtn').href = qrApiUrl;
-    }
-    window.onload = updateQR;
-  </script>
 </body>
 </html>
