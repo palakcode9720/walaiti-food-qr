@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walaiti Food – Pizza & Café</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HERO / HEADER ===== -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="logo-circle">
+        <span class="logo-w">W</span>
+      </div>
+      <h1 class="brand-name">Walaiti Food</h1>
+      <p class="brand-tagline">Pizza &amp; Café · Est. 2020</p>
+      <div class="hero-badges">
+        <span class="badge"><i class="fa-solid fa-star"></i> Premium Quality</span>
+        <span class="badge"><i class="fa-solid fa-fire-flame-curved"></i> Fresh Daily</span>
+        <span class="badge"><i class="fa-solid fa-heart"></i> Made with Love</span>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </header>
+
+  <!-- ===== QUICK NAV ===== -->
+  <nav class="quick-nav">
+    <a href="#menu" class="nav-pill active"><i class="fa-solid fa-utensils"></i> Menu</a>
+    <a href="#locations" class="nav-pill"><i class="fa-solid fa-location-dot"></i> Locations</a>
+    <a href="#reviews" class="nav-pill"><i class="fa-solid fa-star"></i> Reviews</a>
+    <a href="#social" class="nav-pill"><i class="fa-solid fa-share-nodes"></i> Follow Us</a>
+  </nav>
+
+  <!-- ===== MENU SECTION ===== -->
+  <section id="menu" class="section">
+    <div class="section-header">
+      <span class="section-label">Our Specialties</span>
+      <h2 class="section-title">Explore the Menu</h2>
+      <p class="section-desc">Fresh ingredients, authentic flavours, crafted with passion every single day.</p>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="tab-btn active" data-tab="all">All</button>
+      <button class="tab-btn" data-tab="pizza">Pizza</button>
+      <button class="tab-btn" data-tab="cafe">Café</button>
+      <button class="tab-btn" data-tab="sides">Sides</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid">
+      <!-- Menu items rendered by JS -->
+    </div>
+
+    <div class="menu-coming-soon" id="menuComingSoon" style="display:none;">
+      <i class="fa-solid fa-clock-rotate-left"></i>
+      <h3>Full Menu Coming Soon</h3>
+      <p>We're adding the complete menu. Check back shortly!</p>
+    </div>
+
+    <!-- PDF MENU PLACEHOLDER — swap src when ready -->
+    <div class="menu-pdf-wrapper">
+      <div class="menu-pdf-card">
+        <i class="fa-solid fa-file-pdf"></i>
+        <div>
+          <h4>Download Full Menu</h4>
+          <p>View our complete menu in PDF format</p>
+        </div>
+        <a href="#" class="btn btn-gold" id="menuPdfBtn">
+          <i class="fa-solid fa-download"></i> Download
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOCATIONS SECTION ===== -->
+  <section id="locations" class="section section-dark">
+    <div class="section-header">
+      <span class="section-label">Find Us</span>
+      <h2 class="section-title">Our Locations</h2>
+      <p class="section-desc">Two outlets. Same amazing taste.</p>
+    </div>
+
+    <div class="locations-grid">
+
+      <!-- Location 1 -->
+      <div class="location-card">
+        <div class="location-badge">📍 Branch 1</div>
+        <h3 class="location-name">New Town</h3>
+        <div class="location-detail">
+          <i class="fa-solid fa-map-pin"></i>
+          <p>Near Small Town,<br/>Opp. Bakery,<br/>City</p>
+        </div>
+        <div class="location-detail">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <a href="tel:+91XXXXXXXXXX" class="phone-link">+91 XXXXX XXXXX</a><br/>
+            <a href="tel:+91XXXXXXXXXX" class="phone-link">+91 XXXXX XXXXX</a>
+          </div>
+        </div>
+        <div class="location-detail">
+          <i class="fa-solid fa-clock"></i>
+          <p>Open Daily: 11 AM – 11 PM</p>
+        </div>
+        <a href="https://maps.google.com" target="_blank" class="btn btn-outline-gold">
+          <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+        </a>
+      </div>
+
+      <!-- Location 2 -->
+      <div class="location-card">
+        <div class="location-badge">📍 Branch 2</div>
+        <h3 class="location-name">Adarsh Nagar</h3>
+        <div class="location-detail">
+          <i class="fa-solid fa-map-pin"></i>
+          <p>38-B, Opp. Hotel,<br/>Adarsh Nagar,<br/>City</p>
+        </div>
+        <div class="location-detail">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <a href="tel:+91XXXXXXXXXX" class="phone-link">+91 XXXXX XXXXX</a><br/>
+            <a href="tel:+91XXXXXXXXXX" class="phone-link">+91 XXXXX XXXXX</a>
+          </div>
+        </div>
+        <div class="location-detail">
+          <i class="fa-solid fa-clock"></i>
+          <p>Open Daily: 11 AM – 11 PM</p>
+        </div>
+        <a href="https://maps.google.com" target="_blank" class="btn btn-outline-gold">
+          <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS SECTION ===== -->
+  <section id="reviews" class="section">
+    <div class="section-header">
+      <span class="section-label">What People Say</span>
+      <h2 class="section-title">Customer Reviews</h2>
+      <p class="section-desc">Don't just take our word for it — here's what our guests are saying.</p>
+    </div>
+
+    <div class="reviews-stats">
+      <div class="stat">
+        <span class="stat-num">4.8</span>
+        <div class="stat-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <span class="stat-label">Overall Rating</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">500+</span>
+        <span class="stat-label">Happy Customers</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">98%</span>
+        <span class="stat-label">Would Recommend</span>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">A</div>
+          <div>
+            <h4>Arjun S.</h4>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p>"Absolutely loved the pizza! Crispy crust, fresh toppings and amazing flavour. The café vibes are great too. Will definitely be back!"</p>
+        <span class="review-date">October 2026</span>
+      </div>
+
+      <div class="review-card review-featured">
+        <div class="review-header">
+          <div class="reviewer-avatar">P</div>
+          <div>
+            <h4>Priya M.</h4>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <span class="featured-tag">⭐ Top Review</span>
+        </div>
+        <p>"Best pizza in town! The ambience is cozy and the staff is super friendly. Their special café drinks are a must-try. 10/10 experience!"</p>
+        <span class="review-date">September 2026</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">R</div>
+          <div>
+            <h4>Rahul K.</h4>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+          </div>
+        </div>
+        <p>"Great value for money. The portions are generous and everything is fresh. Love the Adarsh Nagar outlet — always clean and welcoming."</p>
+        <span class="review-date">October 2026</span>
+      </div>
+    </div>
+
+    <div class="review-cta">
+      <a href="https://g.page/r/review" target="_blank" class="btn btn-gold">
+        <i class="fa-solid fa-pen-to-square"></i> Leave a Review
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== SOCIAL / FOLLOW US ===== -->
+  <section id="social" class="section section-dark section-social">
+    <div class="section-header">
+      <span class="section-label">Stay Connected</span>
+      <h2 class="section-title">Follow Us</h2>
+      <p class="section-desc">Get the latest deals, new menu items and behind-the-scenes updates.</p>
+    </div>
+
+    <div class="social-cards">
+      <a href="https://instagram.com/walaitifood" target="_blank" class="social-card social-insta">
+        <div class="social-icon">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="social-info">
+          <span class="social-platform">Instagram</span>
+          <span class="social-handle">@walaitifood</span>
+          <span class="social-cta">Follow for daily food shots →</span>
+        </div>
+      </a>
+
+      <a href="https://facebook.com/walaitifood" target="_blank" class="social-card social-fb">
+        <div class="social-icon">
+          <i class="fa-brands fa-facebook-f"></i>
+        </div>
+        <div class="social-info">
+          <span class="social-platform">Facebook</span>
+          <span class="social-handle">Walaiti Food</span>
+          <span class="social-cta">Like our page for updates →</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="whatsapp-cta">
+      <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="btn btn-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <div class="logo-circle logo-sm"><span class="logo-w">W</span></div>
+      <span>Walaiti Food</span>
+    </div>
+    <p class="footer-tagline">Pizza &amp; Café · Crafted with ❤️</p>
+    <div class="footer-links">
+      <a href="#menu">Menu</a>
+      <a href="#locations">Locations</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#social">Social</a>
+    </div>
+    <p class="footer-copy">© 2026 Walaiti Food. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
