@@ -19,7 +19,7 @@ const outletsData = {
 
     // Dynamic Category Definitions for Adarsh Nagar
     categories: [
-      { id: "an_pizzas", name: "Pizzas & Paranthas", icon: "fa-pizza-slice" },
+      { id: "an_pizzas", name: "Pizzas & Thin Pesto", icon: "fa-pizza-slice" },
       { id: "an_atta", name: "Atta Pizzas & Breads", icon: "fa-wheat-awn" },
       { id: "an_upgrades_dips", name: "Upgrades & Dips", icon: "fa-wand-magic-sparkles" },
       { id: "an_mania", name: "Pizza Mania", icon: "fa-tags" },
@@ -319,7 +319,7 @@ const outletsData = {
           { name: "Black & White Pizza", desc: "Jalapeno, Black Olive, Sweet Corn, and Extra Cheese", r: 230, m: 400, l: 560 },
           { name: "Mix Veg Pizza", desc: "Onion, Capsicum, Tomato, Mushroom, Corn, Black Olives, Jalapeno & Extra Cheese", r: 260, m: 480, l: 650, tag: "Signature" },
           { name: "Veg Supreme Pizza", desc: "Capsicum, Mushroom, Corn, Paneer, Jalapeno, Red Pepper & Extra Cheese", r: 260, m: 480, l: 650, tag: "Top Pick" },
-          { name: "Pesto Pizza (Thin Crust)", desc: "Pesto sauce, Onion, Capsicum, Mushroom, Paneer, Mozzarella Cheese (9\" / 12\")", customPrice: "9\": ₹550 | 12\": ₹700", tag: "New Add" }
+          { name: "Pesto Pizza (Thin Crust)", desc: "Pesto sauce, Onion, Capsicum, Mushroom, Paneer, Mozzarella Cheese (9\" / 12\")", customPrice: "9\" : ₹550 | 12\" : ₹700", tag: "New Add" }
         ]
       },
 
@@ -582,6 +582,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupViewModeSwitcher();
   setupImageLightbox();
   setupNavLinks();
+  setupThemeToggle();
 
   // Initialize with Model Town
   selectOutlet('modelTown');
@@ -891,7 +892,7 @@ function setupImageLightbox() {
   });
 }
 
-window.openLightbox = function(src, pageNum, total) {
+window.openLightbox = function (src, pageNum, total) {
   const modal = document.getElementById('lightboxModal');
   currentLightboxIndex = pageNum;
   currentLightboxTotal = total;
@@ -925,4 +926,40 @@ function setupNavLinks() {
       }
     });
   });
+}
+// Dark Mode / Light Mode Toggle
+function setupThemeToggle() {
+  const themeToggle = document.getElementById('themeToggleBtn');
+  if (!themeToggle) return;
+
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  updateThemeButton(savedTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme =
+      document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeButton(newTheme);
+  });
+}
+
+function updateThemeButton(theme) {
+  const themeToggle = document.getElementById('themeToggleBtn');
+  if (!themeToggle) return;
+
+  if (theme === 'dark') {
+    themeToggle.innerHTML = `
+            <i class="fa-solid fa-sun"></i>
+            <span>Light Mode</span>
+        `;
+  } else {
+    themeToggle.innerHTML = `
+            <i class="fa-solid fa-moon"></i>
+            <span>Dark Mode</span>
+        `;
+  }
 }
