@@ -3,28 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Walaiti Food – Pizza & Café</title>
+  <title>Walaiti Food – Pizza & Café | Official Digital Menu</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- ===== HERO / HEADER ===== -->
+  <!-- ===== HERO / BRAND HEADER ===== -->
   <header class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="logo-circle">
-        <span class="logo-w">W</span>
+      <!-- Official circular logo -->
+      <div class="brand-logo-wrapper">
+        <img src="logo.png" alt="Walaiti Food Pizza & Café Official Logo" class="brand-logo-img" />
       </div>
       <h1 class="brand-name">Walaiti Food</h1>
-      <p class="brand-tagline">Pizza &amp; Café · Est. 2020</p>
+      <p class="brand-tagline">Pizza &amp; Café · Essence of England</p>
+      
       <div class="hero-badges">
-        <span class="badge"><i class="fa-solid fa-star"></i> Premium Quality</span>
-        <span class="badge"><i class="fa-solid fa-fire-flame-curved"></i> Fresh Daily</span>
-        <span class="badge"><i class="fa-solid fa-heart"></i> Made with Love</span>
+        <span class="badge veg-badge"><i class="fa-solid fa-leaf"></i> 100% Pure Veg</span>
+        <span class="badge"><i class="fa-solid fa-location-dot"></i> Jalandhar City</span>
+        <span class="badge"><i class="fa-solid fa-star"></i> 4.8 Rating</span>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -32,121 +34,180 @@
     </div>
   </header>
 
-  <!-- ===== QUICK NAV ===== -->
+  <!-- ===== STICKY QUICK NAVIGATION ===== -->
   <nav class="quick-nav">
     <a href="#menu" class="nav-pill active"><i class="fa-solid fa-utensils"></i> Menu</a>
-    <a href="#locations" class="nav-pill"><i class="fa-solid fa-location-dot"></i> Locations</a>
-    <a href="#reviews" class="nav-pill"><i class="fa-solid fa-star"></i> Reviews</a>
-    <a href="#social" class="nav-pill"><i class="fa-solid fa-share-nodes"></i> Follow Us</a>
+    <a href="#locations" class="nav-pill"><i class="fa-solid fa-store"></i> Outlets</a>
+    <a href="#reviews" class="nav-pill"><i class="fa-solid fa-comments"></i> Reviews</a>
+    <a href="#social" class="nav-pill"><i class="fa-solid fa-heart"></i> Connect</a>
+    <a href="generate-qr.html" class="nav-pill nav-pill-gold"><i class="fa-solid fa-qrcode"></i> QR Code</a>
   </nav>
 
   <!-- ===== MENU SECTION ===== -->
-  <section id="menu" class="section">
+  <section id="menu" class="section menu-section">
     <div class="section-header">
-      <span class="section-label">Our Specialties</span>
-      <h2 class="section-title">Explore the Menu</h2>
-      <p class="section-desc">Fresh ingredients, authentic flavours, crafted with passion every single day.</p>
+      <span class="section-label">Select Your Outlet</span>
+      <h2 class="section-title">Delicious Menus</h2>
+      <p class="section-desc">Choose your nearest outlet to view accurate items, pricing, and special dishes.</p>
     </div>
 
-    <div class="menu-tabs">
-      <button class="tab-btn active" data-tab="all">All</button>
-      <button class="tab-btn" data-tab="pizza">Pizza</button>
-      <button class="tab-btn" data-tab="cafe">Café</button>
-      <button class="tab-btn" data-tab="sides">Sides</button>
-    </div>
-
-    <div class="menu-grid" id="menuGrid">
-      <!-- Menu items rendered by JS -->
-    </div>
-
-    <div class="menu-coming-soon" id="menuComingSoon" style="display:none;">
-      <i class="fa-solid fa-clock-rotate-left"></i>
-      <h3>Full Menu Coming Soon</h3>
-      <p>We're adding the complete menu. Check back shortly!</p>
-    </div>
-
-    <!-- PDF MENU PLACEHOLDER — swap src when ready -->
-    <div class="menu-pdf-wrapper">
-      <div class="menu-pdf-card">
-        <i class="fa-solid fa-file-pdf"></i>
-        <div>
-          <h4>Download Full Menu</h4>
-          <p>View our complete menu in PDF format</p>
+    <!-- OUTLET SELECTOR BUTTONS -->
+    <div class="outlet-switcher">
+      <button class="outlet-btn active" data-outlet="modelTown">
+        <div class="outlet-btn-icon"><i class="fa-solid fa-shop"></i></div>
+        <div class="outlet-btn-text">
+          <strong>Model Town</strong>
+          <span>Mall Road Outlet</span>
         </div>
-        <a href="#" class="btn btn-gold" id="menuPdfBtn">
-          <i class="fa-solid fa-download"></i> Download
+      </button>
+
+      <button class="outlet-btn" data-outlet="adarshNagar">
+        <div class="outlet-btn-icon"><i class="fa-solid fa-shop"></i></div>
+        <div class="outlet-btn-text">
+          <strong>Adarsh Nagar</strong>
+          <span>Opp. Inderprasth Hotel</span>
+        </div>
+      </button>
+    </div>
+
+    <!-- ACTIVE OUTLET INFO STRIP -->
+    <div class="outlet-info-strip">
+      <div class="outlet-info-left">
+        <i class="fa-solid fa-location-dot strip-icon"></i>
+        <div>
+          <h3 id="activeOutletName">Model Town Outlet</h3>
+          <p id="activeOutletAddress">Plot No 615-L Mall Road, Model Town, Near Parveen Bakery, Jalandhar City</p>
+        </div>
+      </div>
+      <div class="outlet-info-right">
+        <a href="menus/menu-model-town.pdf" class="btn btn-gold-sm" id="menuPdfBtn" download>
+          <i class="fa-solid fa-file-pdf"></i> Download Menu PDF
         </a>
       </div>
+    </div>
+
+    <!-- VIEW MODE SWITCHER (Interactive Grid vs Illustrated Book) -->
+    <div class="view-mode-bar">
+      <span class="view-mode-label">View As:</span>
+      <div class="view-mode-buttons">
+        <button class="view-mode-btn active" data-view="grid">
+          <i class="fa-solid fa-list-check"></i> Digital Menu
+        </button>
+        <button class="view-mode-btn" data-view="cards">
+          <i class="fa-solid fa-book-open"></i> Full Menu Book
+        </button>
+      </div>
+    </div>
+
+    <!-- DIGITAL MENU VIEW -->
+    <div id="digitalMenuView" class="menu-view-container">
+      <!-- Category Tabs -->
+      <div class="menu-categories-scroll">
+        <button class="menu-cat-btn active" data-category="pizzas"><i class="fa-solid fa-pizza-slice"></i> Pizzas</button>
+        <button class="menu-cat-btn" data-category="garlicBreads"><i class="fa-solid fa-bread-slice"></i> Garlic Breads</button>
+        <button class="menu-cat-btn" data-category="burgersSandwiches"><i class="fa-solid fa-burger"></i> Burgers & Sandwiches</button>
+        <button class="menu-cat-btn" data-category="snacksChinese"><i class="fa-solid fa-bowl-food"></i> Snacks & Chinese</button>
+        <button class="menu-cat-btn" data-category="pastas"><i class="fa-solid fa-wheat-awn"></i> Pastas</button>
+        <button class="menu-cat-btn" data-category="beverages"><i class="fa-solid fa-mug-hot"></i> Shakes & Coffee</button>
+        <button class="menu-cat-btn" data-category="combos"><i class="fa-solid fa-gift"></i> Combos & Desserts</button>
+      </div>
+
+      <!-- Items rendered here by app.js -->
+      <div id="digitalItemsContainer"></div>
+    </div>
+
+    <!-- FULL MENU BOOK VIEW (High-Res Scanned Pages) -->
+    <div id="menuCardsView" class="menu-view-container" style="display: none;">
+      <p class="cards-view-hint">
+        <i class="fa-solid fa-circle-info"></i> Click any page to open full-screen zoom reader.
+      </p>
+      <div id="menuPagesGrid" class="menu-pages-grid"></div>
     </div>
   </section>
 
-  <!-- ===== LOCATIONS SECTION ===== -->
+  <!-- ===== LOCATIONS / OUTLETS SECTION ===== -->
   <section id="locations" class="section section-dark">
     <div class="section-header">
-      <span class="section-label">Find Us</span>
-      <h2 class="section-title">Our Locations</h2>
-      <p class="section-desc">Two outlets. Same amazing taste.</p>
+      <span class="section-label">Visit Us</span>
+      <h2 class="section-title">Our Outlets</h2>
+      <p class="section-desc">Experience royal dining at both our prime locations across Jalandhar.</p>
     </div>
 
     <div class="locations-grid">
-
-      <!-- Location 1 -->
+      <!-- Model Town Card -->
       <div class="location-card">
         <div class="location-badge">📍 Branch 1</div>
-        <h3 class="location-name">New Town</h3>
+        <h3 class="location-name">Model Town</h3>
+        
         <div class="location-detail">
           <i class="fa-solid fa-map-pin"></i>
-          <p>Near Small Town,<br/>Opp. Bakery,<br/>City</p>
+          <p>Plot No 615-L Mall Road,<br/>Model Town, Near Parveen Bakery,<br/>Jalandhar City, Punjab</p>
         </div>
+
         <div class="location-detail">
           <i class="fa-solid fa-phone"></i>
           <div>
-            <a href="tel:+91XXXXXXXXXX" class="phone-link">+91 XXXXX XXXXX</a><br/>
-            <a href="tel:+91XXXXXXXXXX" class="phone-link">+91 XXXXX XXXXX</a>
+            <a href="tel:+919517727177" class="phone-link">+91 95177-27177</a><br/>
+            <a href="tel:+919115594155" class="phone-link">+91 91155-94155</a>
           </div>
         </div>
+
         <div class="location-detail">
           <i class="fa-solid fa-clock"></i>
-          <p>Open Daily: 11 AM – 11 PM</p>
+          <p>Open Daily: 11:00 AM – 11:30 PM</p>
         </div>
-        <a href="https://maps.google.com" target="_blank" class="btn btn-outline-gold">
-          <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
-        </a>
+
+        <div class="location-actions">
+          <a href="https://wa.me/919517727177?text=Hi%20Walaiti%20Food%20Model%20Town,%20I%20would%20like%20to%20order" target="_blank" class="btn btn-whatsapp-sm">
+            <i class="fa-brands fa-whatsapp"></i> Order WhatsApp
+          </a>
+          <a href="https://maps.google.com/?q=Walaiti+Food+Model+Town+Jalandhar" target="_blank" class="btn btn-outline-gold">
+            <i class="fa-solid fa-diamond-turn-right"></i> Directions
+          </a>
+        </div>
       </div>
 
-      <!-- Location 2 -->
+      <!-- Adarsh Nagar Card -->
       <div class="location-card">
         <div class="location-badge">📍 Branch 2</div>
         <h3 class="location-name">Adarsh Nagar</h3>
+        
         <div class="location-detail">
           <i class="fa-solid fa-map-pin"></i>
-          <p>38-B, Opp. Hotel,<br/>Adarsh Nagar,<br/>City</p>
+          <p>38-B, Adarsh Nagar,<br/>Opp. Inderprasth Hotel, Canal Road,<br/>Jalandhar City, Punjab</p>
         </div>
+
         <div class="location-detail">
           <i class="fa-solid fa-phone"></i>
           <div>
-            <a href="tel:+91XXXXXXXXXX" class="phone-link">+91 XXXXX XXXXX</a><br/>
-            <a href="tel:+91XXXXXXXXXX" class="phone-link">+91 XXXXX XXXXX</a>
+            <a href="tel:+919517797177" class="phone-link">+91 95177-97177</a><br/>
+            <a href="tel:+919115595155" class="phone-link">+91 91155-95155</a>
           </div>
         </div>
+
         <div class="location-detail">
           <i class="fa-solid fa-clock"></i>
-          <p>Open Daily: 11 AM – 11 PM</p>
+          <p>Open Daily: 11:00 AM – 11:30 PM</p>
         </div>
-        <a href="https://maps.google.com" target="_blank" class="btn btn-outline-gold">
-          <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
-        </a>
-      </div>
 
+        <div class="location-actions">
+          <a href="https://wa.me/919517797177?text=Hi%20Walaiti%20Food%20Adarsh%20Nagar,%20I%20would%20like%20to%20order" target="_blank" class="btn btn-whatsapp-sm">
+            <i class="fa-brands fa-whatsapp"></i> Order WhatsApp
+          </a>
+          <a href="https://maps.google.com/?q=Walaiti+Food+Adarsh+Nagar+Jalandhar" target="_blank" class="btn btn-outline-gold">
+            <i class="fa-solid fa-diamond-turn-right"></i> Directions
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ===== REVIEWS SECTION ===== -->
   <section id="reviews" class="section">
     <div class="section-header">
-      <span class="section-label">What People Say</span>
-      <h2 class="section-title">Customer Reviews</h2>
-      <p class="section-desc">Don't just take our word for it — here's what our guests are saying.</p>
+      <span class="section-label">Guest Feedback</span>
+      <h2 class="section-title">Loved by Foodies</h2>
+      <p class="section-desc">Read real reviews from our happy customers across Jalandhar.</p>
     </div>
 
     <div class="reviews-stats">
@@ -157,26 +218,26 @@
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star-half-stroke"></i>
         </div>
-        <span class="stat-label">Overall Rating</span>
+        <span class="stat-label">Google Rating</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
-        <span class="stat-num">500+</span>
-        <span class="stat-label">Happy Customers</span>
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Pure Vegetarian</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
-        <span class="stat-num">98%</span>
-        <span class="stat-label">Would Recommend</span>
+        <span class="stat-num">10k+</span>
+        <span class="stat-label">Pizzas Served</span>
       </div>
     </div>
 
     <div class="reviews-grid">
       <div class="review-card">
         <div class="review-header">
-          <div class="reviewer-avatar">A</div>
+          <div class="reviewer-avatar">H</div>
           <div>
-            <h4>Arjun S.</h4>
+            <h4>Harpreet Singh</h4>
             <div class="stars">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -184,15 +245,15 @@
             </div>
           </div>
         </div>
-        <p>"Absolutely loved the pizza! Crispy crust, fresh toppings and amazing flavour. The café vibes are great too. Will definitely be back!"</p>
+        <p>"Walaiti Food Model Town has the crispiest crust and the freshest cheese burst pizza! The Stuffed Garlic Bread is simply unmatched in Jalandhar."</p>
         <span class="review-date">October 2026</span>
       </div>
 
       <div class="review-card review-featured">
         <div class="review-header">
-          <div class="reviewer-avatar">P</div>
+          <div class="reviewer-avatar">S</div>
           <div>
-            <h4>Priya M.</h4>
+            <h4>Simran Kaur</h4>
             <div class="stars">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -201,88 +262,107 @@
           </div>
           <span class="featured-tag">⭐ Top Review</span>
         </div>
-        <p>"Best pizza in town! The ambience is cozy and the staff is super friendly. Their special café drinks are a must-try. 10/10 experience!"</p>
+        <p>"The Adarsh Nagar outlet is so cozy and welcoming. Love the 100% veg assurance. Their shakes and Pesto Pizza are authentic and top tier!"</p>
         <span class="review-date">September 2026</span>
       </div>
 
       <div class="review-card">
         <div class="review-header">
-          <div class="reviewer-avatar">R</div>
+          <div class="reviewer-avatar">A</div>
           <div>
-            <h4>Rahul K.</h4>
+            <h4>Aman Sharma</h4>
             <div class="stars">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-solid fa-star"></i>
             </div>
           </div>
         </div>
-        <p>"Great value for money. The portions are generous and everything is fresh. Love the Adarsh Nagar outlet — always clean and welcoming."</p>
+        <p>"Best pizza place for family gatherings. Great portion sizes, fast service and very pocket-friendly combos. Highly recommend the Farm Fresh pizza!"</p>
         <span class="review-date">October 2026</span>
       </div>
     </div>
 
     <div class="review-cta">
-      <a href="https://g.page/r/review" target="_blank" class="btn btn-gold">
-        <i class="fa-solid fa-pen-to-square"></i> Leave a Review
+      <a href="https://maps.google.com/?q=Walaiti+Food+Jalandhar" target="_blank" class="btn btn-gold">
+        <i class="fa-solid fa-pen-to-square"></i> Rate Us on Google
       </a>
     </div>
   </section>
 
-  <!-- ===== SOCIAL / FOLLOW US ===== -->
+  <!-- ===== SOCIAL & FOLLOW SECTION ===== -->
   <section id="social" class="section section-dark section-social">
     <div class="section-header">
-      <span class="section-label">Stay Connected</span>
-      <h2 class="section-title">Follow Us</h2>
-      <p class="section-desc">Get the latest deals, new menu items and behind-the-scenes updates.</p>
+      <span class="section-label">Connect With Us</span>
+      <h2 class="section-title">Follow @walaitifood</h2>
+      <p class="section-desc">Tag us in your stories and stay tuned for daily discounts & new arrivals.</p>
     </div>
 
     <div class="social-cards">
-      <a href="https://instagram.com/walaitifood" target="_blank" class="social-card social-insta">
+      <a href="https://instagram.com" target="_blank" class="social-card social-insta">
         <div class="social-icon">
           <i class="fa-brands fa-instagram"></i>
         </div>
         <div class="social-info">
           <span class="social-platform">Instagram</span>
           <span class="social-handle">@walaitifood</span>
-          <span class="social-cta">Follow for daily food shots →</span>
+          <span class="social-cta">Follow for stories & reels →</span>
         </div>
       </a>
 
-      <a href="https://facebook.com/walaitifood" target="_blank" class="social-card social-fb">
+      <a href="https://facebook.com" target="_blank" class="social-card social-fb">
         <div class="social-icon">
           <i class="fa-brands fa-facebook-f"></i>
         </div>
         <div class="social-info">
           <span class="social-platform">Facebook</span>
           <span class="social-handle">Walaiti Food</span>
-          <span class="social-cta">Like our page for updates →</span>
+          <span class="social-cta">Like our Facebook page →</span>
         </div>
       </a>
     </div>
 
-    <div class="whatsapp-cta">
-      <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="btn btn-whatsapp">
-        <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
-      </a>
+    <div class="whatsapp-cta-box">
+      <h3>Craving Walaiti Food Right Now?</h3>
+      <p>Order directly on WhatsApp for instant confirmation and takeaway</p>
+      <div class="cta-btn-group">
+        <a href="https://wa.me/919517727177?text=Hi%20Walaiti%20Food,%20I%20want%20to%20order%20from%20Model%20Town" target="_blank" class="btn btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Model Town WhatsApp
+        </a>
+        <a href="https://wa.me/919517797177?text=Hi%20Walaiti%20Food,%20I%20want%20to%20order%20from%20Adarsh%20Nagar" target="_blank" class="btn btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Adarsh Nagar WhatsApp
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-logo">
-      <div class="logo-circle logo-sm"><span class="logo-w">W</span></div>
+      <img src="logo.png" alt="Walaiti Food" class="footer-logo-img" />
       <span>Walaiti Food</span>
     </div>
-    <p class="footer-tagline">Pizza &amp; Café · Crafted with ❤️</p>
+    <p class="footer-tagline">Pizza &amp; Café · Essence of England · 100% Pure Veg</p>
     <div class="footer-links">
-      <a href="#menu">Menu</a>
-      <a href="#locations">Locations</a>
+      <a href="#menu">Menus</a>
+      <a href="#locations">Outlets</a>
       <a href="#reviews">Reviews</a>
       <a href="#social">Social</a>
+      <a href="generate-qr.html">QR Code</a>
     </div>
-    <p class="footer-copy">© 2026 Walaiti Food. All rights reserved.</p>
+    <p class="footer-copy">© 2026 Walaiti Food. All rights reserved. Jalandhar City, Punjab.</p>
   </footer>
+
+  <!-- ===== FULLSCREEN LIGHTBOX MODAL FOR MENU PAGES ===== -->
+  <div id="lightboxModal" class="lightbox-modal">
+    <button class="lightbox-close-btn" id="lightboxClose">&times;</button>
+    <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Menu page" />
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+    <button class="lightbox-nav-btn lightbox-next" id="lightboxNext"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
 
   <script src="app.js"></script>
 </body>
