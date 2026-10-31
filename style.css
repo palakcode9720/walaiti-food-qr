@@ -596,12 +596,30 @@ img {
   overflow: hidden;
 }
 
+.item-card-body {
+  padding: 0.9rem 0.9rem 1rem;
+}
+
+.feature-food-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 0 auto 1rem;
+  max-width: 760px;
+}
+
+@media (max-width: 680px) {
+  .feature-food-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .mini-food-thumb {
   width: 100%;
   height: 130px;
   overflow: hidden;
   border-radius: 16px 16px 0 0;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255,255,255,0.04);
 }
 
 .mini-food-thumb img {

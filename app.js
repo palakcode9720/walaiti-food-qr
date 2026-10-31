@@ -793,7 +793,6 @@ function renderDigitalItems() {
               ${group.items.map(item => `
                 <div class="item-card">
                   ${item.tag ? `<span class="badge-tag card-tag">${item.tag}</span>` : ''}
-                  ${itemImageMarkup(item)}
                   <div class="item-card-body">
                     <h4 class="item-title">${item.name}</h4>
                     <p class="item-desc">${item.desc}</p>
@@ -938,7 +937,6 @@ function renderDigitalItems() {
       ${items.map(item => `
         <div class="item-card">
           ${item.tag ? `<span class="badge-tag card-tag">${item.tag}</span>` : ''}
-          ${itemImageMarkup(item)}
           <div class="item-card-body">
             <h4 class="item-title">${item.name}</h4>
             <p class="item-desc">${item.desc}</p>
@@ -1153,9 +1151,3 @@ const getItemImage = (itemName = '') => {
     if (name.includes('dessert') || name.includes('cake') || name.includes('brownie') || name.includes('ice cream')) return 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=300&q=80';
     return 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=300&q=80';
   };
-
-  const itemImageMarkup = (item) => `
-    <div class="mini-food-thumb">
-      <img src="${getItemImage(item.name)}" alt="${item.name}" loading="lazy" />
-    </div>
-  `;
