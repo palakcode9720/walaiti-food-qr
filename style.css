@@ -1700,6 +1700,10 @@ img {
 
 .page-panel {
   display: none;
+  min-height: calc(100vh - 120px);
+  scroll-margin-top: 5.5rem;
+  scroll-margin-bottom: 5rem;
+  padding-bottom: 4.5rem;
 }
 
 .page-panel.active {
@@ -1710,6 +1714,13 @@ img {
 #menu.page-panel.active,
 #outlets.page-panel.active {
   display: block;
+}
+
+@media (max-width: 680px) {
+  .page-panel {
+    padding-top: 1rem;
+    min-height: calc(100vh - 110px);
+  }
 }
 
 .page-panel#reviews,
@@ -1742,6 +1753,7 @@ img {
   background: rgba(10, 10, 10, 0.96);
   backdrop-filter: blur(12px);
   border-top: 1px solid rgba(212,160,23,0.16);
+  margin-top: 0.5rem;
 }
 
 .bottom-nav-item {
