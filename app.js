@@ -585,10 +585,49 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNavLinks();
   setupThemeToggle();
   setupSearchBox();
+  setupFoodShortcutCards();
+  setupPanelNavigation();
 
-  // Initialize with Model Town
+  // Initialize with Dashboard visible, then load the default outlet menu in the menu section
+  if (document.getElementById('dashboard')) {
+    document.getElementById('dashboard').classList.add('active');
+  }
   selectOutlet('modelTown');
 });
+
+function setupFoodShortcutCards() {
+  document.querySelectorAll('.feature-food-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const foodKey = (card.dataset.food || '').toLowerCase();
+      const currentData = outletsData[currentOutlet];
+
+      if (!currentData) return;
+
+      const searchMap = {
+        pizza: 'pizza',
+        burger: 'burger',
+        fries: 'fries',
+        shake: 'shake',
+        dessert: 'dessert'
+      };
+
+      currentSearchTerm = searchMap[foodKey] || foodKey;
+      const matchingCategory = currentData.categories.find(cat => {
+        const catName = cat.name.toLowerCase();
+        return catName.includes(currentSearchTerm) || currentSearchTerm.includes(catName.replace(/[^a-z]/g, ''));
+      });
+
+      if (matchingCategory) {
+        currentCategory = matchingCategory.id;
+        document.querySelectorAll('.menu-cat-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.category === matchingCategory.id);
+        });
+      }
+
+      renderCurrentView();
+    });
+  });
+}
 
 // Select Outlet (rebuilds category tabs to match ONLY that branch)
 function selectOutlet(outletKey) {
@@ -624,6 +663,9 @@ function selectOutlet(outletKey) {
 
   // Set default category to first category
   currentCategory = data.categories[0].id;
+  const searchInput = document.getElementById('menuSearchInput');
+  if (searchInput) searchInput.value = '';
+  currentSearchTerm = '';
   renderCurrentView();
 }
 
@@ -655,7 +697,7 @@ function setupSearchBox() {
 
   searchInput.addEventListener('input', (event) => {
     currentSearchTerm = (event.target.value || '').trim().toLowerCase();
-    renderDigitalItems();
+    renderCurrentView();
   });
 }
 
@@ -711,10 +753,62 @@ function renderDigitalItems() {
   const filterItems = (items) => {
     if (!currentSearchTerm) return items;
     return items.filter(item => {
-      const haystack = `${item.name} ${item.desc || ''}`.toLowerCase();
+      const haystack = `${item.name} ${item.desc || ''} ${item.tag || ''}`.toLowerCase();
       return haystack.includes(currentSearchTerm);
     });
   };
+
+  if (currentSearchTerm) {
+    const groupedMatches = Object.values(outlet.sections)
+      .map(sectionData => {
+        if (!sectionData || !Array.isArray(sectionData.items)) return null;
+        const matches = filterItems(sectionData.items);
+        if (!matches.length) return null;
+        return {
+          title: sectionData.title || 'Menu Items',
+          items: matches
+        };
+      })
+      .filter(Boolean);
+
+    if (!groupedMatches.length) {
+      container.innerHTML = `
+        <div class="empty-search-state">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <p>No item matches “${currentSearchTerm}”. Try a different name or category.</p>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = `
+      <div class="search-results-wrap">
+        ${groupedMatches.map(group => `
+          <div class="search-results-group">
+            <h3 class="search-results-title">${group.title}</h3>
+            <div class="items-cards-grid">
+              ${group.items.map(item => `
+                <div class="item-card">
+                  ${item.tag ? `<span class="badge-tag card-tag">${item.tag}</span>` : ''}
+                  <div class="item-card-body">
+                    <h4 class="item-title">${item.name}</h4>
+                    <p class="item-desc">${item.desc}</p>
+                    <div class="item-bottom">
+                      <span class="item-price">${item.price || (item.customPrice || `₹${item.r}`)}</span>
+                      <a href="https://wa.me/${outlet.waPhone}?text=Hi%20Walaiti%20Food%20(${encodeURIComponent(outlet.name)}),%20I%20would%20like%20to%20order%20${encodeURIComponent(item.name)}" target="_blank" class="order-wa-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Order
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    return;
+  }
 
   if (section.type === 'pizza_table') {
     const items = filterItems(section.items);
@@ -969,8 +1063,6 @@ function setupThemeToggle() {
   const themeToggle = document.getElementById('themeToggleBtn');
   if (!themeToggle) return;
 
- 
-
   const savedTheme = localStorage.getItem('theme') || 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeButton(savedTheme);
@@ -1001,4 +1093,46 @@ function updateThemeButton(theme) {
             <span>Dark Mode</span>
         `;
   }
+}
+
+function setupPanelNavigation() {
+  const panels = [...document.querySelectorAll('.page-panel')];
+  const selectors = [...document.querySelectorAll('[data-open-panel]')];
+  const bottomNav = [...document.querySelectorAll('.bottom-nav-item')];
+
+  const activatePanel = (panelId) => {
+    panels.forEach(panel => {
+      panel.classList.toggle('active', panel.id === panelId);
+    });
+
+    selectors.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.openPanel === panelId);
+    });
+
+    bottomNav.forEach(item => {
+      item.classList.toggle('active', item.dataset.openPanel === panelId);
+    });
+
+    const panel = document.getElementById(panelId);
+    if (panel) {
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  selectors.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panelId = btn.dataset.openPanel;
+      if (panelId) activatePanel(panelId);
+    });
+  });
+
+  bottomNav.forEach(item => {
+    item.addEventListener('click', () => {
+      const panelId = item.dataset.openPanel;
+      if (panelId) activatePanel(panelId);
+    });
+  });
+
+  const initialPanel = document.getElementById('dashboard');
+  if (initialPanel) activatePanel('dashboard');
 }

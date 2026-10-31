@@ -40,18 +40,74 @@
 
   <!-- ===== STICKY QUICK NAVIGATION ===== -->
   <nav class="quick-nav">
-    <a href="#menu" class="nav-pill active"><i class="fa-solid fa-utensils"></i> Menu</a>
-    <a href="#locations" class="nav-pill"><i class="fa-solid fa-store"></i> Outlets</a>
-    <a href="#reviews" class="nav-pill"><i class="fa-solid fa-comments"></i> Reviews</a>
-    <a href="#social" class="nav-pill"><i class="fa-solid fa-heart"></i> Connect</a>
-    <a href="#qr-standee" class="nav-pill nav-pill-gold"><i class="fa-solid fa-qrcode"></i> Table QR</a>
-    <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Light/Dark Mode">
+    <button type="button" class="nav-pill active" data-open-panel="dashboard"><i class="fa-solid fa-house"></i> Home</button>
+    <button type="button" class="nav-pill" data-open-panel="menu"><i class="fa-solid fa-utensils"></i> Menu</button>
+    <button type="button" class="nav-pill" data-open-panel="outlets"><i class="fa-solid fa-store"></i> Outlets</button>
+    <button type="button" class="nav-pill" data-open-panel="reviews"><i class="fa-solid fa-comments"></i> Reviews</button>
+    <button type="button" class="nav-pill nav-pill-gold" data-open-panel="qr-standee"><i class="fa-solid fa-qrcode"></i> Table QR</button>
+    <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Light/Dark Mode" type="button">
       <i class="fa-solid fa-sun"></i> <span>Light</span>
     </button>
   </nav>
 
+  <!-- ===== DASHBOARD / QUICK PICK ===== -->
+  <section id="dashboard" class="section page-panel active">
+    <div class="section-header">
+      <span class="section-label">Quick Order</span>
+      <h2 class="section-title">Pick Your Craving</h2>
+      <p class="section-desc">Choose a category and jump straight to the matching menu.</p>
+    </div>
+
+    <div class="feature-food-grid">
+      <div class="feature-food-card" data-food="pizza">
+        <div class="food-thumb">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=300&q=80"
+            alt="Pizza" />
+        </div>
+        <span class="food-label">Pizza</span>
+      </div>
+      <div class="feature-food-card" data-food="burger">
+        <div class="food-thumb">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80"
+            alt="Burger" />
+        </div>
+        <span class="food-label">Burger</span>
+      </div>
+      <div class="feature-food-card" data-food="fries">
+        <div class="food-thumb">
+          <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&w=300&q=80"
+            alt="Fries" />
+        </div>
+        <span class="food-label">Sides</span>
+      </div>
+      <div class="feature-food-card" data-food="shake">
+        <div class="food-thumb">
+          <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=300&q=80"
+            alt="Shake" />
+        </div>
+        <span class="food-label">Shakes</span>
+      </div>
+      <div class="feature-food-card" data-food="dessert">
+        <div class="food-thumb">
+          <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=300&q=80"
+            alt="Dessert" />
+        </div>
+        <span class="food-label">Desserts</span>
+      </div>
+    </div>
+
+    <div class="dashboard-actions">
+      <button class="dashboard-primary-btn" data-open-panel="menu">
+        <i class="fa-solid fa-utensils"></i> View Full Menu
+      </button>
+      <button class="dashboard-secondary-btn" data-open-panel="outlets">
+        <i class="fa-solid fa-location-dot"></i> View Outlets
+      </button>
+    </div>
+  </section>
+
   <!-- ===== MENU SECTION ===== -->
-  <section id="menu" class="section menu-section">
+  <section id="menu" class="section menu-section page-panel">
     <div class="section-header">
       <span class="section-label">Select Your Outlet</span>
       <h2 class="section-title">Menu</h2>
@@ -172,7 +228,7 @@
   </section>
 
   <!-- ===== LOCATIONS / OUTLETS SECTION ===== -->
-  <section id="locations" class="section section-dark">
+  <section id="outlets" class="section section-dark page-panel">
     <div class="section-header">
       <span class="section-label">Visit Us</span>
       <h2 class="section-title">Our Outlets</h2>
@@ -253,7 +309,7 @@
   </section>
 
   <!-- ===== REVIEWS SECTION ===== -->
-  <section id="reviews" class="section">
+  <section id="reviews" class="section page-panel">
     <div class="section-header">
       <span class="section-label">Guest Feedback</span>
       <h2 class="section-title">Loved by Foodies</h2>
@@ -344,7 +400,7 @@
   </section>
 
   <!-- ===== SOCIAL & FOLLOW SECTION ===== -->
-  <section id="social" class="section section-dark section-social">
+  <section id="social" class="section section-dark section-social page-panel">
     <div class="section-header">
       <span class="section-label">Connect With Us</span>
       <h2 class="section-title">Follow @walaitifood</h2>
@@ -392,7 +448,7 @@
   </section>
 
   <!-- ===== QR CODE & TABLE STANDEE SECTION ===== -->
-  <section id="qr-standee" class="section qr-home-section">
+  <section id="qr-standee" class="section qr-home-section page-panel">
     <div class="section-header">
       <span class="section-label">Scan &amp; Order</span>
       <h2 class="section-title">Official Table QR Code</h2>
