@@ -608,7 +608,10 @@ function setupFoodShortcutCards() {
         burger: 'burger',
         fries: 'fries',
         shake: 'shake',
-        dessert: 'dessert'
+        dessert: 'dessert',
+        pasta: 'pasta',
+        noodles: 'noodles',
+        coffee: 'coffee'
       };
 
       currentSearchTerm = searchMap[foodKey] || foodKey;
@@ -790,6 +793,7 @@ function renderDigitalItems() {
               ${group.items.map(item => `
                 <div class="item-card">
                   ${item.tag ? `<span class="badge-tag card-tag">${item.tag}</span>` : ''}
+                  ${itemImageMarkup(item)}
                   <div class="item-card-body">
                     <h4 class="item-title">${item.name}</h4>
                     <p class="item-desc">${item.desc}</p>
@@ -934,6 +938,7 @@ function renderDigitalItems() {
       ${items.map(item => `
         <div class="item-card">
           ${item.tag ? `<span class="badge-tag card-tag">${item.tag}</span>` : ''}
+          ${itemImageMarkup(item)}
           <div class="item-card-body">
             <h4 class="item-title">${item.name}</h4>
             <p class="item-desc">${item.desc}</p>
@@ -1136,3 +1141,21 @@ function setupPanelNavigation() {
   const initialPanel = document.getElementById('dashboard');
   if (initialPanel) activatePanel('dashboard');
 }
+
+// Image thumbnails for menu items
+const getItemImage = (itemName = '') => {
+    const name = itemName.toLowerCase();
+    if (name.includes('pizza')) return 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=300&q=80';
+    if (name.includes('burger') || name.includes('sandwich') || name.includes('wrap')) return 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80';
+    if (name.includes('fries') || name.includes('potato') || name.includes('snack')) return 'https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&w=300&q=80';
+    if (name.includes('shake') || name.includes('coffee') || name.includes('mojito') || name.includes('ice tea')) return 'https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=300&q=80';
+    if (name.includes('pasta') || name.includes('noodle')) return 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=300&q=80';
+    if (name.includes('dessert') || name.includes('cake') || name.includes('brownie') || name.includes('ice cream')) return 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=300&q=80';
+    return 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=300&q=80';
+  };
+
+  const itemImageMarkup = (item) => `
+    <div class="mini-food-thumb">
+      <img src="${getItemImage(item.name)}" alt="${item.name}" loading="lazy" />
+    </div>
+  `;
