@@ -739,38 +739,47 @@ function renderDigitalItems() {
         </div>
       ` : ''}
 
-      <div class="pizza-table-wrapper">
-        <div class="pizza-table-header">
-          <span>Item & Description</span>
-          <div class="pizza-size-cols">
-            <span>Regular</span>
-            <span>Medium</span>
-            <span>Large</span>
-          </div>
-        </div>
-        <div class="pizza-list">
-          ${items.map(p => `
-            <div class="pizza-row">
-              <div class="pizza-info">
-                <div class="pizza-title-row">
-                  <span class="pizza-name">${p.name}</span>
-                  ${p.tag ? `<span class="badge-tag">${p.tag}</span>` : ''}
-                </div>
-                <p class="pizza-desc">${p.desc}</p>
-                ${p.price ? `<span class="single-item-price">${p.price}</span>` : ''}
-              </div>
-              ${p.customPrice ? `
-                <div class="pizza-custom-price">${p.customPrice}</div>
-              ` : p.r ? `
-                <div class="pizza-prices">
-                  <span class="price-val">₹${p.r}</span>
-                  <span class="price-val">₹${p.m}</span>
-                  <span class="price-val">₹${p.l}</span>
-                </div>
-              ` : ''}
+      <div class="premium-menu-grid">
+        ${items.map(p => {
+          const sizes = p.customPrice ? `
+            <div class="single-offer-box">
+              <span class="offer-label">Special</span>
+              <strong>${p.customPrice}</strong>
             </div>
-          `).join('')}
-        </div>
+          ` : `
+            <div class="size-price-boxes">
+              <span><em>R</em> ₹${p.r}</span>
+              <span><em>M</em> ₹${p.m}</span>
+              <span><em>L</em> ₹${p.l}</span>
+            </div>
+          `;
+
+          return `
+            <article class="premium-food-card ${p.tag ? 'has-tag' : ''}">
+              <div class="premium-card-visual">
+                <div class="premium-badge-wrap">
+                  ${p.tag ? `<span class="premium-tag">${p.tag}</span>` : '<span class="premium-tag muted">Chef Pick</span>'}
+                </div>
+                <div class="premium-burger-illustration">
+                  <div class="bun bun-top"></div>
+                  <div class="patty"></div>
+                  <div class="bun bun-bottom"></div>
+                </div>
+              </div>
+
+              <div class="premium-card-body">
+                <h4>${p.name}</h4>
+                <p>${p.desc}</p>
+                ${sizes}
+                <div class="premium-card-actions">
+                  <a href="https://wa.me/${outlet.waPhone}?text=Hi%20Walaiti%20Food%20(${encodeURIComponent(outlet.name)}),%20I%20would%20like%20to%20order%20${encodeURIComponent(p.name)}" target="_blank" class="premium-order-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Order
+                  </a>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join('')}
       </div>
     `;
     return;

@@ -19,6 +19,17 @@
   --fb-color: #1877F2;
   --whatsapp: #25D366;
 
+  --bg-main: #0A0A0A;
+  --bg-soft: #1A1A1A;
+  --panel: #171717;
+  --panel-strong: #111111;
+  --text: #FFFFFF;
+  --text-soft: #CCCCCC;
+  --text-muted: #888888;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(212, 160, 23, 0.32);
+  --card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
+
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
@@ -29,6 +40,32 @@
 
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Poppins', sans-serif;
+}
+
+:root[data-theme="light"] {
+  --gold: #C68810;
+  --gold-light: #E0A821;
+  --gold-dark: #8B6400;
+  --black: #F3F3F3;
+  --dark: #F5F1E8;
+  --dark2: #FFFFFF;
+  --dark3: #F3EFE7;
+  --white: #171717;
+  --off-white: #141414;
+  --gray: #666666;
+  --gray-light: #4a4a4a;
+  --green: #1E9F5D;
+  --bg-main: #F4F0E7;
+  --bg-soft: #F8F4EE;
+  --panel: #FFFFFF;
+  --panel-strong: #F0E9DA;
+  --text: #171717;
+  --text-soft: #3c3c3c;
+  --text-muted: #666666;
+  --line: rgba(18, 18, 18, 0.08);
+  --line-strong: rgba(198, 136, 16, 0.25);
+  --card-bg: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(242,236,223,0.9));
+  --shadow-gold: 0 8px 25px rgba(198, 136, 16, 0.16);
 }
 
 *,
@@ -46,8 +83,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--dark);
-  color: var(--white);
+  background: var(--bg-main);
+  color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
 }
