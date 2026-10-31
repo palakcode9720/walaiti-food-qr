@@ -370,7 +370,7 @@ img {
   gap: 0.65rem;
   padding: 0.75rem 0.8rem;
   background: var(--dark2);
-  border: 2px solid rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-md);
   color: var(--white);
   cursor: pointer;
@@ -385,8 +385,8 @@ img {
 
 .outlet-btn.active {
   background: linear-gradient(135deg, rgba(212, 160, 23, 0.18), rgba(212, 160, 23, 0.05));
-  border-color: rgba(212, 160, 23, 0.48);
-  box-shadow: 0 12px 24px rgba(212, 160, 23, 0.12);
+  border-color: rgba(212, 160, 23, 0.9);
+  box-shadow: 0 0 0 2px rgba(212, 160, 23, 0.18), 0 14px 26px rgba(212, 160, 23, 0.12);
 }
 
 .outlet-btn-icon {
@@ -404,14 +404,15 @@ img {
 
 .outlet-btn-text strong {
   display: block;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
+  color: var(--white);
   font-weight: 700;
 }
 
 .outlet-btn-text span {
   display: block;
   font-size: 0.69rem;
-  color: var(--gray);
+  color: var(--gray-light);
 }
 
 .outlet-info-strip {
@@ -419,6 +420,8 @@ img {
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(212, 160, 23, 0.03));
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.04);
   border-radius: 18px;
   padding: 0.7rem 0.85rem;
   margin-bottom: 0.85rem;
@@ -1513,6 +1516,52 @@ img {
   font-weight: 800;
 }
 
+.feature-food-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 0 auto 1rem;
+  max-width: 760px;
+}
+
+.feature-food-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 92px;
+  padding: 0.7rem 0.45rem;
+  border-radius: 18px;
+  border: 1px solid var(--line-strong);
+  background: linear-gradient(180deg, rgba(212, 160, 23, 0.08), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.food-thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.12), 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.food-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.food-label {
+  color: var(--text);
+}
+
+:root[data-theme="light"] .food-label {
+  color: var(--text);
+}
+
 @media (max-width: 680px) {
   .pizza-row {
     flex-direction: column;
@@ -1532,5 +1581,119 @@ img {
   .pizza-custom-price {
     width: 100%;
     justify-content: flex-start;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .outlet-switcher {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+  SEARCH RESULTS STYLING
+   ============================================================ */
+.search-results-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.search-results-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.search-results-title {
+  font-family: var(--font-heading);
+  color: var(--gold-light);
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.location-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(212,160,23,0.28);
+  border-radius: 22px;
+  padding: 1.3rem;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.05);
+}
+
+.location-badge {
+  display: inline-flex;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(212,160,23,0.1);
+  border: 1px solid rgba(212,160,23,0.24);
+  color: var(--gold-light);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.location-name {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.45rem;
+  color: var(--white);
+  font-family: var(--font-heading);
+}
+
+.location-detail {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  margin-bottom: 0.9rem;
+  color: var(--gray-light);
+}
+
+.location-detail i {
+  color: var(--gold);
+  margin-top: 0.2rem;
+}
+
+.location-detail p,
+.location-detail a {
+  color: var(--gray-light);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.location-card .phone-link {
+  font-weight: 600;
+}
+
+@media (max-width: 680px) {
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-card {
+    border-radius: 18px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    padding: 1rem;
   }
 }
