@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +9,11 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
 </head>
+
 <body>
 
   <!-- ===== HERO / BRAND HEADER ===== -->
@@ -21,12 +25,12 @@
         <img src="logo.png" alt="Walaiti Food Pizza & Café Official Logo" class="brand-logo-img" />
       </div>
       <h1 class="brand-name">Walaiti Food</h1>
-      <p class="brand-tagline">Pizza &amp; Café · Essence of England</p>
-      
+      <p class="brand-tagline">Pizza &amp; Café</p>
+
       <div class="hero-badges">
-        <span class="badge veg-badge"><i class="fa-solid fa-leaf"></i> 100% Pure Veg</span>
-        <span class="badge"><i class="fa-solid fa-location-dot"></i> Jalandhar City</span>
-        <span class="badge"><i class="fa-solid fa-star"></i> 4.8 Rating</span>
+        <span class="badge veg-badge"><i class="fa-solid fa-leaf"></i> Pure Veg</span>
+        <span class="badge"><i class="fa-solid fa-location-dot"></i> Jalandhar</span>
+        <span class="badge"><i class="fa-solid fa-star"></i> 4.8</span>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -36,7 +40,7 @@
 
   <!-- ===== STICKY QUICK NAVIGATION ===== -->
   <nav class="quick-nav">
-    <a href="#menu" class="nav-pill active"><i class="fa-solid fa-utensils"></i> Complete Menu</a>
+    <a href="#menu" class="nav-pill active"><i class="fa-solid fa-utensils"></i> Menu</a>
     <a href="#locations" class="nav-pill"><i class="fa-solid fa-store"></i> Outlets</a>
     <a href="#reviews" class="nav-pill"><i class="fa-solid fa-comments"></i> Reviews</a>
     <a href="#social" class="nav-pill"><i class="fa-solid fa-heart"></i> Connect</a>
@@ -50,8 +54,8 @@
   <section id="menu" class="section menu-section">
     <div class="section-header">
       <span class="section-label">Select Your Outlet</span>
-      <h2 class="section-title">Complete Digital Menu</h2>
-      <p class="section-desc">Every single pizza, atta crust, dip, burger, pasta, shake, frappe, coffee & dessert is listed below.</p>
+      <h2 class="section-title">Menu</h2>
+      <p class="section-desc">Choose your outlet and browse the full digital menu with quick category filters.</p>
     </div>
 
     <!-- OUTLET SELECTOR BUTTONS -->
@@ -60,7 +64,7 @@
         <div class="outlet-btn-icon"><i class="fa-solid fa-shop"></i></div>
         <div class="outlet-btn-text">
           <strong>Model Town Outlet</strong>
-          <span>Mall Road (12 Pages Menu)</span>
+          <span>12-page menu</span>
         </div>
       </button>
 
@@ -68,7 +72,7 @@
         <div class="outlet-btn-icon"><i class="fa-solid fa-shop"></i></div>
         <div class="outlet-btn-text">
           <strong>Adarsh Nagar Outlet</strong>
-          <span>Opp. Inderprasth Hotel (8 Pages Menu)</span>
+          <span>8-page menu</span>
         </div>
       </button>
     </div>
@@ -84,26 +88,34 @@
       </div>
       <div class="outlet-info-right">
         <a href="menus/menu-model-town.pdf" class="btn btn-gold-sm" id="menuPdfBtn" download>
-          <i class="fa-solid fa-file-pdf"></i> Download Official PDF
+          <i class="fa-solid fa-file-pdf"></i> Official PDF
         </a>
       </div>
     </div>
 
-    <!-- VIEW MODE SWITCHER (Interactive Grid vs Illustrated Book) -->
+    <!-- VIEW MODE SWITCHER -->
     <div class="view-mode-bar">
-      <span class="view-mode-label">Browse Menu:</span>
+      <span class="view-mode-label">Browse</span>
       <div class="view-mode-buttons">
         <button class="view-mode-btn active" data-view="grid">
-          <i class="fa-solid fa-list-check"></i> Interactive Digital List
+          <i class="fa-solid fa-burger"></i> Digital Menu
         </button>
         <button class="view-mode-btn" data-view="cards">
-          <i class="fa-solid fa-book-open"></i> Full Illustrated Cards (Pages 1-12)
+          <i class="fa-solid fa-book-open"></i> Full Menu Book
         </button>
       </div>
     </div>
 
     <!-- DIGITAL MENU VIEW -->
     <div id="digitalMenuView" class="menu-view-container">
+      <div class="menu-toolbar">
+        <div class="menu-search-wrap">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input id="menuSearchInput" type="search" placeholder="Search pizza, burger, shakes, drinks..."
+            aria-label="Search menu items" />
+        </div>
+      </div>
+
       <!-- Category Tabs (Populated dynamically per selected outlet) -->
       <div class="menu-categories-scroll"></div>
 
@@ -133,16 +145,16 @@
       <div class="location-card">
         <div class="location-badge">📍 Branch 1</div>
         <h3 class="location-name">Model Town</h3>
-        
+
         <div class="location-detail">
           <i class="fa-solid fa-map-pin"></i>
-          <p>Plot No 615-L Mall Road,<br/>Model Town, Near Parveen Bakery,<br/>Jalandhar City, Punjab</p>
+          <p>Plot No 615-L Mall Road,<br />Model Town, Near Parveen Bakery,<br />Jalandhar City, Punjab</p>
         </div>
 
         <div class="location-detail">
           <i class="fa-solid fa-phone"></i>
           <div>
-            <a href="tel:+919517727177" class="phone-link">+91 95177-27177</a><br/>
+            <a href="tel:+919517727177" class="phone-link">+91 95177-27177</a><br />
             <a href="tel:+919115594155" class="phone-link">+91 91155-94155</a>
           </div>
         </div>
@@ -153,10 +165,12 @@
         </div>
 
         <div class="location-actions">
-          <a href="https://wa.me/919517727177?text=Hi%20Walaiti%20Food%20Model%20Town,%20I%20would%20like%20to%20order" target="_blank" class="btn btn-whatsapp-sm">
+          <a href="https://wa.me/919517727177?text=Hi%20Walaiti%20Food%20Model%20Town,%20I%20would%20like%20to%20order"
+            target="_blank" class="btn btn-whatsapp-sm">
             <i class="fa-brands fa-whatsapp"></i> Order WhatsApp
           </a>
-          <a href="https://maps.google.com/?q=Walaiti+Food+Model+Town+Jalandhar" target="_blank" class="btn btn-outline-gold">
+          <a href="https://maps.google.com/?q=Walaiti+Food+Model+Town+Jalandhar" target="_blank"
+            class="btn btn-outline-gold">
             <i class="fa-solid fa-diamond-turn-right"></i> Directions
           </a>
         </div>
@@ -166,16 +180,16 @@
       <div class="location-card">
         <div class="location-badge">📍 Branch 2</div>
         <h3 class="location-name">Adarsh Nagar</h3>
-        
+
         <div class="location-detail">
           <i class="fa-solid fa-map-pin"></i>
-          <p>38-B, Adarsh Nagar,<br/>Opp. Inderprasth Hotel, Canal Road,<br/>Jalandhar City, Punjab</p>
+          <p>38-B, Adarsh Nagar,<br />Opp. Inderprasth Hotel, Canal Road,<br />Jalandhar City, Punjab</p>
         </div>
 
         <div class="location-detail">
           <i class="fa-solid fa-phone"></i>
           <div>
-            <a href="tel:+919517797177" class="phone-link">+91 95177-97177</a><br/>
+            <a href="tel:+919517797177" class="phone-link">+91 95177-97177</a><br />
             <a href="tel:+919115595155" class="phone-link">+91 91155-95155</a>
           </div>
         </div>
@@ -186,10 +200,12 @@
         </div>
 
         <div class="location-actions">
-          <a href="https://wa.me/919517797177?text=Hi%20Walaiti%20Food%20Adarsh%20Nagar,%20I%20would%20like%20to%20order" target="_blank" class="btn btn-whatsapp-sm">
+          <a href="https://wa.me/919517797177?text=Hi%20Walaiti%20Food%20Adarsh%20Nagar,%20I%20would%20like%20to%20order"
+            target="_blank" class="btn btn-whatsapp-sm">
             <i class="fa-brands fa-whatsapp"></i> Order WhatsApp
           </a>
-          <a href="https://maps.google.com/?q=Walaiti+Food+Adarsh+Nagar+Jalandhar" target="_blank" class="btn btn-outline-gold">
+          <a href="https://maps.google.com/?q=Walaiti+Food+Adarsh+Nagar+Jalandhar" target="_blank"
+            class="btn btn-outline-gold">
             <i class="fa-solid fa-diamond-turn-right"></i> Directions
           </a>
         </div>
@@ -240,7 +256,8 @@
             </div>
           </div>
         </div>
-        <p>"Walaiti Food Model Town has the crispiest crust and the freshest cheese burst pizza! The Stuffed Garlic Bread is simply unmatched in Jalandhar."</p>
+        <p>"Walaiti Food Model Town has the crispiest crust and the freshest cheese burst pizza! The Stuffed Garlic
+          Bread is simply unmatched in Jalandhar."</p>
         <span class="review-date">October 2026</span>
       </div>
 
@@ -257,7 +274,8 @@
           </div>
           <span class="featured-tag">⭐ Top Review</span>
         </div>
-        <p>"The Adarsh Nagar outlet is so cozy and welcoming. Love the 100% veg assurance. Their shakes and Pesto Pizza are authentic and top tier!"</p>
+        <p>"The Adarsh Nagar outlet is so cozy and welcoming. Love the 100% veg assurance. Their shakes and Pesto Pizza
+          are authentic and top tier!"</p>
         <span class="review-date">September 2026</span>
       </div>
 
@@ -273,7 +291,8 @@
             </div>
           </div>
         </div>
-        <p>"Best pizza place for family gatherings. Great portion sizes, fast service and very pocket-friendly combos. Highly recommend the Farm Fresh pizza!"</p>
+        <p>"Best pizza place for family gatherings. Great portion sizes, fast service and very pocket-friendly combos.
+          Highly recommend the Farm Fresh pizza!"</p>
         <span class="review-date">October 2026</span>
       </div>
     </div>
@@ -321,10 +340,12 @@
       <h3>Craving Walaiti Food Right Now?</h3>
       <p>Order directly on WhatsApp for instant confirmation and takeaway</p>
       <div class="cta-btn-group">
-        <a href="https://wa.me/919517727177?text=Hi%20Walaiti%20Food,%20I%20want%20to%20order%20from%20Model%20Town" target="_blank" class="btn btn-whatsapp">
+        <a href="https://wa.me/919517727177?text=Hi%20Walaiti%20Food,%20I%20want%20to%20order%20from%20Model%20Town"
+          target="_blank" class="btn btn-whatsapp">
           <i class="fa-brands fa-whatsapp"></i> Model Town WhatsApp
         </a>
-        <a href="https://wa.me/919517797177?text=Hi%20Walaiti%20Food,%20I%20want%20to%20order%20from%20Adarsh%20Nagar" target="_blank" class="btn btn-whatsapp">
+        <a href="https://wa.me/919517797177?text=Hi%20Walaiti%20Food,%20I%20want%20to%20order%20from%20Adarsh%20Nagar"
+          target="_blank" class="btn btn-whatsapp">
           <i class="fa-brands fa-whatsapp"></i> Adarsh Nagar WhatsApp
         </a>
       </div>
@@ -336,7 +357,8 @@
     <div class="section-header">
       <span class="section-label">Scan &amp; Order</span>
       <h2 class="section-title">Official Table QR Code</h2>
-      <p class="section-desc">Place this on restaurant tables, reception counter, or share with guests to view the digital menu instantly.</p>
+      <p class="section-desc">Place this on restaurant tables, reception counter, or share with guests to view the
+        digital menu instantly.</p>
     </div>
 
     <div class="qr-home-card">
@@ -347,8 +369,9 @@
       <div class="qr-home-details">
         <div class="qr-status-badge"><i class="fa-solid fa-circle-check"></i> 100% Tested &amp; Working Live</div>
         <h3>Scan with Phone Camera</h3>
-        <p>Directly opens <strong>walaiti-food-qr.vercel.app</strong>. Guests can switch outlets, view pizzas, drinks, and place orders directly via WhatsApp.</p>
-        
+        <p>Directly opens <strong>walaiti-food-qr.vercel.app</strong>. Guests can switch outlets, view pizzas, drinks,
+          and place orders directly via WhatsApp.</p>
+
         <div class="qr-specs-list">
           <div><i class="fa-solid fa-check"></i> High Error-Correction (Level H) with Central Logo</div>
           <div><i class="fa-solid fa-check"></i> Model Town &amp; Adarsh Nagar details included</div>
@@ -400,4 +423,5 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>

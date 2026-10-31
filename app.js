@@ -576,6 +576,7 @@ const outletsData = {
 let currentOutlet = 'modelTown';
 let currentCategory = '';
 let currentViewMode = 'grid';
+let currentSearchTerm = '';
 
 document.addEventListener('DOMContentLoaded', () => {
   setupOutletSwitcher();
@@ -583,6 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupImageLightbox();
   setupNavLinks();
   setupThemeToggle();
+  setupSearchBox();
 
   // Initialize with Model Town
   selectOutlet('modelTown');
@@ -647,6 +649,16 @@ function buildCategoryTabs(categories) {
   });
 }
 
+function setupSearchBox() {
+  const searchInput = document.getElementById('menuSearchInput');
+  if (!searchInput) return;
+
+  searchInput.addEventListener('input', (event) => {
+    currentSearchTerm = (event.target.value || '').trim().toLowerCase();
+    renderDigitalItems();
+  });
+}
+
 // Outlet switcher events
 function setupOutletSwitcher() {
   document.querySelectorAll('.outlet-btn').forEach(btn => {
@@ -696,8 +708,26 @@ function renderDigitalItems() {
     return;
   }
 
-  // 1. Pizza Table View
+  const filterItems = (items) => {
+    if (!currentSearchTerm) return items;
+    return items.filter(item => {
+      const haystack = `${item.name} ${item.desc || ''}`.toLowerCase();
+      return haystack.includes(currentSearchTerm);
+    });
+  };
+
   if (section.type === 'pizza_table') {
+    const items = filterItems(section.items);
+    if (!items.length) {
+      container.innerHTML = `
+        <div class="empty-search-state">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <p>No item matches “${currentSearchTerm}”. Try a different name or category.</p>
+        </div>
+      `;
+      return;
+    }
+
     container.innerHTML = `
       ${section.description ? `
         <div class="category-banner-note">
@@ -719,7 +749,7 @@ function renderDigitalItems() {
           </div>
         </div>
         <div class="pizza-list">
-          ${section.items.map(p => `
+          ${items.map(p => `
             <div class="pizza-row">
               <div class="pizza-info">
                 <div class="pizza-title-row">
@@ -746,11 +776,9 @@ function renderDigitalItems() {
     return;
   }
 
-  // 2. Upgrades & Dips View
   if (section.type === 'upgrades_dips') {
     container.innerHTML = `
       <div class="upgrades-dips-container">
-        <!-- Upgrades Section -->
         <div class="upgrades-box">
           <h3 class="box-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Upgrade Your Pizza</h3>
           <p class="box-desc">Customise your pizza crust and toppings just the way you love it.</p>
@@ -776,7 +804,6 @@ function renderDigitalItems() {
           </div>
         </div>
 
-        <!-- Dips Section -->
         <div class="dips-box">
           <h3 class="box-title"><i class="fa-solid fa-bowl-food"></i> Delicious Dips (@ ₹30 each)</h3>
           <p class="box-desc">Pair your pizzas, breads, and fries with our signature dips.</p>
@@ -797,10 +824,20 @@ function renderDigitalItems() {
     return;
   }
 
-  // 3. Standard Cards Grid (Burgers, Shakes, Teas, Chinese, etc.)
+  const items = filterItems(section.items);
+  if (!items.length) {
+    container.innerHTML = `
+      <div class="empty-search-state">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <p>No item matches “${currentSearchTerm}”. Try a different name or category.</p>
+      </div>
+    `;
+    return;
+  }
+
   container.innerHTML = `
     <div class="items-cards-grid">
-      ${section.items.map(item => `
+      ${items.map(item => `
         <div class="item-card">
           ${item.tag ? `<span class="badge-tag card-tag">${item.tag}</span>` : ''}
           <div class="item-card-body">
