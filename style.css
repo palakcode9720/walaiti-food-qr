@@ -1369,8 +1369,110 @@ img {
   display: none;
 }
 
-@media (max-width: 680px) {
-  .item-card {
-    border-radius: 16px;
+@media (max-width: 768px) {
+  .view-mode-bar {
+    flex-direction: column;
+    align-items: flex-start;
   }
+
+  .view-mode-buttons {
+    width: 100%;
+  }
+
+  .view-mode-btn {
+    flex: 1;
+  }
+
+  .locations-grid,
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.view-mode-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+}
+
+.view-mode-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.view-mode-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.view-mode-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.42rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 160, 23, 0.25);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--gray-light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-mode-btn.active,
+.view-mode-btn:hover {
+  background: linear-gradient(135deg, rgba(212,160,23,0.2), rgba(255,255,255,0.03));
+  border-color: rgba(212, 160, 23, 0.5);
+  color: var(--white);
+  box-shadow: 0 8px 16px rgba(212, 160, 23, 0.1);
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.location-card,
+.review-card,
+.whatsapp-cta-box,
+.social-card {
+  border: 1px solid rgba(212, 160, 23, 0.22);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.location-card {
+  padding: 1rem;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.review-card {
+  padding: 1rem;
+}
+
+.review-card.review-featured {
+  border-color: rgba(212, 160, 23, 0.48);
+  background: linear-gradient(180deg, rgba(212, 160, 23, 0.08), rgba(255,255,255,0.02));
 }
