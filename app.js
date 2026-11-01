@@ -186,9 +186,18 @@ const outletsData = {
           { name: "Walaiti Special Noodles", desc: "Wok-tossed noodles with fresh shredded vegetables", price: "₹200", tag: "Popular" },
           { name: "Veg Manchow Soup", desc: "Dark spicy broth with vegetables and crispy fried noodles", price: "₹90" },
           { name: "Lemon Coriander Soup", desc: "Refreshing clear broth with fresh lemon juice & coriander", price: "₹110" },
-          { name: "Veg Salad", desc: "Healthy salad loaded with garden fresh vegetables", price: "₹180" },
-          { name: "Pasta Salad", desc: "Healthy salad infused with vegetables and chilled pasta", price: "₹190" },
-          { name: "High Protein Salad", desc: "Loaded with fresh paneer & legumes (GYM Special)", price: "₹210", tag: "Fitness" }
+          { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
+          { name: "Honey Chilli Potato", desc: "Crisp potato fingers glazed in spicy sweet honey sesame glaze", price: "₹200" },
+          { name: "Cheese Chilli (Dry / Gravy)", desc: "Wok tossed paneer cubes with bell peppers & spicy oriental sauce", price: "₹300", tag: "Best Seller" },
+          { name: "Veg Manchurian (Dry / Gravy)", desc: "Crisp vegetable dumplings tossed in tangy soya garlic gravy", price: "₹180" },
+          { name: "Mushroom Chilli", desc: "Button mushrooms stir-fried with capsicum and spicy chilli sauce", price: "₹200" },
+          { name: "Spring Rolls (2 Pcs)", desc: "Crispy golden fried rolls stuffed with shredded vegetables", price: "₹180" },
+          { name: "Paneer Pops (20 Pcs)", desc: "Bite-sized crunchy paneer nuggets with dipping sauce", price: "₹230" },
+          { name: "Cheese Corn Roll (6 Pcs)", desc: "Crisp rolls packed with gooey sweet corn and mozzarella", price: "₹250" },
+          { name: "Fried Rice / Schezwan Fried Rice", desc: "Wok tossed aromatic basmati rice with veggies / spicy Schezwan", price: "₹100 / ₹110" },
+          { name: "High Protein Salad", desc: "Fresh paneer, boiled legumes, crunchy greens (GYM Special)", price: "₹220", tag: "Fitness" },
+          { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables & herb dressing", price: "₹190" },
+          { name: "Veg Salad", desc: "Garden fresh crispy lettuce, cucumber, tomato & olives", price: "₹180" }
         ]
       },
 
@@ -411,7 +420,8 @@ const outletsData = {
           { name: "Tikki Wrap", desc: "Tortilla, crisp veg patty, onion, lettuce with house sauces", price: "₹150" },
           { name: "Simply Veg Sub", desc: "Onion, cucumber, tomato, corn, capsicum, lettuce, mozzarella cheese", price: "₹150" },
           { name: "Veg Tikki Sub", desc: "Veg patty, onion, cucumber, tomato, corn, capsicum, lettuce, mozzarella", price: "₹160" },
-          { name: "Paneer Tikka Sub", desc: "Marinated paneer, onion, cucumber, tomato, corn, capsicum, lettuce, mozzarella", price: "₹170" }
+          { name: "Paneer Tikka Sub", desc: "Marinated paneer, onion, cucumber, tomato, corn, capsicum, lettuce, mozzarella", price: "₹170" },
+          { name: "Add Cheese Slice", desc: "Extra cheese slice for burgers, sandwiches, wraps & subs", price: "₹20" }
         ]
       },
 
@@ -426,6 +436,9 @@ const outletsData = {
           { name: "Peri Peri V Crisper (M / L)", desc: "V-cut crunchy potato crispers in peri peri seasoning", price: "M: ₹180 | L: ₹200" },
           { name: "Cheesy V Crisper (M / L)", desc: "V-cut potato crispers loaded with warm cheese sauce", price: "M: ₹180 | L: ₹200" },
           { name: "Walaiti Special Noodles", desc: "Chef's signature wok-tossed noodles with garden vegetables", price: "₹250", tag: "Popular" },
+          { name: "Veg Manchow Soup", desc: "Dark spicy broth with vegetables and crispy fried noodles", price: "₹100" },
+          { name: "Lemon Coriander Soup", desc: "Refreshing clear broth with fresh lemon juice & coriander", price: "₹110" },
+          { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
           { name: "Honey Chilli Potato", desc: "Crisp potato fingers glazed in spicy sweet honey sesame glaze", price: "₹200" },
           { name: "Cheese Chilli (Dry / Gravy)", desc: "Wok tossed paneer cubes with bell peppers & spicy oriental sauce", price: "₹300", tag: "Best Seller" },
           { name: "Veg Manchurian (Dry / Gravy)", desc: "Crisp vegetable dumplings tossed in tangy soya garlic gravy", price: "₹180" },
@@ -465,6 +478,7 @@ const outletsData = {
         type: "cards",
         title: "Frappes (Model Town Exclusive)",
         items: [
+          { name: "Classic Cold Coffee", desc: "A delightful blend of rich espresso, creamy milk, and ice cream served for a refreshing, indulgent treat", price: "₹159" },
           { name: "Choco Frappe", desc: "A creamy blend of rich chocolate and coffee, topped with ice cream", price: "₹199" },
           { name: "Caramel Frappe", desc: "A delightful blend of ice cream and cold coffee, infused with rich caramel", price: "₹199" },
           { name: "Hazelnut Frappe", desc: "A deliciously blended ice cream coffee drink infused with rich hazelnut flavor", price: "₹199" },
