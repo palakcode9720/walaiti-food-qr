@@ -185,10 +185,9 @@ const outletsData = {
           { name: "Walaiti Special Noodles", desc: "Wok-tossed noodles with fresh shredded vegetables", price: "₹200", tag: "Popular" },
           { name: "Veg Manchow Soup", desc: "Dark spicy broth with vegetables and crispy fried noodles", price: "₹90" },
           { name: "Lemon Coriander Soup", desc: "Refreshing clear broth with fresh lemon juice & coriander", price: "₹110" },
-          { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
-          { name: "Veg Salad", desc: "Fresh garden salad with crunchy vegetables and herbs", price: "₹180" },
-          { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables and dressing", price: "₹190" },
-          { name: "High Protein Salad", desc: "Protein-rich salad with paneer, legumes and fresh greens", price: "₹210" }
+          { name: "Veg Salad", desc: "Healthy salad loaded with garden fresh vegetables", price: "₹180" },
+          { name: "Pasta Salad", desc: "Healthy salad infused with vegetables and chilled pasta", price: "₹190" },
+          { name: "High Protein Salad", desc: "Loaded with fresh paneer & legumes (GYM Special)", price: "₹210", tag: "Fitness" }
         ]
       },
 
