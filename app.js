@@ -669,7 +669,7 @@ function selectOutlet(outletKey) {
   }
 
   buildCategoryTabs(data.categories);
-  currentCategory = data.categories[0].id;
+  currentCategory = '';
   isCategoryDetailOpen = false;
   const searchInput = document.getElementById('menuSearchInput');
   if (searchInput) searchInput.value = '';
@@ -682,7 +682,7 @@ function buildCategoryTabs(categories) {
   if (!scrollContainer) return;
 
   scrollContainer.innerHTML = categories.map((cat, idx) => `
-    <button class="menu-cat-btn ${idx === 0 ? 'active' : ''}" data-category="${cat.id}">
+    <button class="menu-cat-btn ${idx === 0 && currentCategory ? 'active' : ''}" data-category="${cat.id}">
       <div class="menu-cat-thumb">
         <img src="${getCategoryImage(cat.id)}" alt="${cat.name}" />
       </div>
@@ -825,6 +825,7 @@ function renderDigitalItems() {
   const detailHeader = `
     <div class="category-detail-page">
       <div class="category-detail-head">
+       
         <button class="category-back-btn" type="button" id="categoryBackBtn">
           <i class="fa-solid fa-arrow-left"></i> Back to menu
         </button>
