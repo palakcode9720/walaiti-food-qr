@@ -3150,3 +3150,214 @@ img {
         grid-template-columns: minmax(0, 1fr) 120px !important;
     }
 }
+
+/* ======================================
+   BURGERS, SANDWICHES, WRAPS & SUBWRAPS
+====================================== */
+
+.food-category-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.food-subsection {
+    padding: 17px;
+    background: linear-gradient(145deg, #FFFDF8, #F3EBDD);
+    border: 2px solid #D1A84F;
+    border-radius: 23px;
+    box-shadow: 0 7px 20px rgba(150, 110, 25, 0.08);
+}
+
+/* Individual section heading */
+.food-subsection-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding-bottom: 14px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #D1A84F;
+}
+
+.food-subsection-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    background: #211D14;
+    color: #E5B84F;
+    border: 1px solid #D1A84F;
+    border-radius: 13px;
+    font-size: 18px;
+}
+
+.food-subsection-heading h3 {
+    margin: 0;
+    color: #171717;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.food-subsection-heading p {
+    margin: 4px 0 0;
+    color: #946B12;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Food item cards */
+.food-subsection .menu-standard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.food-subsection .menu-standard-row {
+    padding: 14px;
+    background: #FFFFFF;
+    border: 1.5px solid #E0C477;
+    border-radius: 15px;
+    gap: 12px;
+    box-shadow: 0 3px 10px rgba(150, 110, 25, 0.05);
+}
+
+.food-subsection .menu-standard-name {
+    color: #171717;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.food-subsection .menu-standard-desc {
+    color: #55504A;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 6px;
+}
+
+.food-subsection .menu-standard-price-box {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    background: #FFF4D8;
+    border: 1px solid #D1A84F;
+    border-radius: 11px;
+    color: #946B12;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .food-category-groups {
+        gap: 17px;
+        margin-top: 15px;
+    }
+
+    .food-subsection {
+        padding: 12px;
+        border-radius: 19px;
+    }
+
+    .food-subsection-heading {
+        gap: 10px;
+        padding-bottom: 11px;
+        margin-bottom: 12px;
+    }
+
+    .food-subsection-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .food-subsection-heading h3 {
+        font-size: 17px;
+    }
+
+    .food-subsection .menu-standard-row {
+        padding: 11px;
+        gap: 8px;
+    }
+
+    .food-subsection .menu-standard-name {
+        font-size: 13px;
+    }
+
+    .food-subsection .menu-standard-desc {
+        font-size: 11px;
+    }
+
+    .food-subsection .menu-standard-price-box {
+        padding: 7px 9px;
+        font-size: 12px;
+    }
+}
+.food-category-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.food-subsection {
+  width: 100%;
+}
+
+.food-subsection-heading {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--text-color);
+  padding: 0 0 10px;
+  margin: 0 0 12px;
+  border-bottom: 2px solid #c9a45c;
+}
+
+.food-subsection .menu-standard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.food-subsection .menu-standard-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px;
+  border: 1px solid #c9a45c;
+  border-radius: 13px;
+  background: var(--card-bg);
+}
+
+.menu-standard-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.menu-standard-name {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.menu-standard-desc {
+  font-size: 12px;
+  margin-top: 4px;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
+.menu-standard-price-box {
+  font-weight: 800;
+  white-space: nowrap;
+  color: #b58b3b;
+}
+
+@media (max-width: 600px) {
+  .food-subsection-heading {
+    font-size: 17px;
+  }
+
+  .food-subsection .menu-standard-row {
+    padding: 11px;
+  }
+}

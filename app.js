@@ -705,7 +705,7 @@ function buildCategoryTabs(categories) {
   if (!scrollContainer) return;
 
   scrollContainer.innerHTML = categories.map((cat, idx) => `
-    <button class="menu-cat-btn ${idx === 0 && currentCategory ? 'active' : ''}" data-category="${cat.id}">
+    <button class="menu-cat-btn ${cat.id === currentCategory ? 'active' : ''}" data-category="${cat.id}">
       <div class="menu-cat-thumb">
         <img src="${getCategoryImage(cat.id)}" alt="${cat.name}" />
       </div>
@@ -775,6 +775,42 @@ function renderItemPrice(item) {
   }
   return `₹${item.r || item.m || item.l || 0}`;
 }
+function renderBurgerSubcategories(items) {
+  const groups = [
+    { title: "Burgers", start: 0, end: 8 },
+    { title: "Sandwiches", start: 8, end: 16 },
+    { title: "Wraps", start: 16, end: 21 },
+    { title: "Subwraps & Subs", start: 21, end: 24 }
+  ];
+
+  return `
+    <div class="food-category-groups">
+      ${groups.map(group => {
+        const groupItems = items.slice(group.start, group.end);
+
+        if (!groupItems.length) return '';
+
+        return `
+          <section class="food-subsection">
+            <h3 class="food-subsection-heading">${group.title}</h3>
+            <div class="menu-standard-list">
+              ${groupItems.map(item => `
+                <div class="menu-standard-row">
+                  <div class="menu-standard-info">
+                    <div class="menu-standard-name">${item.name}</div>
+                    ${item.desc ? `<div class="menu-standard-desc">${item.desc}</div>` : ''}
+                    ${item.tag ? `<span class="item-tag">${item.tag}</span>` : ''}
+                  </div>
+                  <div class="menu-standard-price-box">${item.price || ''}</div>
+                </div>
+              `).join('')}
+            </div>
+          </section>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
 
 function renderDigitalItems() {
   const container = document.getElementById('digitalItemsContainer');
@@ -817,14 +853,15 @@ function renderDigitalItems() {
       .filter(Boolean);
 
     if (!groupedMatches.length) {
-      container.innerHTML = `
-        <div class="empty-search-state">
-
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <p>No item matches “${currentSearchTerm}”. Try a different name or category.</p>
-      `;
-      return;
-    }
+  container.innerHTML = `
+    <div class="empty-search-state">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <p>No item matches “${currentSearchTerm}”. Try a different name or category.</p>
+    </div>
+  `;
+  return;
+}
+  
 
     container.innerHTML = `
       <div class="search-results-wrap">
@@ -858,9 +895,9 @@ function renderDigitalItems() {
   }
 
   if (!section) {
-    container.innerHTML = '<p style="text-align:center; padding:2rem; color:#888;">Select a category above.</p>';
-    return;
-  }
+  container.innerHTML = '<p style="text-align:center; padding:2rem; color:#888;">Select a category above.</p>';
+  return;
+}
 
   const detailHeader = `
     <div class="category-detail-page">
@@ -876,7 +913,7 @@ function renderDigitalItems() {
         <div>
           <span class="section-label">Category</span>
           <h3 class="category-detail-title">${sectionTitle}</h3>
-        </div>
+        
       </div>
   `;
 
@@ -898,6 +935,27 @@ function renderDigitalItems() {
       button.onclick = handleBackToMenu;
     });
   };
+  
+
+// PASTE THE NEW GROUPING CODE HERE
+
+// FIRST: Check whether the selected category is burgers
+if (
+  currentCategory === 'an_burgers' ||
+  currentCategory === 'mt_burgers'
+) {
+  container.innerHTML = `
+    ${detailHeader}
+    ${renderBurgerSubcategories(section.items || [])}
+    ${detailFooter}
+  `;
+
+  bindBackButtons();
+  return;
+}
+
+// SECOND: Check whether the selected category is a pizza table
+
 
   if (section.type === 'pizza_table') {
     const items = section.items;
@@ -1326,3 +1384,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   selectOutlet('modelTown');
 });
+setupPanelNavigation();
