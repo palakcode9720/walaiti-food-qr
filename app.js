@@ -557,7 +557,6 @@ const outletsData = {
           { name: "Lemon Tea", price: "₹60" },
           { name: "Mint Tea", price: "₹60" },
           { name: "Hibiscus Tea", price: "₹60" },
-          { name: "Honey Tea", price: "₹60" },
           { name: "Cardamom Tea", price: "₹60" },
           { name: "Vanilla Tea", price: "₹90" }
         ]
