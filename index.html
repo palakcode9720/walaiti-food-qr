@@ -5,6 +5,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Walaiti Food – Pizza & Café | Official Digital Menu</title>
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        const theme = savedTheme === 'dark' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        if (!savedTheme) localStorage.setItem('theme', theme);
+      } catch (error) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css" />
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -413,7 +425,7 @@
 
     <div class="qr-home-card">
       <div class="qr-home-img-wrapper">
-        <img src="walaiti_table_standee.png" alt="Walaiti Food Table Standee QR Card" class="qr-standee-img" />
+        <img src="walaiti_qr_code_logo.png" alt="Walaiti Food Official QR Code with logo" class="qr-standee-img" />
       </div>
 
       <div class="qr-home-details">
@@ -432,8 +444,8 @@
           <a href="walaiti_table_standee.png" download="walaiti-food-table-standee.png" class="btn btn-gold">
             <i class="fa-solid fa-download"></i> Download Table Standee Card
           </a>
-          <a href="walaiti_qr_code.png" download="walaiti-food-qr-code.png" class="btn btn-outline-gold">
-            <i class="fa-solid fa-qrcode"></i> Download QR Code Only
+          <a href="walaiti_qr_code_logo.png" download="walaiti-food-qr-code-logo.png" class="btn btn-outline-gold">
+            <i class="fa-solid fa-qrcode"></i> Download Branded QR Code
           </a>
           <a href="generate-qr.html" class="btn btn-gold-sm">
             <i class="fa-solid fa-expand"></i> Full Standee Page &amp; Print
