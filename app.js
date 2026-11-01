@@ -175,8 +175,8 @@ const outletsData = {
           { name: "Peri Peri Fries", desc: "Tossed with fiery peri peri seasoning", price: "₹90" },
           { name: "Peri Peri Cheesy Fries", desc: "Peri peri fries drenched with hot cheese drizzle", price: "₹99", tag: "Hot" },
           { name: "Cheese Masala Fries", desc: "Crisp fries seasoned with chatpata masala & cheese", price: "₹99" },
-          { name: "Peri Peri V Crisper (M / L)", desc: "V-cut crunchy potato crispers in peri peri seasoning", price: "M: ₹150 | L: ₹170" },
-          { name: "Cheesy V Crisper (M / L)", desc: "V-cut potato crispers with warm cheese drizzle", price: "M: ₹170 | L: ₹190" },
+          { name: "Peri Peri V Crisper", desc: "V-cut crunchy potato crispers in peri peri seasoning", price: "₹180" },
+          { name: "Cheesy V Crisper", desc: "V-cut potato crispers loaded with warm cheese sauce", price: "₹200" },
           { name: "Manchurian (Dry / Gravy)", desc: "Crispy veg balls in tangy indo-chinese gravy", price: "₹220" },
           { name: "Cheese Chilli (Dry / Gravy)", desc: "Paneer cubes tossed with bell peppers & spicy sauce", price: "₹280", tag: "Best Seller" },
           { name: "Honey Chilli Potato", desc: "Crispy sesame coated potatoes glazed in spicy honey", price: "₹200" },
@@ -433,8 +433,8 @@ const outletsData = {
           { name: "Peri Peri Fries", desc: "Crispy fries tossed with fiery African peri peri seasoning", price: "₹180" },
           { name: "Peri Peri Cheesy Fries", desc: "Peri peri fries drenched in warm melted cheese sauce", price: "₹200", tag: "Hot" },
           { name: "Cheese Masala Fries", desc: "Crispy fries seasoned with chatpata masala & cheese", price: "₹200" },
-          { name: "Peri Peri V Crisper (M / L)", desc: "V-cut crunchy potato crispers in peri peri seasoning", price: "M: ₹180 | L: ₹200" },
-          { name: "Cheesy V Crisper (M / L)", desc: "V-cut potato crispers loaded with warm cheese sauce", price: "M: ₹180 | L: ₹200" },
+          { name: "Peri Peri V Crisper", desc: "V-cut crunchy potato crispers in peri peri seasoning", price: "₹180" },
+          { name: "Cheesy V Crisper", desc: "V-cut potato crispers loaded with warm cheese sauce", price: "₹200" },
           { name: "Walaiti Special Noodles", desc: "Chef's signature wok-tossed noodles with garden vegetables", price: "₹220", tag: "Popular" },
           { name: "Veg Manchow Soup", desc: "Dark spicy broth with vegetables and crispy fried noodles", price: "₹100" },
           { name: "Lemon Coriander Soup", desc: "Refreshing clear broth with fresh lemon juice & coriander", price: "₹110" },
@@ -525,12 +525,11 @@ const outletsData = {
           { name: "Hazelnut Hot Chocolate", desc: "Rich cocoa with warm hazelnut notes.", price: "₹159" }
         ],
         addons: [
-          { name: "Extra Shot", price: "₹30", desc: "Add an extra espresso shot for more strength." },
-          { name: "Oreo Crumble", price: "₹30", desc: "Crunchy Oreo topping for your coffee." },
-          { name: "Hazelnut Syrup", price: "₹30", desc: "Add a nutty hazelnut finish to any coffee." },
-          { name: "Caramel Syrup", price: "₹30", desc: "Sweet caramel drizzle for extra richness." },
-          { name: "Vanilla Flavour", price: "₹30", desc: "Smooth vanilla flavour boost." },
-          { name: "Chocolate Drizzle", price: "₹30", desc: "A rich chocolate drizzle on top." }
+          { name: "Vanilla", price: "₹30", desc: "Smooth vanilla flavour boost." },
+          { name: "Irish", price: "₹30", desc: "Classic Irish-inspired coffee flavour." },
+          { name: "Hazelnut", price: "₹30", desc: "Add a nutty hazelnut finish to any coffee." },
+          { name: "Caramel", price: "₹30", desc: "Sweet caramel drizzle for extra richness." },
+          { name: "Honey", price: "₹30", desc: "A smooth honey touch for a sweeter cup." }
         ]
       },
 
@@ -806,7 +805,6 @@ function renderDigitalItems() {
 
           <i class="fa-solid fa-magnifying-glass"></i>
           <p>No item matches “${currentSearchTerm}”. Try a different name or category.</p>
-        </div>
       `;
       return;
     }
