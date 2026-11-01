@@ -2184,3 +2184,27 @@ img {
     align-items: flex-start;
   }
 }
+
+button,
+.btn,
+.feature-food-card,
+.location-card,
+.review-card,
+.social-card,
+.stat,
+.menu-page-thumbnail,
+.item-card,
+.menu-standard-row,
+.pizza-row,
+.search-results-group,
+.page-panel,
+.footer,
+.nav-pill,
+.menu-cat-btn,
+.category-detail-head,
+.category-back-btn,
+.theme-toggle-btn,
+.dashboard-primary-btn,
+.dashboard-secondary-btn {
+  border: 1.5px solid rgba(212, 160, 23, 0.32);
+}
