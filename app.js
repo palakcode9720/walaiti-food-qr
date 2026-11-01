@@ -754,6 +754,21 @@ function getCategoryDisplayName(catId, fallback = 'Menu') {
   return match ? match.name : fallback;
 }
 
+function renderItemPrice(item) {
+  if (item.customPrice) return item.customPrice;
+  if (item.price) return item.price;
+  if (item.r !== undefined && item.m !== undefined && item.l !== undefined) {
+    return `
+      <div class="pizza-prices">
+        <span class="price-val">₹${item.r}</span>
+        <span class="price-val">₹${item.m}</span>
+        <span class="price-val">₹${item.l}</span>
+      </div>
+    `;
+  }
+  return `₹${item.r || item.m || item.l || 0}`;
+}
+
 function renderDigitalItems() {
   const container = document.getElementById('digitalItemsContainer');
   const categoryStrip = document.querySelector('.menu-categories-scroll');
@@ -817,7 +832,7 @@ function renderDigitalItems() {
                     <h4 class="item-title">${item.name}</h4>
                     <p class="item-desc">${item.desc}</p>
                     <div class="item-bottom">
-                      <span class="item-price">${item.price || (item.customPrice || `₹${item.r}`)}</span>
+                      <span class="item-price">${renderItemPrice(item)}</span>
                       <a href="https://wa.me/${outlet.waPhone}?text=Hi%20Walaiti%20Food%20(${encodeURIComponent(outlet.name)}),%20I%20would%20like%20to%20order%20${encodeURIComponent(item.name)}" target="_blank" class="order-wa-btn">
                         <i class="fa-brands fa-whatsapp"></i> Order
                       </a>
