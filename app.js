@@ -163,7 +163,8 @@ const outletsData = {
           { name: "Spicy Paneer Wrap", desc: "Tortilla rolled with fiery spiced paneer and sauces", price: "₹190" },
           { name: "Simply Veg Subwrap", desc: "Fresh subwrap loaded with garden veggies and mozzarella", price: "₹140" },
           { name: "Veg Tikki Subwrap", desc: "Fresh subwrap with spiced veg patty and dressings", price: "₹150" },
-          { name: "Paneer Tikka Subwrap", desc: "Fresh subwrap stuffed with tandoori paneer tikka (Add Cheese +₹20)", price: "₹160" }
+          { name: "Paneer Tikka Subwrap", desc: "Fresh subwrap stuffed with tandoori paneer tikka", price: "₹160" },
+          { name: "Add Cheese Slice", desc: "Extra cheese slice for burgers, sandwiches, wraps & subwraps", price: "₹20" }
         ]
       },
 
@@ -171,10 +172,10 @@ const outletsData = {
         type: "cards",
         title: "Snacks, Chinese & Salads",
         items: [
-          { name: "French Fries", desc: "Golden salted crispy fries", price: "₹80" },
-          { name: "Peri Peri Fries", desc: "Tossed with fiery peri peri seasoning", price: "₹90" },
-          { name: "Peri Peri Cheesy Fries", desc: "Peri peri fries drenched with hot cheese drizzle", price: "₹99", tag: "Hot" },
-          { name: "Cheese Masala Fries", desc: "Crisp fries seasoned with chatpata masala & cheese", price: "₹99" },
+          { name: "French Fries", desc: "Golden salted crispy fries (M: ₹80 | L: ₹150)", price: "₹80" },
+          { name: "Peri Peri Fries", desc: "Tossed with fiery peri peri seasoning (M: ₹90 | L: ₹170)", price: "₹90" },
+          { name: "Peri Peri Cheesy Fries", desc: "Peri peri fries drenched with hot cheese drizzle (M: ₹99 | L: ₹190)", price: "₹99", tag: "Hot" },
+          { name: "Cheese Masala Fries", desc: "Crisp fries seasoned with chatpata masala & cheese (M: ₹99 | L: ₹190)", price: "₹99" },
           { name: "Peri Peri V Crisper", desc: "V-cut crunchy potato crispers in peri peri seasoning", price: "₹170" },
           { name: "Cheesy V Crisper", desc: "V-cut potato crispers loaded with warm cheese sauce", price: "₹190" },
           { name: "Manchurian (Dry / Gravy)", desc: "Crispy veg balls in tangy indo-chinese gravy", price: "₹220" },
@@ -420,7 +421,7 @@ const outletsData = {
           { name: "Simply Veg Sub", desc: "Onion, cucumber, tomato, corn, capsicum, lettuce, mozzarella cheese", price: "₹140" },
           { name: "Veg Tikki Sub", desc: "Veg patty, onion, cucumber, tomato, corn, capsicum, lettuce, mozzarella", price: "₹150" },
           { name: "Paneer Tikka Sub", desc: "Marinated paneer, onion, cucumber, tomato, corn, capsicum, lettuce, mozzarella", price: "₹160" },
-          { name: "Add Cheese Slice", desc: "Extra cheese slice for burgers, sandwiches, wraps & subs", price: "₹20" }
+          { name: "Add Cheese Slice", desc: "Extra cheese slice for burgers, sandwiches, wraps & subwraps", price: "₹20" }
         ]
       },
 
@@ -827,7 +828,7 @@ function renderDigitalItems() {
                         <i class="fa-brands fa-whatsapp"></i> Order
                       </a>
                     </div>
-                  </div>
+                                   </div>
                 </div>
               `).join('')}
             </div>
