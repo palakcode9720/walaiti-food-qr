@@ -1440,3 +1440,156 @@ img {
 .compact-home-grid .feature-food-card:nth-child(8n) {
   margin-right: 0;
 }
+
+/* ============================================================
+  PREMIUM PIZZA MENU TABLE
+   ============================================================ */
+
+.pizza-table-wrapper {
+  margin-top: 0.6rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(212, 160, 23, 0.25);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.pizza-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  background: rgba(212, 160, 23, 0.08);
+  border-bottom: 1px solid rgba(212, 160, 23, 0.25);
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pizza-size-cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(70px, 1fr));
+  gap: 0.5rem;
+  min-width: 220px;
+  text-align: center;
+}
+
+.pizza-list {
+  display: grid;
+  gap: 0.7rem;
+  padding: 0.7rem;
+}
+
+.pizza-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(212, 160, 23, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.pizza-info {
+  flex: 1;
+  min-width: 0;
+  padding-right: 0.5rem;
+}
+
+.pizza-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3rem;
+}
+
+.pizza-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.35;
+}
+
+.pizza-desc {
+  margin: 0;
+  color: var(--gray-light);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.single-item-price {
+  display: inline-flex;
+  margin-top: 0.6rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 160, 23, 0.3);
+  background: rgba(212, 160, 23, 0.08);
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.pizza-prices {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(70px, 1fr));
+  gap: 0.5rem;
+  min-width: 220px;
+}
+
+.price-val {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.pizza-custom-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  min-height: 52px;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+@media (max-width: 680px) {
+  .pizza-table-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+
+  .pizza-size-cols,
+  .pizza-prices,
+  .pizza-custom-price {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .pizza-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pizza-prices {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
