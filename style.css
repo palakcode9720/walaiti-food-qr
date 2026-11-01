@@ -64,7 +64,7 @@
   --text-muted: #666666;
   --line: rgba(18, 18, 18, 0.08);
   --line-strong: rgba(198, 136, 16, 0.25);
-  --card-bg: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(242,236,223,0.9));
+  --card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(242, 236, 223, 0.9));
   --shadow-gold: 0 8px 25px rgba(198, 136, 16, 0.16);
 }
 
@@ -270,6 +270,7 @@ img {
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
+
 .quick-nav::-webkit-scrollbar {
   display: none;
 }
@@ -331,7 +332,7 @@ img {
 
 .menu-cat-btn:hover,
 .menu-cat-btn.active {
-  background: linear-gradient(135deg, rgba(212, 160, 23, 0.16), rgba(255,255,255,0.03));
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.16), rgba(255, 255, 255, 0.03));
   border-color: rgba(212, 160, 23, 0.45);
   color: var(--white);
   transform: translateY(-1px);
@@ -351,8 +352,8 @@ img {
   padding: 0.9rem 0.85rem;
   border-radius: 18px;
   border: 1px solid rgba(212, 160, 23, 0.3);
-  background: linear-gradient(135deg, rgba(212, 160, 23, 0.12), rgba(255,255,255,0.02));
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.12), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 .category-back-btn {
@@ -361,7 +362,7 @@ img {
   justify-content: center;
   gap: 0.5rem;
   border: 1px solid rgba(212, 160, 23, 0.35);
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   color: var(--white);
   border-radius: 999px;
   padding: 0.7rem 0.9rem;
@@ -383,7 +384,7 @@ img {
   border-radius: 18px;
   overflow: hidden;
   border: 2px solid rgba(212, 160, 23, 0.35);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
 }
 
 .category-detail-badge img {
@@ -492,8 +493,8 @@ img {
   text-align: left;
   padding: 0.85rem 0.95rem;
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
   color: var(--text);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -505,7 +506,7 @@ img {
 }
 
 .outlet-btn.active {
-  background: linear-gradient(135deg, rgba(212, 160, 23, 0.18), rgba(255,255,255,0.03));
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.18), rgba(255, 255, 255, 0.03));
   border-color: rgba(212, 160, 23, 0.5);
   box-shadow: 0 10px 22px rgba(212, 160, 23, 0.12);
 }
@@ -516,7 +517,7 @@ img {
   border-radius: 14px;
   display: grid;
   place-items: center;
-  background: rgba(212,160,23,0.12);
+  background: rgba(212, 160, 23, 0.12);
   color: var(--gold-light);
   font-size: 1rem;
   flex-shrink: 0;
@@ -545,9 +546,9 @@ img {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.8rem 0.9rem;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255, 255, 255, 0.02);
   margin-bottom: 1rem;
 }
 
@@ -589,7 +590,7 @@ img {
   overflow: hidden;
   flex-shrink: 0;
   border: 2px solid rgba(212, 160, 23, 0.24);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .menu-cat-thumb img {
@@ -606,7 +607,7 @@ img {
 
 .menu-cat-btn:hover,
 .menu-cat-btn.active {
-  background: linear-gradient(135deg, rgba(212, 160, 23, 0.16), rgba(255,255,255,0.03));
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.16), rgba(255, 255, 255, 0.03));
   border-color: rgba(212, 160, 23, 0.45);
   color: var(--white);
   transform: translateY(-1px);
@@ -626,8 +627,8 @@ img {
   padding: 0.9rem 0.85rem;
   border-radius: 18px;
   border: 1px solid rgba(212, 160, 23, 0.3);
-  background: linear-gradient(135deg, rgba(212, 160, 23, 0.12), rgba(255,255,255,0.02));
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.12), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 .category-back-btn {
@@ -636,7 +637,7 @@ img {
   justify-content: center;
   gap: 0.5rem;
   border: 1px solid rgba(212, 160, 23, 0.35);
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   color: var(--white);
   border-radius: 999px;
   padding: 0.7rem 0.9rem;
@@ -658,7 +659,7 @@ img {
   border-radius: 18px;
   overflow: hidden;
   border: 2px solid rgba(212, 160, 23, 0.35);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
 }
 
 .category-detail-badge img {
@@ -771,8 +772,8 @@ img {
   text-align: left;
   padding: 0.85rem 0.95rem;
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
   color: var(--text);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -784,7 +785,7 @@ img {
 }
 
 .outlet-btn.active {
-  background: linear-gradient(135deg, rgba(212, 160, 23, 0.18), rgba(255,255,255,0.03));
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.18), rgba(255, 255, 255, 0.03));
   border-color: rgba(212, 160, 23, 0.5);
   box-shadow: 0 10px 22px rgba(212, 160, 23, 0.12);
 }
@@ -795,7 +796,7 @@ img {
   border-radius: 14px;
   display: grid;
   place-items: center;
-  background: rgba(212,160,23,0.12);
+  background: rgba(212, 160, 23, 0.12);
   color: var(--gold-light);
   font-size: 1rem;
   flex-shrink: 0;
@@ -824,9 +825,9 @@ img {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.8rem 0.9rem;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255, 255, 255, 0.02);
   margin-bottom: 1rem;
 }
 
@@ -868,7 +869,7 @@ img {
   overflow: hidden;
   flex-shrink: 0;
   border: 2px solid rgba(212, 160, 23, 0.24);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .menu-cat-thumb img {
@@ -885,7 +886,7 @@ img {
 
 .menu-cat-btn:hover,
 .menu-cat-btn.active {
-  background: linear-gradient(135deg, rgba(212, 160, 23, 0.16), rgba(255,255,255,0.03));
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.16), rgba(255, 255, 255, 0.03));
   border-color: rgba(212, 160, 23, 0.45);
   color: var(--white);
   transform: translateY(-1px);
@@ -905,8 +906,8 @@ img {
   padding: 0.9rem 0.85rem;
   border-radius: 18px;
   border: 1px solid rgba(212, 160, 23, 0.3);
-  background: linear-gradient(135deg, rgba(212, 160, 23, 0.12), rgba(255,255,255,0.02));
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.12), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 .category-back-btn {
@@ -915,7 +916,7 @@ img {
   justify-content: center;
   gap: 0.5rem;
   border: 1px solid rgba(212, 160, 23, 0.35);
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   color: var(--white);
   border-radius: 999px;
   padding: 0.7rem 0.9rem;
@@ -937,7 +938,7 @@ img {
   border-radius: 18px;
   overflow: hidden;
   border: 2px solid rgba(212, 160, 23, 0.35);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
 }
 
 .category-detail-badge img {
@@ -1123,27 +1124,15 @@ img {
     font-size: 0.82rem;
   }
 
- 
-/* REVIEW STATISTICS */
 
-.reviews-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  padding: 30px;
-  margin: 24px 0 35px;
-  border: 3px solid #E5D3A0;
-  border-radius: 35px;
-  background: #F6F0E4;
-}
 
-.reviews-stats > * {
-  border: 3px solid #D1A84F;
-  border-radius: 28px;
-  padding: 22px 12px;
-  text-align: center;
-  background: #F5EFE3;
-}
+  /* FIX REVIEWS STATISTICS */
+
+
+  /* FIX REVIEWS STATS - REMOVE RECTANGULAR CONTAINER */
+
+  
+  }
 
   .stat-divider {
     display: none;
@@ -1172,7 +1161,106 @@ img {
     width: 100%;
     justify-content: center;
   }
+
+/* =====================================
+   MOBILE-FIRST REVIEWS STATISTICS
+===================================== */
+
+#reviews .reviews-stats {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 20px auto 30px !important;
+
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
 }
+
+/* Individual statistic cards */
+#reviews .reviews-stats .stat {
+    display: grid !important;
+    grid-template-columns: 85px 1fr !important;
+    grid-template-areas:
+        "number stars"
+        "number label" !important;
+
+    align-items: center !important;
+    justify-items: start !important;
+    gap: 3px 12px !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+
+    padding: 16px !important;
+    margin: 0 !important;
+
+    background: linear-gradient(
+        135deg,
+        #242016 0%,
+        #100F0C 100%
+    ) !important;
+
+    border: 2px solid #D1A84F !important;
+    border-radius: 22px !important;
+
+    box-shadow: 0 5px 16px rgba(209, 168, 79, 0.12) !important;
+}
+
+/* Statistics number */
+#reviews .reviews-stats .stat-num {
+    grid-area: number !important;
+    color: #F4D17A !important;
+    font-size: 29px !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+}
+
+/* Stars */
+#reviews .reviews-stats .stat-stars {
+    grid-area: stars !important;
+    color: #E0AD32 !important;
+    margin: 0 !important;
+    font-size: 17px !important;
+}
+
+/* Labels */
+#reviews .reviews-stats .stat-label {
+    grid-area: label !important;
+    color: #F5EBD5 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+/* Remove dividers and outer decorations */
+#reviews .reviews-stats .stat-divider,
+#reviews .reviews-stats::before,
+#reviews .reviews-stats::after {
+    display: none !important;
+}
+
+/* Desktop: three cards side by side */
+@media (min-width: 768px) {
+    #reviews .reviews-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+    }
+
+    #reviews .reviews-stats .stat {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 24px 12px !important;
+    }
+}
+
 
 /* ============================================================
   LAYOUT AND SEARCH STYLING
@@ -1246,8 +1334,8 @@ img {
 .item-card {
   min-height: 210px;
   border: 1px solid rgba(212, 160, 23, 0.26);
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
 .item-card-body {
@@ -1255,7 +1343,7 @@ img {
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  border-top: 1px solid rgba(212,160,23,0.12);
+  border-top: 1px solid rgba(212, 160, 23, 0.12);
 }
 
 .item-title {
@@ -1285,13 +1373,13 @@ img {
   gap: 0.8rem;
   margin-top: 1rem;
   padding-top: 0.8rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .order-wa-btn {
   flex-shrink: 0;
   border: 1px solid rgba(37, 211, 102, 0.35);
-  box-shadow: inset 0 0 0 1px rgba(37,211,102,0.06);
+  box-shadow: inset 0 0 0 1px rgba(37, 211, 102, 0.06);
 }
 
 .menu-view-container {
@@ -1337,7 +1425,7 @@ img {
   border: 1px solid rgba(212, 160, 23, 0.2);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.02);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
 }
 
 .view-mode-label {
@@ -1372,7 +1460,7 @@ img {
 
 .view-mode-btn.active,
 .view-mode-btn:hover {
-  background: linear-gradient(135deg, rgba(212,160,23,0.2), rgba(255,255,255,0.03));
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.2), rgba(255, 255, 255, 0.03));
   border-color: rgba(212, 160, 23, 0.5);
   color: var(--white);
   box-shadow: 0 8px 16px rgba(212, 160, 23, 0.1);
@@ -1389,14 +1477,13 @@ img {
 .review-card {
   border: 3px solid #D1A84F;
   border-radius: 36px;
-  background: linear-gradient(
-    180deg,
-    #FFFFFF 0%,
-    #F3EDE1 100%
-  );
+  background: linear-gradient(180deg,
+      #FFFFFF 0%,
+      #F3EDE1 100%);
   box-shadow: 0 8px 22px rgba(150, 110, 25, 0.10);
   color: #242424;
 }
+
 .location-card {
   padding: 30px;
 }
@@ -1408,12 +1495,11 @@ img {
 
 .review-card.review-featured {
   border: 3px solid #D1A84F;
-  background: linear-gradient(
-    180deg,
-    #F8F0DD 0%,
-    #F0E7D4 100%
-  );
+  background: linear-gradient(180deg,
+      #F8F0DD 0%,
+      #F0E7D4 100%);
 }
+
 .whatsapp-cta-box,
 .social-card {
   display: flex;
@@ -1422,12 +1508,10 @@ img {
   padding: 1.15rem 1.1rem;
   border: 1.5px solid rgba(212, 160, 23, 0.32);
   border-radius: 24px;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.04),
-    rgba(255,255,255,0.015)
-  );
-  box-shadow: 0 14px 32px rgba(0,0,0,0.07);
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.015));
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.07);
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -1435,6 +1519,7 @@ img {
   transform: translateY(-3px);
   border-color: rgba(212, 160, 23, 0.6);
 }
+
 .social-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1450,7 +1535,7 @@ img {
   place-items: center;
   font-size: 1.5rem;
   color: var(--white);
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .social-insta .social-icon {
@@ -1489,7 +1574,7 @@ img {
   border: 1.5px solid rgba(212, 160, 23, 0.28);
   border-radius: 24px;
   background: var(--card-bg);
-  box-shadow: 0 16px 32px rgba(0,0,0,0.06);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -1497,13 +1582,14 @@ img {
   transform: translateY(-3px);
   border-color: rgba(212, 160, 23, 0.6);
 }
+
 .location-badge {
   display: inline-flex;
   align-self: flex-start;
   padding: 0.4rem 0.7rem;
   border-radius: 999px;
   border: 1px solid rgba(212, 160, 23, 0.28);
-  background: rgba(212,160,23,0.08);
+  background: rgba(212, 160, 23, 0.08);
   color: var(--gold);
   font-size: 0.7rem;
   font-weight: 800;
@@ -1551,22 +1637,26 @@ img {
   font-size: 23px;
   font-weight: 800;
 }
+
 .review-card p {
   color: #393939;
   font-size: 17px;
   line-height: 1.8;
 }
+
 .review-card .review-date {
   color: #B98512;
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 1px;
 }
+
 .review-card .review-date,
 .review-card .stars,
 .review-card .rating {
   color: #D5A01B;
 }
+
 .location-detail p,
 .location-detail a,
 .featured-tag {
@@ -1579,7 +1669,7 @@ img {
 
 .review-card.review-featured {
   border-color: rgba(212, 160, 23, 0.48);
-  background: linear-gradient(180deg, rgba(212, 160, 23, 0.08), rgba(255,255,255,0.02));
+  background: linear-gradient(180deg, rgba(212, 160, 23, 0.08), rgba(255, 255, 255, 0.02));
 }
 
 .compact-home-grid {
@@ -1598,7 +1688,7 @@ img {
   border: 1px solid rgba(212, 160, 23, 0.35);
   border-radius: 18px;
   background: linear-gradient(180deg, rgba(212, 160, 23, 0.06), rgba(255, 255, 255, 0.02));
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .compact-home-grid .food-thumb {
@@ -1607,7 +1697,7 @@ img {
   border-radius: 14px;
   border: 2px solid rgba(212, 160, 23, 0.35);
   overflow: hidden;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .compact-home-grid .food-thumb img {
@@ -1694,16 +1784,18 @@ img {
     height: 78px;
     min-height: 78px;
   }
+
   .locations-grid,
-.social-cards {
-  grid-template-columns: 1fr;
+  .social-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .location-card,
+  .social-card {
+    padding: 1rem;
+  }
 }
 
-.location-card,
-.social-card {
-  padding: 1rem;
-}
-}
 /* MOBILE REFERENCE DESIGN */
 
 @media (max-width: 680px) {
@@ -1740,7 +1832,7 @@ img {
     border-radius: 30px;
   }
 
-  .reviews-stats > * {
+  .reviews-stats>* {
     padding: 18px 7px;
     border-radius: 23px;
   }
@@ -1753,4 +1845,113 @@ img {
     font-size: 16px;
   }
 
+}
+
+/* =========================================
+   FIX: OUTLETS & REVIEWS IN DARK MODE
+   KEEP CREAM + GOLD DESIGN IN BOTH MODES
+========================================= */
+
+.location-card,
+.review-card,
+.review-card.review-featured {
+  background: linear-gradient(180deg,
+      #FFFFFF 0%,
+      #F3EDE1 100%) !important;
+
+  border: 3px solid #D1A84F !important;
+  border-radius: 32px !important;
+  color: #292929 !important;
+  opacity: 1 !important;
+}
+
+/* Outlet headings */
+.location-name,
+.location-card h3,
+.location-card h4 {
+  color: #171717 !important;
+}
+
+/* Outlet address, phone and timings */
+.location-detail,
+.location-detail p,
+.location-detail a,
+.location-card p {
+  color: #333333 !important;
+}
+
+/* Outlet icons */
+.location-card i {
+  color: #BD8918;
+}
+
+/* Review customer names */
+.review-card h4 {
+  color: #171717 !important;
+}
+
+/* Review text */
+.review-card p,
+.review-card .review-text {
+  color: #393939 !important;
+}
+
+/* Review stars */
+.review-card .stars,
+.review-card .rating {
+  color: #D5A01B !important;
+}
+
+/* Review dates */
+.review-card .review-date {
+  color: #B98512 !important;
+}
+
+/* Review statistics container */
+.reviews-stats {
+  background: #F6F0E4 !important;
+  border: 3px solid #E5D3A0 !important;
+  border-radius: 30px;
+}
+
+/* Individual statistics */
+.reviews-stats>* {
+  background: #F5EFE3 !important;
+  border: 3px solid #D1A84F !important;
+  color: #292929 !important;
+}
+
+.reviews-stats h3,
+.reviews-stats h4,
+.reviews-stats p,
+.reviews-stats span,
+.reviews-stats strong {
+  color: #292929 !important;
+}
+
+/* Supporting text */
+.reviews-stats p,
+.reviews-stats span {
+  color: #444444 !important;
+}
+
+/* Outlet action buttons */
+.location-card button,
+.location-card .order-wa-btn,
+.location-card a {
+  opacity: 1 !important;
+}
+
+/* Prevent dark mode from dimming cards */
+.location-card *,
+.review-card * {
+  opacity: 1;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .reviews-stats {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
 }
