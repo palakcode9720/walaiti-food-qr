@@ -1113,6 +1113,7 @@ function setupPanelNavigation() {
   const panels = [...document.querySelectorAll('.page-panel')];
   const selectors = [...document.querySelectorAll('[data-open-panel]')];
   const bottomNav = [...document.querySelectorAll('.bottom-nav-item')];
+  const hero = document.querySelector('.hero');
 
   const activatePanel = (panelId) => {
     panels.forEach(panel => {
@@ -1126,6 +1127,12 @@ function setupPanelNavigation() {
     bottomNav.forEach(item => {
       item.classList.toggle('active', item.dataset.openPanel === panelId);
     });
+
+    document.body.classList.toggle('show-hero', panelId === 'dashboard');
+
+    if (hero) {
+      hero.style.display = panelId === 'dashboard' ? 'flex' : 'none';
+    }
 
     const panel = document.getElementById(panelId);
     if (panel) {
