@@ -632,66 +632,43 @@ img {
 
 @media (max-width: 680px) {
   .hero {
-    min-height: 30vh;
-    padding: 0.9rem 0.7rem 0.6rem;
+    min-height: 18vh;
+    padding: 0.75rem 0.7rem 0.5rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
   }
 
   .brand-logo-wrapper {
-    width: 64px;
-    height: 64px;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 0.35rem;
   }
 
   .brand-name {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    margin-bottom: 0;
   }
 
   .brand-tagline {
-    font-size: 0.6rem;
+    font-size: 0.56rem;
     letter-spacing: 0.12em;
+    margin-bottom: 0.45rem;
+  }
+
+  .hero-badges {
+    gap: 0.3rem;
   }
 
   .badge {
-    padding: 0.26rem 0.6rem;
-    font-size: 0.62rem;
+    padding: 0.2rem 0.55rem;
+    font-size: 0.58rem;
   }
 
-  .section {
-    padding: 1.7rem 0.8rem;
-  }
-
-  .nav-pill,
-  .theme-toggle-btn {
-    padding: 0.45rem 0.7rem;
-    font-size: 0.66rem;
-  }
-
-  .section-title {
-    font-size: 1.7rem;
-  }
-
-  .outlet-btn {
-    padding: 0.7rem 0.7rem;
-  }
-
-  .outlet-btn-text strong {
-    font-size: 0.8rem;
-  }
-
-  .item-card {
-    border-radius: 16px;
-  }
-
-  .menu-preview-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .menu-mini-thumb {
-    width: 48px;
-    height: 48px;
-  }
-
-  .menu-mini-label {
-    font-size: 0.66rem;
+  .scroll-indicator {
+    bottom: 0.4rem;
+    font-size: 0.9rem;
   }
 }
 
