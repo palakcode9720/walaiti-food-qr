@@ -826,7 +826,6 @@ function renderDigitalItems() {
     <div class="category-detail-page">
       <div class="category-detail-head">
        
-       
         <button class="category-back-btn" type="button" id="categoryBackBtn">
           <i class="fa-solid fa-arrow-left"></i> Back to menu
         </button>
@@ -855,40 +854,38 @@ function renderDigitalItems() {
         </div>
       ` : ''}
 
-      <div class="menu-variety-grid">
-        ${items.map(p => `
-          <div class="pizza-card">
-            <div class="pizza-card-header">
-              <div>
-                <h4 class="pizza-name">${p.name}</h4>
-                ${p.tag ? `<span class="badge-tag">${p.tag}</span>` : ''}
-              </div>
-            </div>
-            <p class="pizza-desc">${p.desc}</p>
-
-            ${p.customPrice ? `
-              <div class="pizza-single-box">
-                <span class="size-label">Price</span>
-                <strong>${p.customPrice}</strong>
-              </div>
-            ` : `
-              <div class="pizza-size-grid">
-                <div class="size-box">
-                  <span class="size-label">Regular</span>
-                  <strong>₹${p.r}</strong>
-                </div>
-                <div class="size-box">
-                  <span class="size-label">Medium</span>
-                  <strong>₹${p.m}</strong>
-                </div>
-                <div class="size-box">
-                  <span class="size-label">Large</span>
-                  <strong>₹${p.l}</strong>
-                </div>
-              </div>
-            `}
+      <div class="pizza-table-wrapper premium-menu-table">
+        <div class="pizza-table-header">
+          <span>Item & Description</span>
+          <div class="pizza-size-cols">
+            <span>Regular</span>
+            <span>Medium</span>
+            <span>Large</span>
           </div>
-        `).join('')}
+        </div>
+        <div class="pizza-list">
+          ${items.map(p => `
+            <div class="pizza-row">
+              <div class="pizza-info">
+                <div class="pizza-title-row">
+                  <span class="pizza-name">${p.name}</span>
+                  ${p.tag ? `<span class="badge-tag">${p.tag}</span>` : ''}
+                </div>
+                <p class="pizza-desc">${p.desc}</p>
+                ${p.price ? `<span class="single-item-price">${p.price}</span>` : ''}
+              </div>
+              ${p.customPrice ? `
+                <div class="pizza-custom-price">${p.customPrice}</div>
+              ` : p.r ? `
+                <div class="pizza-prices">
+                  <span class="price-val">₹${p.r}</span>
+                  <span class="price-val">₹${p.m}</span>
+                  <span class="price-val">₹${p.l}</span>
+                </div>
+              ` : ''}
+            </div>
+          `).join('')}
+        </div>
       </div>
     ` + detailFooter;
 
