@@ -2312,588 +2312,120 @@ img {
 
 .locations-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.2rem;
 }
 
 .location-card,
 .review-card,
 .whatsapp-cta-box,
 .social-card {
-  border: 2px solid var(--line-strong);
-  border-radius: 22px;
+  border: 1px solid rgba(212, 160, 23, 0.26);
+  border-radius: 24px;
   background: var(--card-bg);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.06);
 }
 
-.social-cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.social-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.1rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.social-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(212, 160, 23, 0.8);
-  box-shadow: var(--shadow-gold);
-}
-
-.social-icon {
-  width: 58px;
-  height: 58px;
-  min-width: 58px;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.18);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 10px 18px rgba(0,0,0,0.12);
-}
-
-.social-insta .social-icon {
-  background: var(--insta-grad);
-}
-
-.social-fb .social-icon {
-  background: linear-gradient(135deg, #2f7ef7 0%, #1a5fd0 100%);
-}
-
-.social-info {
+.location-card {
   display: flex;
   flex-direction: column;
-  gap: 0.18rem;
-  min-width: 0;
+  gap: 1.05rem;
+  padding: 1.2rem 1.15rem 1.15rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.social-platform {
-  font-size: 1rem;
+.location-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 160, 23, 0.6);
+  box-shadow: 0 18px 34px rgba(212, 160, 23, 0.08);
+}
+
+.location-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 160, 23, 0.28);
+  background: rgba(212,160,23,0.08);
+  color: var(--gold);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.location-name {
+  font-size: 1.2rem;
   font-weight: 800;
   color: var(--text);
+  line-height: 1.2;
 }
 
-.social-handle {
-  font-size: 0.76rem;
-  font-weight: 700;
+.location-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  color: var(--text-soft);
+  padding: 0.1rem 0;
+}
+
+.location-detail i {
+  width: 20px;
+  margin-top: 0.25rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  font-size: 0.92rem;
+}
+
+.location-detail p,
+.location-detail a,
+.phone-link {
+  color: var(--text-soft);
+  font-weight: 600;
+  line-height: 1.7;
+  font-size: 0.84rem;
+}
+
+.location-detail a:hover {
   color: var(--gold);
 }
 
-.social-cta {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--text-soft);
-}
-
-.whatsapp-cta-box {
-  margin-top: 1rem;
-  padding: 1.1rem 1rem 1rem;
-  background: linear-gradient(180deg, rgba(37,211,102,0.08), rgba(255,255,255,0.02));
-}
-
-.whatsapp-cta-box h3 {
-  color: var(--text);
-  margin-bottom: 0.45rem;
-  font-size: 1.05rem;
-  font-weight: 800;
-}
-
-.whatsapp-cta-box p {
-  color: var(--text-soft);
-  margin-bottom: 0.9rem;
-  font-size: 0.82rem;
-}
-
-.cta-btn-group {
+.location-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.35rem;
 }
 
-.btn-whatsapp {
-  border: 2px solid rgba(37, 211, 102, 0.45);
-}
-
-button,
-.btn,
-.feature-food-card,
-.location-card,
-.review-card,
-.social-card,
-.stat,
-.menu-page-thumbnail,
-.item-card,
-.menu-standard-row,
-.pizza-row,
-.search-results-group,
-.page-panel,
-.footer,
-.nav-pill,
-.menu-cat-btn,
-.category-detail-head,
-.category-back-btn,
-.theme-toggle-btn,
-.dashboard-primary-btn,
-.dashboard-secondary-btn,
-.outlet-btn,
-.card,
-.section,
-.review-card,
-.qr-home-card,
-.site-card,
-.location-card,
-.social-card {
-  border: 2px solid var(--line-strong);
-}
-
-:root[data-theme="light"] .social-card,
-:root[data-theme="light"] .whatsapp-cta-box,
-:root[data-theme="light"] .location-card,
-:root[data-theme="light"] .review-card {
-  box-shadow: 0 10px 22px rgba(84, 62, 10, 0.08), inset 0 0 0 1px rgba(198, 136, 16, 0.12);
-}
-
-@media (max-width: 680px) {
-  .social-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .social-card {
-    padding: 0.9rem;
-  }
-
-  .cta-btn-group {
-    flex-direction: column;
-  }
-
-  .cta-btn-group .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .coffee-addons-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .coffee-addons-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.compact-home-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.8rem;
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.compact-home-grid .feature-food-card {
-  width: 100%;
-  min-height: 128px;
-  padding: 0.6rem 0.45rem 0.5rem;
-  border: 1.5px solid rgba(212, 160, 23, 0.35);
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(212, 160, 23, 0.06), rgba(255, 255, 255, 0.02));
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
+.btn-whatsapp-sm,
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.45rem;
-}
-
-.compact-home-grid .food-thumb {
-  width: 100%;
-  height: 82px;
-  min-height: 82px;
-  border-radius: 14px;
-  border: 2px solid rgba(212, 160, 23, 0.35);
-  overflow: hidden;
-  background: rgba(255,255,255,0.05);
-  flex-shrink: 0;
-}
-
-.compact-home-grid .food-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-@media (max-width: 680px) {
-  .compact-home-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.7rem;
-  }
-
-  .compact-home-grid .feature-food-card {
-    min-height: 126px;
-    padding: 0.55rem 0.45rem 0.5rem;
-  }
-
-  .compact-home-grid .food-thumb {
-    height: 82px;
-    min-height: 82px;
-  }
-}
-
-/* ============================================================
-  PIZZA DETAIL STYLES
-   ============================================================ */
-.pizza-table-wrapper {
-  margin-top: 0.6rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 2px solid rgba(212, 160, 23, 0.35);
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-}
-
-.pizza-table-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.9rem 1rem;
-  background: rgba(212, 160, 23, 0.08);
-  border-bottom: 2px solid rgba(212, 160, 23, 0.35);
-  color: var(--gold);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.pizza-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem;
-  border: 1px solid rgba(212, 160, 23, 0.22);
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.018));
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
-}
-
-.pizza-info {
-  flex: 1;
-  min-width: 0;
-  padding-right: 0.5rem;
-}
-
-.pizza-title-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.4rem;
-}
-
-.pizza-name {
-  font-size: 1rem;
-  font-weight: 800;
-  color: var(--text);
-  line-height:  1.35;
-}
-
-.pizza-desc {
-  margin: 0;
-  color: var(--text-soft);
-  font-size: 0.76rem;
-  line-height: 1.5;
-}
-
-.single-item-price {
-  display: inline-flex;
-  margin-top: 0.7rem;
-  padding: 0.42rem 0.75rem;
+  min-height: 42px;
+  padding: 0.72rem 0.98rem;
   border-radius: 999px;
-  border: 1px solid rgba(212, 160, 23, 0.35);
-  background: rgba(212, 160, 23, 0.08);
-  color: var(--gold);
+  border: 1px solid rgba(212, 160, 23, 0.28);
   font-size: 0.72rem;
-  font-weight: 700;
-}
-
-.pizza-prices {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(70px, 1fr));
-  gap: 0.5rem;
-  min-width: 220px;
-}
-
-.price-val {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 52px;
-  border-radius: 12px;
-  border: 1px solid rgba(212, 160, 23, 0.25);
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--gold);
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.pizza-custom-price {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 220px;
-  min-height: 52px;
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  border: 1px solid rgba(212, 160, 23, 0.25);
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--gold);
-  font-size: 0.85rem;
-  font-weight: 800;
-}
-
-.menu-standard-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 1rem 0.95rem;
-  border: 1.5px solid rgba(212, 160, 23, 0.3);
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.018));
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
-}
-
-.menu-standard-name {
-  font-size: 1rem;
-  font-weight: 800;
-  line-height: 1.35;
-  color: var(--text);
-}
-
-.menu-standard-desc {
-  margin: 0;
-  color: var(--text-soft);
-  font-size: 0.76rem;
-  line-height: 1.5;
-}
-
-.menu-standard-price-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 110px;
-  padding: 0.7rem 0.9rem;
-  border-radius: 12px;
-  border: 1px solid rgba(212, 160, 23, 0.22);
-  background: rgba(212, 160, 23, 0.08);
-  color: var(--gold);
-  font-weight: 800;
-  font-size: 0.8rem;
-  text-align: center;
-}
-
-/* ============================================================
-  FOOTER STYLES
-   ============================================================ */
-.footer {
-  background: var(--black);
-  border-top: 1px solid rgba(212, 160, 23, 0.18);
-  text-align: center;
-  padding: 3rem 1.5rem 2.2rem;
-}
-
-.footer-brand {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.85rem;
-  margin-bottom: 0.65rem;
-}
-
-.footer-logo-img {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  border: 2px solid rgba(212, 160, 23, 0.45);
-  box-shadow: 0 10px 22px rgba(212, 160, 23, 0.12);
-  background: #000;
-}
-
-.footer-brand-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 1.1;
-}
-
-.footer-brand-name {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--gold);
-}
-
-.footer-brand-sub {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-soft);
-}
-
-.footer-tagline {
-  color: var(--text-soft);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.footer-copy {
-  font-size: 0.75rem;
-  color: var(--gray);
-  margin-top: 0.3rem;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 0.65rem;
-  margin: 1rem auto 0.9rem;
-  flex-wrap: wrap;
-}
-
-.footer-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 38px;
-  padding: 0.55rem 0.9rem;
-  border-radius: 999px;
-  border: 1px solid rgba(212, 160, 23, 0.35);
-  background: rgba(212, 160, 23, 0.06);
-  color: var(--text);
-  font-size: 0.74rem;
   font-weight: 700;
   transition: all 0.2s ease;
 }
 
-.footer-links a:hover {
-  color: var(--gold);
-  border-color: rgba(212, 160, 23, 0.6);
-  box-shadow: 0 8px 18px rgba(212, 160, 23, 0.08);
-}
-
-/* ============================================================
-  COFFEE ADD-ONS STYLES
-   ============================================================ */
-.coffee-addons-box {
-  margin-top: 1rem;
-  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01));
-  border: 2px solid rgba(212, 160, 23, 0.3);
-  border-radius: 20px;
-  padding: 1rem;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
-}
-
-.coffee-addons-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-bottom: 0.9rem;
-}
-
-.coffee-addons-title {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
+.btn-whatsapp-sm {
+  background: rgba(37,211,102,0.08);
+  border-color: rgba(37,211,102,0.4);
   color: var(--text);
-  font-size: 0.95rem;
-  font-weight: 800;
 }
 
-.coffee-addons-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.35rem 0.6rem;
-  border-radius: 999px;
-  border: 1px solid rgba(212, 160, 23, 0.35);
-  background: rgba(212, 160, 23, 0.08);
-  color: var(--gold);
-  font-size: 0.68rem;
-  font-weight: 800;
-}
-
-.coffee-addons-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-.coffee-addon-card {
-  padding: 0.8rem;
-  border-radius: 14px;
-  border: 1.5px solid rgba(212, 160, 23, 0.28);
-  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.012));
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.025);
-}
-
-.coffee-addon-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 0.35rem;
-}
-
-.coffee-addon-name {
+.btn-outline-gold {
+  background: transparent;
   color: var(--text);
-  font-size: 0.76rem;
-  font-weight: 800;
 }
 
-.coffee-addon-price {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.35rem 0.55rem;
-  border-radius: 999px;
-  border: 1px solid rgba(212, 160, 23, 0.25);
-  background: rgba(212, 160, 23, 0.08);
-  color: var(--gold);
-  font-size: 0.68rem;
-  font-weight: 800;
-}
-
-.coffee-addon-desc {
-  margin: 0;
-  color: var(--text-soft);
-  font-size: 0.7rem;
-  line-height: 1.5;
-}
-
-@media (max-width: 680px) {
-  .coffee-addons-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .coffee-addons-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.btn-whatsapp-sm:hover,
+.btn-outline-gold:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(212, 160, 23, 0.08);
 }
