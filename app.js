@@ -503,6 +503,11 @@ const outletsData = {
         title: "Iced & Hot Coffees, Hot Chocolates",
         items: [
           { name: "Classic Cold Coffee", desc: "A delightful blend of rich espresso, creamy milk, and ice cream served for a refreshing, indulgent treat", price: "₹159" },
+          { name: "Vanilla Add-On", desc: "Classic vanilla flavour boost for your coffee", price: "+₹30" },
+          { name: "Irish Add-On", desc: "Irish cream flavour enhancement for your coffee", price: "+₹30" },
+          { name: "Hazelnut Add-On", desc: "Roasted hazelnut flavour boost for your coffee", price: "+₹30" },
+          { name: "Caramel Add-On", desc: "Golden caramel drizzle for extra richness", price: "+₹30" },
+          { name: "Honey Add-On", desc: "Natural honey sweetness for a smooth finish", price: "+₹30" },
           { name: "Iced Americano", desc: "Chilled double espresso and cold water over ice for a bold pick-me-up", price: "₹149" },
           { name: "Iced Cappuccino", desc: "Chilled espresso, frothy cold milk, and a dusting of cocoa", price: "₹169" },
           { name: "Iced Latte", desc: "Chilled espresso and smooth cold milk over ice", price: "₹149" },
