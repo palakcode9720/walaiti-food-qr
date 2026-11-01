@@ -1188,9 +1188,14 @@ function setupThemeToggle() {
   const themeToggle = document.getElementById('themeToggleBtn');
   if (!themeToggle) return;
 
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  updateThemeButton(savedTheme);
+  const savedTheme = localStorage.getItem('theme');
+  const initialTheme = savedTheme || 'light';
+
+  document.documentElement.setAttribute('data-theme', initialTheme);
+  if (!savedTheme) {
+    localStorage.setItem('theme', initialTheme);
+  }
+  updateThemeButton(initialTheme);
 
   themeToggle.addEventListener('click', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
