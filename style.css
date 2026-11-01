@@ -521,12 +521,14 @@ img {
 
 .outlet-btn-text strong {
   font-size: 0.98rem;
-  color: var(--white);
+  color: var(--text);
+  font-weight: 800;
 }
 
 .outlet-btn-text span {
   font-size: 0.72rem;
-  color: var(--gray-light);
+  color: var(--text-soft);
+  font-weight: 600;
   letter-spacing: 0.04em;
 }
 
@@ -800,12 +802,14 @@ img {
 
 .outlet-btn-text strong {
   font-size: 0.98rem;
-  color: var(--white);
+  color: var(--text);
+  font-weight: 800;
 }
 
 .outlet-btn-text span {
   font-size: 0.72rem;
-  color: var(--gray-light);
+  color: var(--text-soft);
+  font-weight: 600;
   letter-spacing: 0.04em;
 }
 
@@ -1079,12 +1083,14 @@ img {
 
 .outlet-btn-text strong {
   font-size: 0.98rem;
-  color: var(--white);
+  color: var(--text);
+  font-weight: 800;
 }
 
 .outlet-btn-text span {
   font-size: 0.72rem;
-  color: var(--gray-light);
+  color: var(--text-soft);
+  font-weight: 600;
   letter-spacing: 0.04em;
 }
 
