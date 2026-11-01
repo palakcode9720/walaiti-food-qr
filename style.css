@@ -1593,3 +1593,213 @@ img {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* ============================================================
+  STANDARD MENU ROWS (Burger, Pasta, Drinks, Desserts, etc.)
+   ============================================================ */
+
+.menu-standard-list {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.menu-standard-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1rem 0.95rem;
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.018);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+}
+
+.menu-standard-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.menu-standard-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.35rem;
+}
+
+.menu-standard-name {
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--white);
+}
+
+.menu-standard-desc {
+  margin: 0;
+  color: var(--gray-light);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.menu-standard-price-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 160, 23, 0.22);
+  background: rgba(212, 160, 23, 0.08);
+  color: var(--gold);
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.upgrades-dips-container {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.7rem;
+}
+
+.upgrades-box,
+.dips-box {
+  background: rgba(255, 255, 255, 0.018);
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  border-radius: 18px;
+  padding: 1rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+}
+
+.box-title {
+  margin: 0 0 0.35rem;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.box-desc {
+  margin: 0 0 0.9rem;
+  color: var(--gray-light);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.upgrade-table {
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.upgrade-head,
+.upgrade-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.75rem 0.8rem;
+}
+
+.upgrade-head {
+  background: rgba(212, 160, 23, 0.08);
+  border-bottom: 1px solid rgba(212, 160, 23, 0.2);
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.size-headers,
+.upgrade-vals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.upgrade-row {
+  border-bottom: 1px solid rgba(212, 160, 23, 0.14);
+}
+
+.upgrade-row:last-child {
+  border-bottom: none;
+}
+
+.upgrade-name {
+  color: var(--white);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.upgrade-vals span {
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.dips-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.dip-card {
+  padding: 0.8rem;
+  border-radius: 14px;
+  border: 1px solid rgba(212, 160, 23, 0.18);
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.dip-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.dip-name {
+  color: var(--white);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.dip-price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  background: rgba(212, 160, 23, 0.08);
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.dip-desc {
+  margin: 0;
+  color: var(--gray-light);
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 680px) {
+  .menu-standard-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .menu-standard-price-box {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .dips-grid {
+    grid-template-columns: 1fr;
+  }
+}

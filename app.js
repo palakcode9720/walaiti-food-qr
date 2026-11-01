@@ -826,6 +826,7 @@ function renderDigitalItems() {
     <div class="category-detail-page">
       <div class="category-detail-head">
        
+       
         <button class="category-back-btn" type="button" id="categoryBackBtn">
           <i class="fa-solid fa-arrow-left"></i> Back to menu
         </button>
@@ -958,19 +959,18 @@ function renderDigitalItems() {
   }
 
   container.innerHTML = detailHeader + `
-    <div class="items-cards-grid">
+    <div class="menu-standard-list">
       ${section.items.map(item => `
-        <div class="item-card">
-          ${item.tag ? `<span class="badge-tag card-tag">${item.tag}</span>` : ''}
-          <div class="item-card-body">
-            <h4 class="item-title">${item.name}</h4>
-            <p class="item-desc">${item.desc}</p>
-            <div class="item-bottom">
-              <span class="item-price">${item.price}</span>
-              <a href="https://wa.me/${outlet.waPhone}?text=Hi%20Walaiti%20Food%20(${encodeURIComponent(outlet.name)}),%20I%20would%20like%20to%20order%20${encodeURIComponent(item.name)}" target="_blank" class="order-wa-btn">
-                <i class="fa-brands fa-whatsapp"></i> Order
-              </a>
+        <div class="menu-standard-row">
+          <div class="menu-standard-info">
+            <div class="menu-standard-title-row">
+              <span class="menu-standard-name">${item.name}</span>
+              ${item.tag ? `<span class="badge-tag">${item.tag}</span>` : ''}
             </div>
+            ${item.desc ? `<p class="menu-standard-desc">${item.desc}</p>` : ''}
+          </div>
+          <div class="menu-standard-price-box">
+            ${item.price || (item.customPrice || `₹${item.r}`)}
           </div>
         </div>
       `).join('')}
