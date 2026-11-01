@@ -188,7 +188,7 @@ const outletsData = {
           { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
           { name: "Veg Salad", desc: "Fresh garden salad with crunchy vegetables and herbs", price: "₹180" },
           { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables and dressing", price: "₹190" },
-          { name: "High Protein Salad", desc: "Protein-rich salad with paneer, legumes and fresh greens", price: "₹220" }
+          { name: "High Protein Salad", desc: "Protein-rich salad with paneer, legumes and fresh greens", price: "₹210" }
         ]
       },
 
@@ -240,9 +240,8 @@ const outletsData = {
 
       an_hot: {
         type: "cards",
-        title: "Tea, Coffee & Hot Chocolate Milk",
+        title: "Tea, Coffee & Hot Chocolate",
         items: [
-          { name: "Hot Tea (Milk Tea)", desc: "Classic creamy milk tea", price: "₹70" },
           { name: "Paan Tea", price: "₹50" },
           { name: "Rose Tea", price: "₹50" },
           { name: "Elaichi Tea", price: "₹50" },
@@ -452,7 +451,7 @@ const outletsData = {
           { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
           { name: "Veg Salad", desc: "Fresh garden salad with crunchy vegetables and herbs", price: "₹180" },
           { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables and dressing", price: "₹190" },
-          { name: "High Protein Salad", desc: "Protein-rich salad with paneer, legumes and fresh greens", price: "₹220" }
+          { name: "High Protein Salad", desc: "Protein-rich salad with paneer, legumes and fresh greens", price: "₹210" }
         ]
       },
 
@@ -832,6 +831,7 @@ function renderDigitalItems() {
       <div class="search-results-wrap">
         ${groupedMatches.map(group => `
           <div class="search-results-group">
+           
            
             <h3 class="search-results-title">${group.title}</h3>
             <div class="items-cards-grid">
