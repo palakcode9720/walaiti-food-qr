@@ -1388,3 +1388,25 @@ img {
   border-color: rgba(212, 160, 23, 0.48);
   background: linear-gradient(180deg, rgba(212, 160, 23, 0.08), rgba(255,255,255,0.02));
 }
+
+.compact-home-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 760px;
+  gap: 0.7rem;
+}
+
+.compact-home-grid .feature-food-card {
+  min-height: 100px;
+  padding: 0.55rem 0.38rem;
+}
+
+.compact-home-grid .food-thumb {
+  width: 54px;
+  height: 54px;
+}
+
+.compact-home-grid .food-label {
+  min-width: 62px;
+  font-size: 0.68rem;
+  padding: 0.24rem 0.5rem;
+}
