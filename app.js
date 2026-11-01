@@ -589,10 +589,10 @@ const getItemImage = (itemName = '') => {
 function getCategoryImage(catId) {
   const imageMap = {
     an_pizzas: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
-    an_atta: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
-    an_upgrades_dips: 'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=400&q=80',
+    an_atta: 'https://www.shutterstock.com/image-photo/veg-extravaganza-loaded-flavorful-pizza-600w-2700208497.jpg',
+    an_upgrades_dips: 'https://www.unileverfoodsolutions.com.ph/dam/global-ufs/mcos/SEA/calcmenu/recipes/PH-recipes/appetisers/sriracha-mayo-dip/main-header.jpg',
     an_mania: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80',
-    an_breads: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80',
+    an_breads: 'https://www.ambitiouskitchen.com/wp-content/uploads/2023/02/Garlic-Bread-4.jpg',
     an_pastas: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=400&q=80',
     an_burgers: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80',
     an_chinese: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGIaMgfVnI1C2urOQgqMNhMmk5xTFIjB_4LpJcftlgCDijH4QdNPId96Y&s=10',
@@ -602,9 +602,9 @@ function getCategoryImage(catId) {
     an_combos_desserts: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=400&q=80',
 
     mt_pizzas: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
-    mt_atta: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
-    mt_upgrades_dips: 'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=400&q=80',
-    mt_breads: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80',
+    mt_atta: 'https://www.shutterstock.com/image-photo/veg-extravaganza-loaded-flavorful-pizza-600w-2700208497.jpg',
+    mt_upgrades_dips: 'https://www.unileverfoodsolutions.com.ph/dam/global-ufs/mcos/SEA/calcmenu/recipes/PH-recipes/appetisers/sriracha-mayo-dip/main-header.jpg',
+    mt_breads: 'https://www.ambitiouskitchen.com/wp-content/uploads/2023/02/Garlic-Bread-4.jpg',
     mt_pastas: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=400&q=80',
     mt_burgers: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80',
     mt_chinese: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGIaMgfVnI1C2urOQgqMNhMmk5xTFIjB_4LpJcftlgCDijH4QdNPId96Y&s=10',
