@@ -2699,3 +2699,454 @@ img {
 .menu-view-container .item-bottom {
     justify-content: flex-start !important;
 }
+
+/* =========================================
+   HOT & ICED COFFEE - ADD ON SECTION
+========================================= */
+
+/* Main add-ons container */
+.coffee-addons-box {
+    margin-top: 25px !important;
+    padding: 20px !important;
+
+    background: linear-gradient(145deg, #F8F0DD, #F3EBDD) !important;
+    border: 2px solid #D1A84F !important;
+    border-radius: 25px !important;
+
+    box-shadow: 0 8px 22px rgba(150, 110, 25, 0.10) !important;
+}
+
+/* Add-ons heading */
+.coffee-addons-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+
+    padding-bottom: 15px !important;
+    margin-bottom: 16px !important;
+
+    border-bottom: 1.5px solid #D1A84F !important;
+}
+
+.coffee-addons-title {
+    color: #171717 !important;
+    font-size: 19px !important;
+    font-weight: 800 !important;
+}
+
+.coffee-addons-title i {
+    color: #B98512 !important;
+    margin-right: 7px !important;
+}
+
+/* +₹30 each badge */
+.coffee-addons-badge {
+    padding: 7px 13px !important;
+
+    background: #211D14 !important;
+    border: 1px solid #D1A84F !important;
+    border-radius: 30px !important;
+
+    color: #F4D17A !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+}
+
+/* Add-on cards grid */
+.coffee-addons-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+}
+
+/* Individual add-on card */
+.coffee-addon-card {
+    padding: 15px !important;
+
+    background: #FFFFFF !important;
+    border: 1.5px solid #D1A84F !important;
+    border-radius: 17px !important;
+
+    box-shadow: 0 4px 12px rgba(150, 110, 25, 0.07) !important;
+}
+
+/* Add-on name and price */
+.coffee-addon-top {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+}
+
+.coffee-addon-name {
+    color: #171717 !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+}
+
+/* Individual price */
+.coffee-addon-price {
+    padding: 6px 10px !important;
+
+    background: #FFF4D8 !important;
+    border: 1px solid #D1A84F !important;
+    border-radius: 10px !important;
+
+    color: #946B12 !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+}
+
+/* Add-on description */
+.coffee-addon-desc {
+    margin: 9px 0 0 !important;
+
+    color: #55504A !important;
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+}
+
+/* =========================================
+   MOBILE DESIGN
+========================================= */
+
+@media (max-width: 600px) {
+
+    .coffee-addons-box {
+        margin-top: 20px !important;
+        padding: 14px !important;
+        border-radius: 21px !important;
+    }
+
+    .coffee-addons-title {
+        font-size: 17px !important;
+    }
+
+    .coffee-addons-badge {
+        font-size: 11px !important;
+        padding: 6px 10px !important;
+    }
+
+    .coffee-addons-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 9px !important;
+    }
+
+    .coffee-addon-card {
+        padding: 12px 10px !important;
+        border-radius: 14px !important;
+    }
+
+    .coffee-addon-name {
+        font-size: 13px !important;
+    }
+
+    .coffee-addon-price {
+        font-size: 12px !important;
+        padding: 5px 8px !important;
+    }
+
+    .coffee-addon-desc {
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .coffee-addons-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ==========================================
+   PREMIUM UPGRADE & TOPPINGS DESIGN
+========================================== */
+
+/* Main layout */
+.upgrades-dips-container {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    margin: 22px 0 !important;
+}
+
+/* Main upgrade and dips containers */
+.upgrades-box,
+.dips-box {
+    padding: 22px !important;
+    background: linear-gradient(145deg, #FFFDF8, #F3EBDD) !important;
+    border: 2px solid #D1A84F !important;
+    border-radius: 25px !important;
+    box-shadow: 0 8px 22px rgba(150, 110, 25, 0.09) !important;
+}
+
+/* Section headings */
+.upgrades-box .box-title,
+.dips-box .box-title {
+    color: #171717 !important;
+    font-size: 21px !important;
+    font-weight: 800 !important;
+    margin: 0 0 9px !important;
+}
+
+.box-title i {
+    color: #B98512 !important;
+    margin-right: 8px !important;
+}
+
+/* Description */
+.upgrades-box .box-desc,
+.dips-box .box-desc {
+    color: #55504A !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 18px !important;
+}
+
+/* ==========================================
+   UPGRADE TABLE
+========================================== */
+
+.upgrade-table {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+
+/* Table heading */
+.upgrade-head {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 180px !important;
+    align-items: center !important;
+    gap: 10px !important;
+
+    padding: 13px !important;
+    background: #211D14 !important;
+    border: 1.5px solid #D1A84F !important;
+    border-radius: 14px !important;
+
+    color: #F4D17A !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+}
+
+/* R M L headings */
+.size-headers {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 7px !important;
+    text-align: center !important;
+}
+
+/* Individual upgrade cards */
+.upgrade-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 180px !important;
+    align-items: center !important;
+    gap: 10px !important;
+
+    padding: 14px !important;
+    background: #FFFFFF !important;
+    border: 1.5px solid #D1A84F !important;
+    border-radius: 16px !important;
+
+    box-shadow: 0 3px 10px rgba(150, 110, 25, 0.06) !important;
+}
+
+/* Upgrade names */
+.upgrade-name {
+    color: #171717 !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    line-height: 1.5 !important;
+}
+
+/* Three price columns */
+.upgrade-vals {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+    text-align: center !important;
+}
+
+/* Individual prices */
+.upgrade-vals span {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    min-width: 0 !important;
+    padding: 9px 3px !important;
+
+    background: #FFF4D8 !important;
+    border: 1px solid #D1A84F !important;
+    border-radius: 10px !important;
+
+    color: #946B12 !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+}
+
+/* ==========================================
+   DELICIOUS DIPS
+========================================== */
+
+.dips-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+}
+
+/* Individual dip cards */
+.dip-card {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+
+    padding: 16px !important;
+    margin: 0 !important;
+
+    background: #FFFFFF !important;
+    border: 1.5px solid #D1A84F !important;
+    border-radius: 17px !important;
+
+    box-shadow: 0 4px 12px rgba(150, 110, 25, 0.07) !important;
+}
+
+/* Dip name and price */
+.dip-top {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+}
+
+.dip-name {
+    color: #171717 !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+}
+
+/* Dip price badge */
+.dip-price {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 7px 12px !important;
+
+    background: #FFF4D8 !important;
+    border: 1px solid #D1A84F !important;
+    border-radius: 10px !important;
+
+    color: #946B12 !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+}
+
+/* Dip description */
+.dip-desc {
+    color: #55504A !important;
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+/* ==========================================
+   MOBILE FIRST DESIGN
+========================================== */
+
+@media (max-width: 600px) {
+
+    .upgrades-dips-container {
+        gap: 16px !important;
+        margin: 15px 0 !important;
+    }
+
+    .upgrades-box,
+    .dips-box {
+        padding: 13px !important;
+        border-radius: 20px !important;
+    }
+
+    .upgrades-box .box-title,
+    .dips-box .box-title {
+        font-size: 17px !important;
+    }
+
+    .upgrades-box .box-desc,
+    .dips-box .box-desc {
+        font-size: 12px !important;
+        margin-bottom: 14px !important;
+    }
+
+    .upgrade-head {
+        grid-template-columns: minmax(0, 1fr) 135px !important;
+        gap: 6px !important;
+        padding: 10px !important;
+        font-size: 11px !important;
+    }
+
+    .upgrade-row {
+        grid-template-columns: minmax(0, 1fr) 135px !important;
+        gap: 7px !important;
+        padding: 11px 9px !important;
+        border-radius: 14px !important;
+    }
+
+    .upgrade-name {
+        font-size: 12px !important;
+    }
+
+    .size-headers,
+    .upgrade-vals {
+        gap: 4px !important;
+    }
+
+    .upgrade-vals span {
+        padding: 8px 2px !important;
+        font-size: 11px !important;
+        border-radius: 8px !important;
+    }
+
+    .dips-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 9px !important;
+    }
+
+    .dip-card {
+        padding: 12px 10px !important;
+        border-radius: 14px !important;
+        gap: 8px !important;
+    }
+
+    .dip-name {
+        font-size: 13px !important;
+    }
+
+    .dip-price {
+        padding: 6px 9px !important;
+        font-size: 11px !important;
+    }
+
+    .dip-desc {
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+    }
+}
+
+/* Very narrow phones */
+@media (max-width: 350px) {
+    .dips-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .upgrade-head,
+    .upgrade-row {
+        grid-template-columns: minmax(0, 1fr) 120px !important;
+    }
+}
