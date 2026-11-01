@@ -835,7 +835,7 @@ function renderDigitalItems() {
            
             <h3 class="search-results-title">${group.title}</h3>
             <div class="items-cards-grid">
-              ${group.items.map(item => `
+                           ${group.items.map(item => `
                 <div class="item-card">
                   ${item.tag ? `<span class="badge-tag card-tag">${item.tag}</span>` : ''}
                   <div class="item-card-body">
@@ -1224,6 +1224,14 @@ function setupPanelNavigation() {
   const selectors = [...document.querySelectorAll('[data-open-panel]')];
   const hero = document.querySelector('.hero');
 
+  const scrollToPanel = (panelId) => {
+    const panel = document.getElementById(panelId);
+    if (!panel) return;
+    const offset = 72;
+    const y = panel.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
+
   const activatePanel = (panelId) => {
     panels.forEach(panel => {
       panel.classList.toggle('active', panel.id === panelId);
@@ -1239,10 +1247,16 @@ function setupPanelNavigation() {
       hero.style.display = panelId === 'dashboard' ? 'flex' : 'none';
     }
 
-    const panel = document.getElementById(panelId);
-    if (panel) {
-      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (panelId === 'menu') {
+      currentCategory = '';
+      isCategoryDetailOpen = false;
+      currentSearchTerm = '';
+      const searchInput = document.getElementById('menuSearchInput');
+      if (searchInput) searchInput.value = '';
+      renderCurrentView();
     }
+
+    requestAnimationFrame(() => scrollToPanel(panelId));
   };
 
   selectors.forEach(btn => {
