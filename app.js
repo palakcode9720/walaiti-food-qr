@@ -680,9 +680,15 @@ function buildCategoryTabs(categories) {
   // Re-bind click handlers
   scrollContainer.querySelectorAll('.menu-cat-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      scrollContainer.querySelectorAll('.menu-cat-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentCategory = btn.dataset.category;
+      const selectedCategory = btn.dataset.category;
+      const shouldClose = currentCategory === selectedCategory && !currentSearchTerm;
+
+      scrollContainer.querySelectorAll('.menu-cat-btn').forEach(b => {
+        const isActive = !shouldClose && b.dataset.category === selectedCategory;
+        b.classList.toggle('active', isActive);
+      });
+
+      currentCategory = shouldClose ? '' : selectedCategory;
       renderDigitalItems();
     });
   });
@@ -738,6 +744,16 @@ function renderCurrentView() {
 function renderDigitalItems() {
   const container = document.getElementById('digitalItemsContainer');
   if (!container) return;
+
+  if (!currentCategory) {
+    container.innerHTML = `
+      <div class="empty-search-state">
+        <i class="fa-solid fa-burger"></i>
+        <p>Select a menu category to view its items and prices.</p>
+      </div>
+    `;
+    return;
+  }
 
   const outlet = outletsData[currentOutlet];
   const section = outlet.sections[currentCategory];
@@ -954,6 +970,7 @@ function renderMenuCards() {
 
   const data = outletsData[currentOutlet];
   let html = '';
+
 
   for (let i = 1; i <= data.totalPages; i++) {
     const imgSrc = `${data.imgFolder}/page_${i}.jpg`;
