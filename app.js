@@ -187,14 +187,14 @@ const outletsData = {
           { name: "Veg Manchow Soup", desc: "Dark spicy broth with vegetables and crispy fried noodles", price: "₹90" },
           { name: "Lemon Coriander Soup", desc: "Refreshing clear broth with fresh lemon juice & coriander", price: "₹110" },
           { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
-          { name: "Honey Chilli Potato", desc: "Crisp potato fingers glazed in spicy sweet honey sesame glaze", price: "₹200" },
+          { name: "Honey Chilli Potato", desc: "Crisp potato fingers glazed in spicy sweet honey sesame glaze", price: "₹250" },
           { name: "Cheese Chilli (Dry / Gravy)", desc: "Wok tossed paneer cubes with bell peppers & spicy oriental sauce", price: "₹300", tag: "Best Seller" },
           { name: "Veg Manchurian (Dry / Gravy)", desc: "Crisp vegetable dumplings tossed in tangy soya garlic gravy", price: "₹180" },
           { name: "Mushroom Chilli", desc: "Button mushrooms stir-fried with capsicum and spicy chilli sauce", price: "₹200" },
           { name: "Spring Rolls (2 Pcs)", desc: "Crispy golden fried rolls stuffed with shredded vegetables", price: "₹180" },
-          { name: "Paneer Pops (20 Pcs)", desc: "Bite-sized crunchy paneer nuggets with dipping sauce", price: "₹230" },
+          { name: "Paneer Pops (20 Pcs)", desc: "Bite-sized crunchy paneer nuggets with dipping sauce", price: "₹200" },
           { name: "Cheese Corn Roll (6 Pcs)", desc: "Crisp rolls packed with gooey sweet corn and mozzarella", price: "₹250" },
-          { name: "Fried Rice / Schezwan Fried Rice", desc: "Wok tossed aromatic basmati rice with veggies / spicy Schezwan", price: "₹100 / ₹110" },
+          { name: "Fried Rice / Schezwan Fried Rice", desc: "Wok tossed aromatic basmati rice with veggies / spicy Schezwan", price: "₹230 / ₹250" },
           { name: "High Protein Salad", desc: "Fresh paneer, boiled legumes, crunchy greens (GYM Special)", price: "₹220", tag: "Fitness" },
           { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables & herb dressing", price: "₹190" },
           { name: "Veg Salad", desc: "Garden fresh crispy lettuce, cucumber, tomato & olives", price: "₹180" }
@@ -435,18 +435,18 @@ const outletsData = {
           { name: "Cheese Masala Fries", desc: "Crispy fries seasoned with chatpata masala & cheese", price: "₹200" },
           { name: "Peri Peri V Crisper (M / L)", desc: "V-cut crunchy potato crispers in peri peri seasoning", price: "M: ₹180 | L: ₹200" },
           { name: "Cheesy V Crisper (M / L)", desc: "V-cut potato crispers loaded with warm cheese sauce", price: "M: ₹180 | L: ₹200" },
-          { name: "Walaiti Special Noodles", desc: "Chef's signature wok-tossed noodles with garden vegetables", price: "₹250", tag: "Popular" },
+          { name: "Walaiti Special Noodles", desc: "Chef's signature wok-tossed noodles with garden vegetables", price: "₹220", tag: "Popular" },
           { name: "Veg Manchow Soup", desc: "Dark spicy broth with vegetables and crispy fried noodles", price: "₹100" },
           { name: "Lemon Coriander Soup", desc: "Refreshing clear broth with fresh lemon juice & coriander", price: "₹110" },
           { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
-          { name: "Honey Chilli Potato", desc: "Crisp potato fingers glazed in spicy sweet honey sesame glaze", price: "₹200" },
+          { name: "Honey Chilli Potato", desc: "Crisp potato fingers glazed in spicy sweet honey sesame glaze", price: "₹250" },
           { name: "Cheese Chilli (Dry / Gravy)", desc: "Wok tossed paneer cubes with bell peppers & spicy oriental sauce", price: "₹300", tag: "Best Seller" },
           { name: "Veg Manchurian (Dry / Gravy)", desc: "Crisp vegetable dumplings tossed in tangy soya garlic gravy", price: "₹180" },
           { name: "Mushroom Chilli", desc: "Button mushrooms stir-fried with capsicum and spicy chilli sauce", price: "₹200" },
           { name: "Spring Rolls (2 Pcs)", desc: "Crispy golden fried rolls stuffed with shredded vegetables", price: "₹180" },
-          { name: "Paneer Pops (20 Pcs)", desc: "Bite-sized crunchy paneer nuggets with dipping sauce", price: "₹230" },
+          { name: "Paneer Pops (20 Pcs)", desc: "Bite-sized crunchy paneer nuggets with dipping sauce", price: "₹200" },
           { name: "Cheese Corn Roll (6 Pcs)", desc: "Crisp rolls packed with gooey sweet corn and mozzarella", price: "₹250" },
-          { name: "Fried Rice / Schezwan Fried Rice", desc: "Wok tossed aromatic basmati rice with veggies / spicy Schezwan", price: "₹100 / ₹110" },
+          { name: "Fried Rice / Schezwan Fried Rice", desc: "Wok tossed aromatic basmati rice with veggies / spicy Schezwan", price: "₹230 / ₹250" },
           { name: "High Protein Salad", desc: "Fresh paneer, boiled legumes, crunchy greens (GYM Special)", price: "₹220", tag: "Fitness" },
           { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables & herb dressing", price: "₹190" },
           { name: "Veg Salad", desc: "Garden fresh crispy lettuce, cucumber, tomato & olives", price: "₹180" }
@@ -499,15 +499,10 @@ const outletsData = {
       },
 
       mt_coffees: {
-        type: "cards",
+        type: "coffee_with_addons",
         title: "Iced & Hot Coffees, Hot Chocolates",
         items: [
           { name: "Classic Cold Coffee", desc: "A delightful blend of rich espresso, creamy milk, and ice cream served for a refreshing, indulgent treat", price: "₹159" },
-          { name: "Vanilla Add-On", desc: "Classic vanilla flavour boost for your coffee", price: "+₹30" },
-          { name: "Irish Add-On", desc: "Irish cream flavour enhancement for your coffee", price: "+₹30" },
-          { name: "Hazelnut Add-On", desc: "Roasted hazelnut flavour boost for your coffee", price: "+₹30" },
-          { name: "Caramel Add-On", desc: "Golden caramel drizzle for extra richness", price: "+₹30" },
-          { name: "Honey Add-On", desc: "Natural honey sweetness for a smooth finish", price: "+₹30" },
           { name: "Iced Americano", desc: "Chilled double espresso and cold water over ice for a bold pick-me-up", price: "₹149" },
           { name: "Iced Cappuccino", desc: "Chilled espresso, frothy cold milk, and a dusting of cocoa", price: "₹169" },
           { name: "Iced Latte", desc: "Chilled espresso and smooth cold milk over ice", price: "₹149" },
@@ -527,6 +522,13 @@ const outletsData = {
           { name: "Hot Chocolate", desc: "Rich creamy hot chocolate made with premium cocoa and fresh milk", price: "₹139", tag: "Comfort" },
           { name: "Tiramisu Hot Chocolate", desc: "Rich cocoa dusted with mascarpone tiramisu essence", price: "₹159" },
           { name: "Hazelnut Hot Chocolate", desc: "Nutty and indulgent hot chocolate with roasted hazelnut", price: "₹159" }
+        ],
+        addons: [
+          { name: "Vanilla Add-On", price: "+₹30", desc: "Classic vanilla flavour boost for your coffee" },
+          { name: "Irish Add-On", price: "+₹30", desc: "Irish cream flavour enhancement for your coffee" },
+          { name: "Hazelnut Add-On", price: "+₹30", desc: "Roasted hazelnut flavour boost for your coffee" },
+          { name: "Caramel Add-On", price: "+₹30", desc: "Golden caramel drizzle for extra richness" },
+          { name: "Honey Add-On", price: "+₹30", desc: "Natural honey sweetness for a smooth finish" }
         ]
       },
 
@@ -962,6 +964,55 @@ function renderDigitalItems() {
               </div>
             `).join('')}
           </div>
+        </div>
+      </div>
+    ` + detailFooter;
+
+    const backBtn = document.getElementById('categoryBackBtn');
+    if (backBtn) {
+      backBtn.addEventListener('click', () => {
+        currentCategory = '';
+        isCategoryDetailOpen = false;
+        renderCurrentView();
+      });
+    }
+    return;
+  }
+
+  if (section.type === 'coffee_with_addons') {
+    container.innerHTML = detailHeader + `
+      <div class="menu-standard-list">
+        ${section.items.map(item => `
+          <div class="menu-standard-row">
+            <div class="menu-standard-info">
+              <div class="menu-standard-title-row">
+                <span class="menu-standard-name">${item.name}</span>
+                ${item.tag ? `<span class="badge-tag">${item.tag}</span>` : ''}
+              </div>
+              ${item.desc ? `<p class="menu-standard-desc">${item.desc}</p>` : ''}
+            </div>
+            <div class="menu-standard-price-box">
+              ${item.price || (item.customPrice || `₹${item.r}`)}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+
+      <div class="coffee-addons-box">
+        <div class="coffee-addons-header">
+          <span class="coffee-addons-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Coffee Add-ons</span>
+          <span class="coffee-addons-badge">+₹30 each</span>
+        </div>
+        <div class="coffee-addons-grid">
+          ${section.addons.map(addon => `
+            <div class="coffee-addon-card">
+              <div class="coffee-addon-top">
+                <span class="coffee-addon-name">${addon.name}</span>
+                <span class="coffee-addon-price">${addon.price}</span>
+              </div>
+              <p class="coffee-addon-desc">${addon.desc}</p>
+            </div>
+          `).join('')}
         </div>
       </div>
     ` + detailFooter;
