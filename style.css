@@ -2291,7 +2291,8 @@ img {
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem 1rem 0.9rem;
-  border: 1.5px solid rgba(212, 160, 23, 0.32);
+  border: 1.5px solid rgba(212, 160, 23, 0.38);
+  border-left: 4px solid rgba(212, 160, 23, 0.8);
   background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.015));
   border-radius: 18px;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.05);
@@ -2319,13 +2320,14 @@ img {
   color: var(--text-soft);
   font-size: 0.8rem;
   line-height: 1.55;
+  font-weight: 700;
 }
 
 .menu-standard-price-box {
   min-width: 90px;
   padding: 0.65rem 0.8rem;
   border-radius: 12px;
-  border: 1.5px solid rgba(212, 160, 23, 0.38);
+  border: 1.5px solid rgba(212, 160, 23, 0.42);
   background: rgba(212, 160, 23, 0.08);
   color: var(--gold);
   font-size: 0.96rem;
@@ -2336,7 +2338,7 @@ img {
 
 .coffee-addons-box {
   margin-top: 1rem;
-  border: 1.5px solid rgba(212, 160, 23, 0.28);
+  border: 1.5px solid rgba(212, 160, 23, 0.3);
   border-radius: 20px;
   background: rgba(255,255,255,0.015);
   padding: 1rem;
@@ -2383,9 +2385,10 @@ img {
   flex-direction: column;
   gap: 0.6rem;
   padding: 0.85rem 0.9rem;
-  border: 1.5px solid rgba(212, 160, 23, 0.32);
+  border: 1.5px solid rgba(46, 204, 113, 0.42);
+  border-left: 4px solid rgba(46, 204, 113, 0.9);
   border-radius: 16px;
-  background: linear-gradient(180deg, rgba(212,160,23,0.06), rgba(255,255,255,0.02));
+  background: linear-gradient(180deg, rgba(46, 204, 113, 0.05), rgba(255,255,255,0.02));
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
 }
 
@@ -2398,7 +2401,7 @@ img {
 
 .coffee-addon-name {
   color: var(--text);
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .coffee-addon-price {
@@ -2410,7 +2413,7 @@ img {
   color: var(--text-soft);
   font-size: 0.78rem;
   line-height: 1.55;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .order-wa-btn {
