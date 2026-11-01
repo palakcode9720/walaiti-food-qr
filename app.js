@@ -591,7 +591,7 @@ function getCategoryImage(catId) {
     an_pizzas: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
     an_atta: 'https://www.shutterstock.com/image-photo/veg-extravaganza-loaded-flavorful-pizza-600w-2700208497.jpg',
     an_upgrades_dips: 'https://www.unileverfoodsolutions.com.ph/dam/global-ufs/mcos/SEA/calcmenu/recipes/PH-recipes/appetisers/sriracha-mayo-dip/main-header.jpg',
-    an_mania: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80',
+    an_mania: 'https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/HomeProductV1/9833864c-fc79-49d3-bf3c-f5f72ff1c881_extravaganzasidejpgFull2x2702.webp',
     an_breads: 'https://www.ambitiouskitchen.com/wp-content/uploads/2023/02/Garlic-Bread-4.jpg',
     an_pastas: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=400&q=80',
     an_burgers: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80',
@@ -599,7 +599,7 @@ function getCategoryImage(catId) {
     an_shakes: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=400&q=80',
     an_drinks: 'https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=400&q=80',
     an_hot: 'https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=400&q=80',
-    an_combos_desserts: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=400&q=80',
+    an_combos_desserts: 'https://www.cookwithkushi.com/wp-content/uploads/2017/01/sizzling_brownie_sundae_ice_cream.jpg',
 
     mt_pizzas: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
     mt_atta: 'https://www.shutterstock.com/image-photo/veg-extravaganza-loaded-flavorful-pizza-600w-2700208497.jpg',
@@ -614,7 +614,7 @@ function getCategoryImage(catId) {
     mt_coffees: 'https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=400&q=80',
     mt_teas: 'https://media.istockphoto.com/id/1064859392/photo/tea-served-in-a-traditional-mud-cup-in-india.jpg?s=612x612&w=0&k=20&c=vOGMGhMX20HSWfGhmaMW6Wu5ogBspkQJq3Y6cs4fu3A=',
     mt_drinks: 'https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=400&q=80',
-    mt_desserts: 'https://rhubarbandcod.com/wp-content/uploads/2021/02/Hazelnut-Brownies-with-Frangelico-Ice-Cream.jpg'
+    mt_desserts: 'https://www.cookwithkushi.com/wp-content/uploads/2017/01/sizzling_brownie_sundae_ice_cream.jpg'
   };
 
   return imageMap[catId] || 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80';
