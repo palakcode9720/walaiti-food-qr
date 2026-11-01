@@ -288,8 +288,8 @@ const outletsData = {
       { id: "mt_upgrades_dips", name: "Upgrades & Dips", icon: "fa-wand-magic-sparkles" },
       { id: "mt_breads", name: "Garlic Breads & Calzones", icon: "fa-bread-slice" },
       { id: "mt_pastas", name: "Pastas (Pesto, Alfredo, Bakes)", icon: "fa-bowl-rice" },
-      { id: "mt_burgers", name: "Burgers, Pesto Sandwich & Subs", icon: "fa-burger" },
-      { id: "mt_chinese", name: "Snacks, Chinese & Soups", icon: "fa-bowl-food" },
+      { id: "mt_burgers", name: "Burgers, Sandwiches, Wraps & Subs", icon: "fa-burger" },
+      { id: "mt_chinese", name: "Snacks, Chinese & Salads", icon: "fa-bowl-food" },
       { id: "mt_shakes", name: "Milkshakes (Classic & Premium)", icon: "fa-blender" },
       { id: "mt_frappes", name: "Frappes & Cold Coffee", icon: "fa-glass-water" },
       { id: "mt_matchas", name: "Matcha Lattes", icon: "fa-leaf" },
@@ -417,7 +417,7 @@ const outletsData = {
 
       mt_chinese: {
         type: "cards",
-        title: "Snacks, Chinese, Salads & Soups",
+        title: "Snacks, Chinese & Salads",
         items: [
           { name: "French Fries", desc: "Crisp salted golden potato fries", price: "₹170" },
           { name: "Peri Peri Fries", desc: "Crispy fries tossed with fiery African peri peri seasoning", price: "₹180" },
@@ -434,9 +434,6 @@ const outletsData = {
           { name: "Paneer Pops (20 Pcs)", desc: "Bite-sized crunchy paneer nuggets with dipping sauce", price: "₹230" },
           { name: "Cheese Corn Roll (6 Pcs)", desc: "Crisp rolls packed with gooey sweet corn and mozzarella", price: "₹250" },
           { name: "Fried Rice / Schezwan Fried Rice", desc: "Wok tossed aromatic basmati rice with veggies / spicy Schezwan", price: "₹100 / ₹110" },
-          { name: "Veg Manchow Soup", desc: "Spicy dark broth with vegetables topped with crispy noodles", price: "₹110" },
-          { name: "Lemon Coriander Soup", desc: "Light fragrant vegetable soup with fresh lemon & coriander", price: "₹110" },
-          { name: "Sweet Corn Soup", desc: "Comforting creamy sweet corn and vegetable soup", price: "₹110" },
           { name: "High Protein Salad", desc: "Fresh paneer, boiled legumes, crunchy greens (GYM Special)", price: "₹220", tag: "Fitness" },
           { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables & herb dressing", price: "₹190" },
           { name: "Veg Salad", desc: "Garden fresh crispy lettuce, cucumber, tomato & olives", price: "₹180" }
@@ -466,7 +463,7 @@ const outletsData = {
 
       mt_frappes: {
         type: "cards",
-        title: "Frappes & Chilled Coffee Blends (Model Town Exclusive)",
+        title: "Frappes & Cold Coffee (Model Town Exclusive)",
         items: [
           { name: "Classic Cold Coffee", desc: "A delightful blend of rich espresso, creamy milk, and vanilla icecream", price: "₹159", tag: "Bestseller" },
           { name: "Choco Frappe", desc: "A creamy blend of rich chocolate and coffee, topped with ice cream", price: "₹199" },
@@ -1186,14 +1183,20 @@ function getCategoryImage(catId) {
     an_drinks: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80',
     an_hot: 'https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=400&q=80',
     an_combos_desserts: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=400&q=80',
+
     mt_pizzas: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
+    mt_atta: 'https://images.unsplash.com/photo-1548365328-9f547fb9587c?auto=format&fit=crop&w=400&q=80',
+    mt_upgrades_dips: 'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=400&q=80',
     mt_breads: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80',
-    mt_burgers: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80',
     mt_pastas: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=400&q=80',
-    mt_chinese: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=400&q=80',
-    mt_milkshakes: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=400&q=80',
-    mt_drinks: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80',
-    mt_tea: 'https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=400&q=80',
+    mt_burgers: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80',
+    mt_chinese: 'https://images.unsplash.com/photo-1557872943-16a0d1f7b4e0?auto=format&fit=crop&w=400&q=80',
+    mt_shakes: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=400&q=80',
+    mt_frappes: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80',
+    mt_matchas: 'https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=400&q=80',
+    mt_coffees: 'https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=400&q=80',
+    mt_teas: 'https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=400&q=80',
+    mt_drinks: 'https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=400&q=80',
     mt_desserts: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=400&q=80'
   };
 
