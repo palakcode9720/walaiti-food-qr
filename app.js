@@ -185,11 +185,7 @@ const outletsData = {
           { name: "Cheese Corn Roll (6 Pcs)", desc: "Golden fried crispy rolls packed with corn & cheese", price: "₹160" },
           { name: "Walaiti Special Noodles", desc: "Wok-tossed noodles with fresh shredded vegetables", price: "₹200", tag: "Popular" },
           { name: "Veg Manchow Soup", desc: "Dark spicy broth with vegetables and crispy fried noodles", price: "₹90" },
-          { name: "Lemon Coriander Soup", desc: "Refreshing clear broth with fresh lemon juice & coriander", price: "₹110" },
-          { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
-          { name: "Veg Salad", desc: "Garden fresh crispy lettuce, cucumber, tomato & olives", price: "₹180" },
-          { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables & herb dressing", price: "₹190" },
-          { name: "High Protein Salad", desc: "Fresh paneer, boiled legumes, crunchy greens (GYM Special)", price: "₹210", tag: "Fitness" }
+          { name: "Lemon Coriander Soup", desc: "Refreshing clear broth with fresh lemon juice & coriander", price: "₹110" }
         ]
       },
 
@@ -243,6 +239,7 @@ const outletsData = {
         type: "cards",
         title: "Tea, Coffee & Hot Chocolate Milk",
         items: [
+          { name: "Hot Tea (Milk Tea)", desc: "Classic creamy milk tea", price: "₹70" },
           { name: "Paan Tea", price: "₹50" },
           { name: "Rose Tea", price: "₹50" },
           { name: "Elaichi Tea", price: "₹50" },
