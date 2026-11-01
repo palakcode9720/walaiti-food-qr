@@ -1188,7 +1188,7 @@ function setupThemeToggle() {
   const themeToggle = document.getElementById('themeToggleBtn');
   if (!themeToggle) return;
 
-  const savedTheme = localStorage.getItem('theme') || 'dark';
+  const savedTheme = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeButton(savedTheme);
 
