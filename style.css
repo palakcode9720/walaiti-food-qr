@@ -1390,18 +1390,17 @@ img {
 }
 
 .compact-home-grid {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.8rem;
-  max-width: 100%;
-  padding: 0 0 0.35rem;
-  scrollbar-width: thin;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .compact-home-grid .feature-food-card {
-  flex: 0 0 150px;
-  min-height: 120px;
+  width: 100%;
+  min-height: 128px;
   padding: 0.6rem 0.45rem;
   border: 1px solid rgba(212, 160, 23, 0.35);
   border-radius: 18px;
@@ -1416,6 +1415,13 @@ img {
   border: 2px solid rgba(212, 160, 23, 0.35);
   overflow: hidden;
   background: rgba(255,255,255,0.05);
+}
+
+.compact-home-grid .food-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .compact-home-grid .food-label {
