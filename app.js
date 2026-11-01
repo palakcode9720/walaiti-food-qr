@@ -175,8 +175,8 @@ const outletsData = {
           { name: "Peri Peri Fries", desc: "Tossed with fiery peri peri seasoning", price: "₹90" },
           { name: "Peri Peri Cheesy Fries", desc: "Peri peri fries drenched with hot cheese drizzle", price: "₹99", tag: "Hot" },
           { name: "Cheese Masala Fries", desc: "Crisp fries seasoned with chatpata masala & cheese", price: "₹99" },
-          { name: "Peri Peri V Crisper", desc: "V-cut crunchy potato crispers in peri peri seasoning", price: "₹180" },
-          { name: "Cheesy V Crisper", desc: "V-cut potato crispers loaded with warm cheese sauce", price: "₹200" },
+          { name: "Peri Peri V Crisper", desc: "V-cut crunchy potato crispers in peri peri seasoning", price: "₹170" },
+          { name: "Cheesy V Crisper", desc: "V-cut potato crispers loaded with warm cheese sauce", price: "₹190" },
           { name: "Manchurian (Dry / Gravy)", desc: "Crispy veg balls in tangy indo-chinese gravy", price: "₹220" },
           { name: "Cheese Chilli (Dry / Gravy)", desc: "Paneer cubes tossed with bell peppers & spicy sauce", price: "₹280", tag: "Best Seller" },
           { name: "Honey Chilli Potato", desc: "Crispy sesame coated potatoes glazed in spicy honey", price: "₹200" },
@@ -187,17 +187,9 @@ const outletsData = {
           { name: "Veg Manchow Soup", desc: "Dark spicy broth with vegetables and crispy fried noodles", price: "₹90" },
           { name: "Lemon Coriander Soup", desc: "Refreshing clear broth with fresh lemon juice & coriander", price: "₹110" },
           { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
-          { name: "Honey Chilli Potato", desc: "Crisp potato fingers glazed in spicy sweet honey sesame glaze", price: "₹250" },
-          { name: "Cheese Chilli (Dry / Gravy)", desc: "Wok tossed paneer cubes with bell peppers & spicy oriental sauce", price: "₹300", tag: "Best Seller" },
-          { name: "Veg Manchurian (Dry / Gravy)", desc: "Crisp vegetable dumplings tossed in tangy soya garlic gravy", price: "₹250" },
-          { name: "Mushroom Chilli", desc: "Button mushrooms stir-fried with capsicum and spicy chilli sauce", price: "₹300" },
-          { name: "Spring Rolls (2 Pcs)", desc: "Crispy golden fried rolls stuffed with shredded vegetables", price: "₹180" },
-          { name: "Paneer Pops (20 Pcs)", desc: "Bite-sized crunchy paneer nuggets with dipping sauce", price: "₹200" },
-          { name: "Cheese Corn Roll (6 Pcs)", desc: "Crisp rolls packed with gooey sweet corn and mozzarella", price: "₹180" },
-          { name: "Fried Rice / Schezwan Fried Rice", desc: "Wok tossed aromatic basmati rice with veggies / spicy Schezwan", price: "₹230 / ₹250" },
-          { name: "High Protein Salad", desc: "Fresh paneer, boiled legumes, crunchy greens (GYM Special)", price: "₹220", tag: "Fitness" },
+          { name: "Veg Salad", desc: "Garden fresh crispy lettuce, cucumber, tomato & olives", price: "₹180" },
           { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables & herb dressing", price: "₹190" },
-          { name: "Veg Salad", desc: "Garden fresh crispy lettuce, cucumber, tomato & olives", price: "₹180" }
+          { name: "High Protein Salad", desc: "Fresh paneer, boiled legumes, crunchy greens (GYM Special)", price: "₹210", tag: "Fitness" }
         ]
       },
 
@@ -231,19 +223,19 @@ const outletsData = {
         title: "Drinks, Mojitos & Ice Teas",
         items: [
           { name: "Virgin Mojito", desc: "Fresh mint, lime juice, sugar and sparkling soda", price: "₹119", tag: "Bestseller" },
-          { name: "Blueberry Mojito", desc: "Crushed blueberries with mint and sparkling soda", price: "₹119" },
-          { name: "Green Apple Mojito", desc: "Crisp green apple flavour with mint fizz", price: "₹119" },
-          { name: "Watermelon Mojito", desc: "Refreshing sweet watermelon with mint and lime", price: "₹119" },
-          { name: "Strawberry Mojito", desc: "Sweet strawberry syrup, mint and fizzy soda", price: "₹119" },
-          { name: "Spicy Mango Mocktail", desc: "Sweet mango puree with spicy tangy chili notes", price: "₹139", tag: "Special" },
-          { name: "Black Currant Mocktail", desc: "Exotic black currant fruit cooler", price: "₹139" },
+          { name: "Blue Berry", desc: "Crushed blueberries with mint and sparkling soda", price: "₹119" },
+          { name: "Green Apple", desc: "Crisp green apple flavour with mint fizz", price: "₹119" },
+          { name: "Watermelon", desc: "Refreshing sweet watermelon with mint and lime", price: "₹119" },
+          { name: "Strawberry", desc: "Sweet strawberry syrup, mint and fizzy soda", price: "₹119" },
+          { name: "Spicy Mango", desc: "Sweet mango puree with spicy tangy chili notes", price: "₹139", tag: "Special" },
+          { name: "Black Currant", desc: "Exotic black currant fruit cooler", price: "₹139" },
           { name: "Green Apple Ice-Tea", desc: "Chilled brewed black tea with green apple flavour", price: "₹119" },
-          { name: "Strawberry Ice-Tea", desc: "Chilled brewed black tea with strawberry flavour", price: "₹139" },
+          { name: "Strawberry Ice-Tea", desc: "Chilled brewed black tea with strawberry flavour", price: "₹119" },
           { name: "Peach Ice-Tea", desc: "Classic peach flavoured iced tea", price: "₹119", tag: "Popular" },
-          { name: "Lemon Ice-Tea", desc: "Citrus lemon brewed iced tea over ice", price: "₹119" },
-          { name: "Lemonade", desc: "Classic sweet and salted fresh lemon cooler", price: "₹70" },
+          { name: "Lemon Ice-Tea", desc: "Citrus lemon brewed iced tea over ice", price: "₹109" },
+          { name: "Lemonade", desc: "Classic sweet and salted fresh lemon cooler", price: "₹99" },
           { name: "Fruit Beer", desc: "Sparkling non-alcoholic fruit beer", price: "₹80" },
-          { name: "Pepsi / Cold Drink", desc: "Chilled soft drink can/bottle", price: "MRP" }
+          { name: "Pepsi", desc: "Chilled soft drink can/bottle", price: "₹60" }
         ]
       },
 
@@ -251,7 +243,17 @@ const outletsData = {
         type: "cards",
         title: "Tea, Coffee & Hot Chocolate Milk",
         items: [
-          { name: "Hot Tea (Milk Tea)", desc: "Freshly brewed Indian milk tea (Add Jaggery +₹20)", price: "₹70" },
+          { name: "Paan Tea", price: "₹50" },
+          { name: "Rose Tea", price: "₹50" },
+          { name: "Elaichi Tea", price: "₹50" },
+          { name: "Kesar Tea", price: "₹50" },
+          { name: "Ginger Tea", price: "₹50" },
+          { name: "Masala Tea", price: "₹50" },
+          { name: "Chocolate Tea", price: "₹50" },
+          { name: "Green Tea", desc: "Without milk", price: "₹90" },
+          { name: "Lemon Honey Tea", desc: "Without milk", price: "₹80" },
+          { name: "Special Masala Tea", desc: "Without milk", price: "₹70" },
+          { name: "Add Jaggery", price: "₹20" },
           { name: "Express Coffee", desc: "Steaming hot freshly brewed espresso milk coffee", price: "₹80", tag: "Hot Pick" },
           { name: "Hot Chocolate Milk", desc: "Rich velvety warm cocoa milk with sweet chocolate notes", price: "₹129", tag: "Comfort" }
         ]
