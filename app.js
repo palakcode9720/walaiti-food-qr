@@ -194,7 +194,7 @@ const outletsData = {
 
       an_shakes: {
         type: "cards",
-        title: "Milkshakes & Cold Coffee (Adarsh Nagar)",
+        title: "Milkshakes & Cold Coffee",
         items: [
           { name: "Bubble Gum Shake", desc: "Fun nostalgic sweet bubble gum flavoured shake", price: "₹139" },
           { name: "Mango Shake", desc: "Thick tropical alphanso mango shake", price: "₹139" },
@@ -219,7 +219,7 @@ const outletsData = {
 
       an_drinks: {
         type: "cards",
-        title: "Drinks, Mojitos & Ice Teas (Adarsh Nagar)",
+        title: "Drinks, Mojitos & Ice Teas",
         items: [
           { name: "Virgin Mojito", desc: "Fresh mint, lime juice, sugar and sparkling soda", price: "₹119", tag: "Bestseller" },
           { name: "Blueberry Mojito", desc: "Crushed blueberries with mint and sparkling soda", price: "₹119" },
@@ -240,7 +240,7 @@ const outletsData = {
 
       an_hot: {
         type: "cards",
-        title: "Tea, Coffee & Hot Chocolate Milk (Adarsh Nagar)",
+        title: "Tea, Coffee & Hot Chocolate Milk",
         items: [
           { name: "Hot Tea (Milk Tea)", desc: "Freshly brewed Indian milk tea (Add Jaggery +₹20)", price: "₹70" },
           { name: "Express Coffee", desc: "Steaming hot freshly brewed espresso milk coffee", price: "₹80", tag: "Hot Pick" },
@@ -250,7 +250,7 @@ const outletsData = {
 
       an_combos_desserts: {
         type: "cards",
-        title: "Combos & Desserts (Adarsh Nagar)",
+        title: "Combos & Desserts",
         items: [
           { name: "Combo 1: Crispy Burger + Fries + Fruit Beer", desc: "Complete solo meal deal", price: "₹200", tag: "Combo 1" },
           { name: "Combo 2: Farm Fresh Pizza (R) + Fries + Fruit Beer", desc: "Regular pizza meal with sides & drink", price: "₹300", tag: "Combo 2" },
