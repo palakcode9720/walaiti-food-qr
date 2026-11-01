@@ -178,8 +178,6 @@ const outletsData = {
           { name: "Cheese Masala Fries", desc: "Crisp fries seasoned with chatpata masala & cheese (M: ₹99 | L: ₹190)", price: "₹99 / ₹190" },
           { name: "Peri Peri V Crisper", desc: "V-cut crunchy potato crispers in peri peri seasoning", price: "₹170" },
           { name: "Cheesy V Crisper", desc: "V-cut potato crispers loaded with warm cheese sauce", price: "₹190" },
-          { name: "Manchurian (Dry / Gravy)", desc: "Crispy veg balls in tangy indo-chinese gravy", price: "₹220" },
-          { name: "Cheese Chilli (Dry / Gravy)", desc: "Paneer cubes tossed with bell peppers & spicy sauce", price: "₹280", tag: "Best Seller" },
           { name: "Honey Chilli Potato", desc: "Crispy sesame coated potatoes glazed in spicy honey", price: "₹200" },
           { name: "Paneer Pops (20 Pcs)", desc: "Bite-sized crispy paneer nuggets with dip", price: "₹160" },
           { name: "Spring Rolls (2 Pcs)", desc: "Crispy golden fried vegetable rolls", price: "₹140" },
@@ -187,9 +185,10 @@ const outletsData = {
           { name: "Walaiti Special Noodles", desc: "Wok-tossed noodles with fresh shredded vegetables", price: "₹200", tag: "Popular" },
           { name: "Veg Manchow Soup", desc: "Dark spicy broth with vegetables and crispy fried noodles", price: "₹90" },
           { name: "Lemon Coriander Soup", desc: "Refreshing clear broth with fresh lemon juice & coriander", price: "₹110" },
+          { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
           { name: "Veg Salad", desc: "Fresh garden salad with crunchy vegetables and herbs", price: "₹180" },
           { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables and dressing", price: "₹190" },
-          { name: "High Protein Salad", desc: "Protein-rich salad with paneer, legumes and fresh greens", price: "₹210" }
+          { name: "High Protein Salad", desc: "Protein-rich salad with paneer, legumes and fresh greens", price: "₹220" }
         ]
       },
 
@@ -438,12 +437,22 @@ const outletsData = {
           { name: "Cheese Masala Fries", desc: "Crispy fries seasoned with chatpata masala & cheese", price: "₹200" },
           { name: "Peri Peri V Crisper", desc: "V-cut crunchy potato crispers in peri peri seasoning", price: "₹180" },
           { name: "Cheesy V Crisper", desc: "V-cut potato crispers loaded with warm cheese sauce", price: "₹200" },
+          { name: "Honey Chilli Potato", desc: "Crisp potato fingers glazed in spicy sweet honey sesame glaze", price: "₹250" },
+          { name: "Cheese Chilli", desc: "Wok tossed paneer cubes with bell peppers & spicy oriental sauce", price: "₹300", tag: "Best Seller" },
+          { name: "Manchurian (Dry / Gravy)", desc: "Crisp vegetable dumplings tossed in tangy soya garlic gravy", price: "₹250" },
+          { name: "Mushroom Chilli", desc: "Button mushrooms stir-fried with capsicum and spicy chilli sauce", price: "₹300" },
+          { name: "Spring Rolls (2 Pcs)", desc: "Crispy golden fried rolls stuffed with shredded vegetables", price: "₹180" },
+          { name: "Paneer Pops (20 Pcs)", desc: "Bite-sized crunchy paneer nuggets with dipping sauce", price: "₹200" },
+          { name: "Cheese Corn Roll (6 Pcs)", desc: "Crisp rolls packed with gooey sweet corn and mozzarella", price: "₹180" },
+          { name: "Fried Rice", desc: "Wok tossed aromatic basmati rice with fresh vegetables", price: "₹230" },
+          { name: "Schezwan Fried Rice", desc: "Wok tossed aromatic basmati rice in fiery Schezwan style", price: "₹250" },
           { name: "Walaiti Special Noodles", desc: "Chef's signature wok-tossed noodles with garden vegetables", price: "₹220", tag: "Popular" },
           { name: "Veg Manchow Soup", desc: "Dark spicy broth with vegetables and crispy fried noodles", price: "₹100" },
           { name: "Lemon Coriander Soup", desc: "Refreshing clear broth with fresh lemon juice & coriander", price: "₹110" },
+          { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
           { name: "Veg Salad", desc: "Fresh garden salad with crunchy vegetables and herbs", price: "₹180" },
           { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables and dressing", price: "₹190" },
-          { name: "High Protein Salad", desc: "Protein-rich salad with paneer, legumes and fresh greens", price: "₹210" }
+          { name: "High Protein Salad", desc: "Protein-rich salad with paneer, legumes and fresh greens", price: "₹220" }
         ]
       },
 
@@ -823,6 +832,7 @@ function renderDigitalItems() {
       <div class="search-results-wrap">
         ${groupedMatches.map(group => `
           <div class="search-results-group">
+           
             <h3 class="search-results-title">${group.title}</h3>
             <div class="items-cards-grid">
               ${group.items.map(item => `
