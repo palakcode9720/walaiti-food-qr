@@ -189,11 +189,11 @@ const outletsData = {
           { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
           { name: "Honey Chilli Potato", desc: "Crisp potato fingers glazed in spicy sweet honey sesame glaze", price: "₹250" },
           { name: "Cheese Chilli (Dry / Gravy)", desc: "Wok tossed paneer cubes with bell peppers & spicy oriental sauce", price: "₹300", tag: "Best Seller" },
-          { name: "Veg Manchurian (Dry / Gravy)", desc: "Crisp vegetable dumplings tossed in tangy soya garlic gravy", price: "₹180" },
-          { name: "Mushroom Chilli", desc: "Button mushrooms stir-fried with capsicum and spicy chilli sauce", price: "₹200" },
+          { name: "Veg Manchurian (Dry / Gravy)", desc: "Crisp vegetable dumplings tossed in tangy soya garlic gravy", price: "₹250" },
+          { name: "Mushroom Chilli", desc: "Button mushrooms stir-fried with capsicum and spicy chilli sauce", price: "₹300" },
           { name: "Spring Rolls (2 Pcs)", desc: "Crispy golden fried rolls stuffed with shredded vegetables", price: "₹180" },
           { name: "Paneer Pops (20 Pcs)", desc: "Bite-sized crunchy paneer nuggets with dipping sauce", price: "₹200" },
-          { name: "Cheese Corn Roll (6 Pcs)", desc: "Crisp rolls packed with gooey sweet corn and mozzarella", price: "₹250" },
+          { name: "Cheese Corn Roll (6 Pcs)", desc: "Crisp rolls packed with gooey sweet corn and mozzarella", price: "₹180" },
           { name: "Fried Rice / Schezwan Fried Rice", desc: "Wok tossed aromatic basmati rice with veggies / spicy Schezwan", price: "₹230 / ₹250" },
           { name: "High Protein Salad", desc: "Fresh paneer, boiled legumes, crunchy greens (GYM Special)", price: "₹220", tag: "Fitness" },
           { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables & herb dressing", price: "₹190" },
@@ -418,9 +418,9 @@ const outletsData = {
           { name: "Tandoori Wrap", desc: "Roast paneer cube, onion, lettuce with tandoori dressing", price: "₹180" },
           { name: "Makhani Pasta Wrap", desc: "Tortilla, cooked creamy pasta, onion, lettuce with sauces", price: "₹170" },
           { name: "Tikki Wrap", desc: "Tortilla, crisp veg patty, onion, lettuce with house sauces", price: "₹150" },
-          { name: "Simply Veg Sub", desc: "Onion, cucumber, tomato, corn, capsicum, lettuce, mozzarella cheese", price: "₹150" },
-          { name: "Veg Tikki Sub", desc: "Veg patty, onion, cucumber, tomato, corn, capsicum, lettuce, mozzarella", price: "₹160" },
-          { name: "Paneer Tikka Sub", desc: "Marinated paneer, onion, cucumber, tomato, corn, capsicum, lettuce, mozzarella", price: "₹170" },
+          { name: "Simply Veg Sub", desc: "Onion, cucumber, tomato, corn, capsicum, lettuce, mozzarella cheese", price: "₹140" },
+          { name: "Veg Tikki Sub", desc: "Veg patty, onion, cucumber, tomato, corn, capsicum, lettuce, mozzarella", price: "₹150" },
+          { name: "Paneer Tikka Sub", desc: "Marinated paneer, onion, cucumber, tomato, corn, capsicum, lettuce, mozzarella", price: "₹160" },
           { name: "Add Cheese Slice", desc: "Extra cheese slice for burgers, sandwiches, wraps & subs", price: "₹20" }
         ]
       },
@@ -441,11 +441,11 @@ const outletsData = {
           { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
           { name: "Honey Chilli Potato", desc: "Crisp potato fingers glazed in spicy sweet honey sesame glaze", price: "₹250" },
           { name: "Cheese Chilli (Dry / Gravy)", desc: "Wok tossed paneer cubes with bell peppers & spicy oriental sauce", price: "₹300", tag: "Best Seller" },
-          { name: "Veg Manchurian (Dry / Gravy)", desc: "Crisp vegetable dumplings tossed in tangy soya garlic gravy", price: "₹180" },
-          { name: "Mushroom Chilli", desc: "Button mushrooms stir-fried with capsicum and spicy chilli sauce", price: "₹200" },
+          { name: "Veg Manchurian (Dry / Gravy)", desc: "Crisp vegetable dumplings tossed in tangy soya garlic gravy", price: "₹250" },
+          { name: "Mushroom Chilli", desc: "Button mushrooms stir-fried with capsicum and spicy chilli sauce", price: "₹300" },
           { name: "Spring Rolls (2 Pcs)", desc: "Crispy golden fried rolls stuffed with shredded vegetables", price: "₹180" },
           { name: "Paneer Pops (20 Pcs)", desc: "Bite-sized crunchy paneer nuggets with dipping sauce", price: "₹200" },
-          { name: "Cheese Corn Roll (6 Pcs)", desc: "Crisp rolls packed with gooey sweet corn and mozzarella", price: "₹250" },
+          { name: "Cheese Corn Roll (6 Pcs)", desc: "Crisp rolls packed with gooey sweet corn and mozzarella", price: "₹180" },
           { name: "Fried Rice / Schezwan Fried Rice", desc: "Wok tossed aromatic basmati rice with veggies / spicy Schezwan", price: "₹230 / ₹250" },
           { name: "High Protein Salad", desc: "Fresh paneer, boiled legumes, crunchy greens (GYM Special)", price: "₹220", tag: "Fitness" },
           { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables & herb dressing", price: "₹190" },
@@ -474,82 +474,6 @@ const outletsData = {
         ]
       },
 
-      mt_frappes: {
-        type: "cards",
-        title: "Frappes (Model Town Exclusive)",
-        items: [
-          { name: "Choco Frappe", desc: "A creamy blend of rich chocolate and coffee, topped with ice cream", price: "₹199" },
-          { name: "Caramel Frappe", desc: "A delightful blend of ice cream and cold coffee, infused with rich caramel", price: "₹199" },
-          { name: "Hazelnut Frappe", desc: "A deliciously blended ice cream coffee drink infused with rich hazelnut flavor", price: "₹199" },
-          { name: "Irish Frappe", desc: "Bold espresso blended with Irish cream essence and ice cream", price: "₹199" },
-          { name: "Brownie Frappe", desc: "Rich chocolate brownie chunks blended into thick iced coffee", price: "₹219" },
-          { name: "Nutella Frappe", desc: "A creamy and indulgent blend of espresso and Nutella, topped with ice cream", price: "₹229", tag: "Chef Special" },
-          { name: "Biscoff Frappe", desc: "A deliciously creamy blend infused with caramelized Lotus Biscoff spread", price: "₹229", tag: "Top Rated" }
-        ]
-      },
-
-      mt_matchas: {
-        type: "cards",
-        title: "Matcha Lattes (Model Town Exclusive)",
-        items: [
-          { name: "Iced Matcha Latte", desc: "Authentic premium Japanese green tea matcha whisked with chilled milk", price: "₹200", tag: "Superfood" },
-          { name: "Mango Matcha Latte", desc: "Layered drink with sweet mango compote, cold milk, and rich green matcha", price: "₹250", tag: "Special" },
-          { name: "Strawberry Matcha Latte", desc: "Fresh sweet strawberry puree layered with velvety cold milk and ceremonial matcha", price: "₹250", tag: "Special" }
-        ]
-      },
-
-      mt_coffees: {
-        type: "coffee_with_addons",
-        title: "Iced & Hot Coffees, Hot Chocolates",
-        items: [
-          { name: "Classic Cold Coffee", desc: "A delightful blend of rich espresso, creamy milk, and ice cream served for a refreshing, indulgent treat", price: "₹159" },
-          { name: "Iced Americano", desc: "Chilled double espresso and cold water over ice for a bold pick-me-up", price: "₹149" },
-          { name: "Iced Cappuccino", desc: "Chilled espresso, frothy cold milk, and a dusting of cocoa", price: "₹169" },
-          { name: "Iced Latte", desc: "Chilled espresso and smooth cold milk over ice", price: "₹149" },
-          { name: "Iced Mocha", desc: "Chilled espresso, creamy milk, and rich chocolate syrup over ice", price: "₹169" },
-          { name: "Iced Caramel", desc: "Rich layers of espresso, milk, and sweet golden caramel over ice", price: "₹169" },
-          { name: "Iced Hazelnut", desc: "Chilled coffee infused with rich nutty hazelnut flavor over ice", price: "₹169" },
-          { name: "Espresso (Hot)", desc: "Brewed fresh from roasted whole coffee beans", price: "₹79" },
-          { name: "Americano (Hot)", desc: "Robust and invigorating double shot hot coffee", price: "₹99" },
-          { name: "Cappuccino (Hot)", desc: "Velvety blend of espresso, steamed milk, and creamy foam layer", price: "₹139", tag: "Classic" },
-          { name: "Cafe Latte (Hot)", desc: "Comforting combination of espresso and steamed milk with thin foam", price: "₹149" },
-          { name: "Caffe Mocha (Hot)", desc: "Rich blend of espresso, steamed milk, and velvety dark chocolate", price: "₹159" },
-          { name: "Flat White (Hot)", desc: "Double shot espresso with silky micro-foam milk", price: "₹139" },
-          { name: "French Vanilla Cappuccino (Hot)", desc: "Cappuccino infused with aromatic French vanilla", price: "₹149" },
-          { name: "Biscoff Latte (Hot)", desc: "Creamy espresso blended with spiced Lotus Biscoff spread", price: "₹179", tag: "Special" },
-          { name: "Special Jaggery Latte (Hot)", desc: "Desi gur jaggery infused healthy milk latte", price: "₹159" },
-          { name: "Turmeric Latte (Hot)", desc: "Immunity boosting golden turmeric steamed milk", price: "₹139" },
-          { name: "Hot Chocolate", desc: "Rich creamy hot chocolate made with premium cocoa and fresh milk", price: "₹139", tag: "Comfort" },
-          { name: "Tiramisu Hot Chocolate", desc: "Rich cocoa dusted with mascarpone tiramisu essence", price: "₹159" },
-          { name: "Hazelnut Hot Chocolate", desc: "Nutty and indulgent hot chocolate with roasted hazelnut", price: "₹159" }
-        ],
-        addons: [
-          { name: "Vanilla Add-On", price: "+₹30", desc: "Classic vanilla flavour boost for your coffee" },
-          { name: "Irish Add-On", price: "+₹30", desc: "Irish cream flavour enhancement for your coffee" },
-          { name: "Hazelnut Add-On", price: "+₹30", desc: "Roasted hazelnut flavour boost for your coffee" },
-          { name: "Caramel Add-On", price: "+₹30", desc: "Golden caramel drizzle for extra richness" },
-          { name: "Honey Add-On", price: "+₹30", desc: "Natural honey sweetness for a smooth finish" }
-        ]
-      },
-
-      mt_teas: {
-        type: "cards",
-        title: "Hot Flavoured Teas (Without Milk / With Milk)",
-        items: [
-          { name: "Paan Tea", desc: "Fragrant sweet paan betel leaf infused tea", price: "₹60" },
-          { name: "Rose Tea", desc: "Fragrant rose petal flavoured tea", price: "₹60" },
-          { name: "Elaichi Tea", desc: "Aromatic green cardamom infused chai", price: "₹70" },
-          { name: "Kesar Tea", desc: "Royal Kashmiri saffron infused tea", price: "₹60" },
-          { name: "Ginger Tea", desc: "Invigorating fresh adrak ginger tea", price: "₹60" },
-          { name: "Masala Tea", desc: "Authentic Indian masala spiced chai", price: "₹60" },
-          { name: "Special Masala Tea", desc: "Chef's signature blend of 7 whole spices in fresh chai", price: "₹80", tag: "Top Pick" },
-          { name: "Chocolate Tea", desc: "Steaming hot tea infused with chocolate flavours", price: "₹60" },
-          { name: "Green Tea", desc: "Pure organic soothing green tea", price: "₹90" },
-          { name: "Lemon Honey Tea", desc: "Warm soothing tea with natural honey and fresh lemon", price: "₹90" },
-          { name: "Note: Add Jaggery (Desi Gur)", desc: "Swap sugar for healthy desi jaggery in any hot tea", price: "+₹20" }
-        ]
-      },
-
       mt_drinks: {
         type: "cards",
         title: "Drinks, Mojitos & Chilli Guava",
@@ -559,16 +483,16 @@ const outletsData = {
           { name: "Blueberry Mojito", desc: "Fizzy blueberry cooler with mint and lemon", price: "₹139" },
           { name: "Green Apple Mojito", desc: "Tangy green apple syrup with sparkling soda and mint", price: "₹139" },
           { name: "Watermelon Mojito", desc: "Sweet watermelon cooler with crushed mint leaves", price: "₹139" },
-          { name: "Strawberry Mojito", desc: "Sweet strawberry cooler with fizzy soda", price: "₹139" },
+          { name: "Strawberry Mojito", desc: "Sweet strawberry cooler with fizzy soda", price: "₹149" },
+          { name: "Strawberry Ice-Tea", desc: "Chilled brewed black tea with strawberry flavour", price: "₹149" },
           { name: "Spicy Mango Mocktail", desc: "Tropical mango juice infused with chatpata spices", price: "₹149", tag: "Special" },
-          { name: "Black Currant Mocktail", desc: "Exotic chilled black currant cooler", price: "₹149" },
+          { name: "Black Currant Mocktail", desc: "Exotic chilled black currant cooler", price: "₹139" },
           { name: "Green Apple Ice-Tea", desc: "Chilled iced tea infused with green apple", price: "₹139" },
-          { name: "Strawberry Ice-Tea", desc: "Chilled brewed black tea with strawberry flavour", price: "₹139" },
           { name: "Peach Ice-Tea", desc: "Aromatic peach iced tea served over ice", price: "₹139" },
-          { name: "Lemon Ice-Tea", desc: "Classic fresh citrus lemon brewed iced tea", price: "₹139" },
-          { name: "Lemonade", desc: "Sweet and salted fresh nimbu pani", price: "₹129" },
-          { name: "Fruit Beer", desc: "Crisp non-alcoholic fruit beer", price: "₹109" },
-          { name: "Pepsi Can", desc: "Chilled 300ml cold drink can", price: "₹80" }
+          { name: "Lemon Ice-Tea", desc: "Classic fresh citrus lemon brewed iced tea", price: "₹129" },
+          { name: "Lemonade", desc: "Sweet and salted fresh nimbu pani", price: "₹109" },
+          { name: "Fruit Beer", desc: "Crisp non-alcoholic fruit beer", price: "₹80" },
+          { name: "Pepsi Can", desc: "Chilled 300ml cold drink can", price: "₹70" }
         ]
       },
 
@@ -598,15 +522,15 @@ let isCategoryDetailOpen = false;
 
 // Image thumbnails for menu items
 const getItemImage = (itemName = '') => {
-    const name = itemName.toLowerCase();
-    if (name.includes('pizza')) return 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=300&q=80';
-    if (name.includes('burger') || name.includes('sandwich') || name.includes('wrap')) return 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80';
-    if (name.includes('fries') || name.includes('potato') || name.includes('snack')) return 'https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&w=300&q=80';
-    if (name.includes('shake') || name.includes('coffee') || name.includes('mojito') || name.includes('ice tea')) return 'https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=300&q=80';
-    if (name.includes('pasta') || name.includes('noodle')) return 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=300&q=80';
-    if (name.includes('dessert') || name.includes('cake') || name.includes('brownie') || name.includes('ice cream')) return 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=300&q=80';
-    return 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=300&q=80';
-  };
+  const name = itemName.toLowerCase();
+  if (name.includes('pizza')) return 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=300&q=80';
+  if (name.includes('burger') || name.includes('sandwich') || name.includes('wrap')) return 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80';
+  if (name.includes('fries') || name.includes('potato') || name.includes('snack')) return 'https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&w=300&q=80';
+  if (name.includes('shake') || name.includes('coffee') || name.includes('mojito') || name.includes('ice tea')) return 'https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=300&q=80';
+  if (name.includes('pasta') || name.includes('noodle')) return 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=300&q=80';
+  if (name.includes('dessert') || name.includes('cake') || name.includes('brownie') || name.includes('ice cream')) return 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=300&q=80';
+  return 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=300&q=80';
+};
 
 function getCategoryImage(catId) {
   const imageMap = {
@@ -785,7 +709,7 @@ function renderDigitalItems() {
 
   if (currentSearchTerm) {
     const groupedMatches = Object.values(outlet.sections)
-           .map(sectionData => {
+      .map(sectionData => {
         if (!sectionData || !Array.isArray(sectionData.items)) return null;
         const matches = sectionData.items.filter(item => {
           const haystack = `${item.name} ${item.desc || ''} ${item.tag || ''}`.toLowerCase();
