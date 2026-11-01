@@ -2683,13 +2683,19 @@ img {
     }
 }
 
-/* REMOVE ORDER ON WHATSAPP FROM MENU ONLY */
 
-.menu-view-container .order-wa-btn {
+/* REMOVE WHATSAPP ORDER BUTTONS FROM ALL MENU ITEMS */
+
+/* Normal menu items and pizza search results */
+.menu-view-container .order-wa-btn,
+.menu-view-container .item-card .order-wa-btn,
+.menu-view-container .item-bottom .order-wa-btn,
+.menu-view-container .item-card a[href*="wa.me"],
+.menu-view-container .item-card a[href*="whatsapp"] {
     display: none !important;
 }
 
-/* Adjust item layout after removing button */
+/* Remove empty button space */
 .menu-view-container .item-bottom {
     justify-content: flex-start !important;
 }
