@@ -22,7 +22,7 @@ const outletsData = {
       { id: "an_pizzas", name: "Pizzas & Thin Pesto", icon: "fa-pizza-slice" },
       { id: "an_atta", name: "Atta Pizzas & Breads", icon: "fa-wheat-awn" },
       { id: "an_upgrades_dips", name: "Upgrades & Dips", icon: "fa-wand-magic-sparkles" },
-      { id: "an_mania", name: "Pizza Mania", icon: "fa-tags" },
+      { id: "an_mania", name: "Pizza Menia", icon: "fa-tags" },
       { id: "an_breads", name: "Garlic Breads & Parcels", icon: "fa-bread-slice" },
       { id: "an_pastas", name: "Pastas", icon: "fa-bowl-rice" },
       { id: "an_burgers", name: "Burgers, Sandwiches & Wraps", icon: "fa-burger" },
@@ -95,7 +95,7 @@ const outletsData = {
 
       an_mania: {
         type: "cards",
-        title: "Pizza Mania Range",
+        title: "Pizza Menia Range",
         items: [
           { name: "Onion Pizza", desc: "Single topping crunchy onion with mozzarella", price: "₹79" },
           { name: "Capsicum Pizza", desc: "Single topping fresh crisp green bell peppers", price: "₹89" },
