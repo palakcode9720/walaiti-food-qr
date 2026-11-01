@@ -645,15 +645,9 @@ function selectOutlet(outletKey) {
   // Update Info Strip
   const nameEl = document.getElementById('activeOutletName');
   const addressEl = document.getElementById('activeOutletAddress');
-  const pdfBtn = document.getElementById('menuPdfBtn');
 
   if (nameEl) nameEl.textContent = data.name;
   if (addressEl) addressEl.textContent = data.address;
-  if (pdfBtn) {
-    pdfBtn.href = data.pdf;
-    pdfBtn.setAttribute('download', `${outletKey}-menu.pdf`);
-    pdfBtn.innerHTML = `<i class="fa-solid fa-file-pdf"></i> Download ${data.name.split(' ')[0]} Menu PDF`;
-  }
 
   // Update Full Menu Cards button label with total pages for this branch
   const cardsBtn = document.querySelector('[data-view="cards"]');

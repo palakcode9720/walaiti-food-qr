@@ -115,6 +115,20 @@
         </div>
         <span class="food-label">Coffee</span>
       </div>
+      <div class="feature-food-card" data-food="momos">
+        <div class="food-thumb">
+          <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=300&q=80"
+            alt="Momos" />
+        </div>
+        <span class="food-label">Momos</span>
+      </div>
+      <div class="feature-food-card" data-food="icecream">
+        <div class="food-thumb">
+          <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=300&q=80"
+            alt="Ice Cream" />
+        </div>
+        <span class="food-label">Ice Cream</span>
+      </div>
     </div>
 
     <div class="dashboard-actions">
@@ -130,13 +144,13 @@
   <!-- ===== MENU SECTION ===== -->
   <section id="menu" class="section menu-section page-panel">
     <div class="section-header">
-      <span class="section-label">Select Your Outlet</span>
-      <h2 class="section-title">Menu</h2>
-      <p class="section-desc">Choose your outlet and browse the full digital menu with quick category filters.</p>
+      <span class="section-label">Our Menu</span>
+      <h2 class="section-title">Curated Picks</h2>
+      <p class="section-desc">Start with your favorite craving, then choose your outlet for the matching menu.</p>
     </div>
 
     <!-- PREMIUM FOOD PREVIEW STRIP -->
-    <div class="feature-food-grid">
+    <div class="feature-food-grid menu-landing-grid">
       <div class="feature-food-card" data-food="pizza">
         <div class="food-thumb">
           <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=300&q=80"
@@ -193,40 +207,52 @@
         </div>
         <span class="food-label">Coffee</span>
       </div>
+      <div class="feature-food-card" data-food="momos">
+        <div class="food-thumb">
+          <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=300&q=80"
+            alt="Momos" />
+        </div>
+        <span class="food-label">Momos</span>
+      </div>
+      <div class="feature-food-card" data-food="icecream">
+        <div class="food-thumb">
+          <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=300&q=80"
+            alt="Ice Cream" />
+        </div>
+        <span class="food-label">Ice Cream</span>
+      </div>
     </div>
 
-    <!-- OUTLET SELECTOR BUTTONS -->
-    <div class="outlet-switcher">
-      <button class="outlet-btn active" data-outlet="modelTown">
-        <div class="outlet-btn-icon"><i class="fa-solid fa-shop"></i></div>
-        <div class="outlet-btn-text">
-          <strong>Model Town Outlet</strong>
-          <span>12-page menu</span>
-        </div>
-      </button>
+    <div class="outlet-selector-block">
+      <div class="outlet-selector-head">
+        <span class="section-label">Select Your Outlet</span>
+      </div>
+      <div class="outlet-switcher">
+        <button class="outlet-btn active" data-outlet="modelTown">
+          <div class="outlet-btn-icon"><i class="fa-solid fa-shop"></i></div>
+          <div class="outlet-btn-text">
+            <strong>Model Town Outlet</strong>
+            <span>12-page menu</span>
+          </div>
+        </button>
 
-      <button class="outlet-btn" data-outlet="adarshNagar">
-        <div class="outlet-btn-icon"><i class="fa-solid fa-shop"></i></div>
-        <div class="outlet-btn-text">
-          <strong>Adarsh Nagar Outlet</strong>
-          <span>8-page menu</span>
-        </div>
-      </button>
+        <button class="outlet-btn" data-outlet="adarshNagar">
+          <div class="outlet-btn-icon"><i class="fa-solid fa-shop"></i></div>
+          <div class="outlet-btn-text">
+            <strong>Adarsh Nagar Outlet</strong>
+            <span>8-page menu</span>
+          </div>
+        </button>
+      </div>
     </div>
 
-    <!-- ACTIVE OUTLET INFO STRIP -->
-    <div class="outlet-info-strip">
+    <div class="outlet-info-strip compact-outlet-strip">
       <div class="outlet-info-left">
         <i class="fa-solid fa-location-dot strip-icon"></i>
         <div>
           <h3 id="activeOutletName">Model Town Outlet</h3>
           <p id="activeOutletAddress">Plot No 615-L Mall Road, Model Town, Near Parveen Bakery, Jalandhar City</p>
         </div>
-      </div>
-      <div class="outlet-info-right">
-        <a href="menus/menu-model-town.pdf" class="btn btn-gold-sm" id="menuPdfBtn" download>
-          <i class="fa-solid fa-file-pdf"></i> Official PDF
-        </a>
       </div>
     </div>
 
