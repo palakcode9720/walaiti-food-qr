@@ -304,6 +304,14 @@ img {
   margin: 0 auto;
 }
 
+.page-panel {
+  display: none;
+}
+
+.page-panel.active {
+  display: block;
+}
+
 .section-dark {
   background: var(--dark2);
   max-width: 100%;
