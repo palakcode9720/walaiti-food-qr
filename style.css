@@ -2205,6 +2205,14 @@ button,
 .category-back-btn,
 .theme-toggle-btn,
 .dashboard-primary-btn,
-.dashboard-secondary-btn {
-  border: 1.5px solid rgba(212, 160, 23, 0.32);
+.dashboard-secondary-btn,
+.outlet-btn,
+.card,
+.section,
+.review-card,
+.qr-home-card,
+.site-card,
+.location-card,
+.social-card {
+  border: 1.8px solid rgba(212, 160, 23, 0.35);
 }
