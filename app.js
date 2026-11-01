@@ -504,9 +504,9 @@ const outletsData = {
         items: [
           { name: "Classic Cold Coffee", desc: "A delightful blend of rich espresso, creamy milk, and ice cream for a refreshing indulgent treat.", price: "₹159" },
           { name: "Iced Coffee", desc: "Refreshing chilled coffee over ice.", price: "₹149" },
-          { name: "Iced Americano", desc: "Espresso and water served chilled over ice.", price: "₹169" },
-          { name: "Iced Cappuccino", desc: "Chilled espresso with frothy milk and a cocoa dusting.", price: "₹149" },
-          { name: "Iced Latte", desc: "Smooth chilled espresso with cold milk.", price: "₹169" },
+          { name: "Iced Americano", desc: "Espresso and water served chilled over ice.", price: "₹149" },
+          { name: "Iced Cappuccino", desc: "Chilled espresso with frothy milk and a cocoa dusting.", price: "₹169" },
+          { name: "Iced Latte", desc: "Smooth chilled espresso with cold milk.", price: "₹149" },
           { name: "Iced Mocha", desc: "Chilled espresso, creamy milk, and chocolate syrup over ice.", price: "₹169" },
           { name: "Iced Caramel", desc: "Espresso, milk, and sweet caramel served over ice.", price: "₹169" },
           { name: "Iced Hazelnut", desc: "Chilled coffee infused with rich hazelnut flavor.", price: "₹169" },
@@ -538,17 +538,16 @@ const outletsData = {
         type: "cards",
         title: "Hot Flavoured Teas",
         items: [
-          { name: "Paan Tea", price: "₹199" },
-          { name: "Rose Tea", price: "₹139" },
-          { name: "Elaichi Tea", price: "₹139" },
-          { name: "Kesar Tea", price: "₹139" },
-          { name: "Ginger Tea", price: "₹139" },
-          { name: "Masala Tea", price: "₹149" },
-          { name: "Chocolate Tea", price: "₹149" },
-          { name: "Green Tea", price: "₹139" },
-          { name: "Lemon Honey Tea", price: "₹139" },
-          { name: "Special Masala Tea", price: "₹139" },
-          { name: "Add Jaggery", price: "₹20" }
+          { name: "Paan Tea", price: "₹60" },
+          { name: "Rose Tea", price: "₹60" },
+          { name: "Elaichi Tea", price: "₹70" },
+          { name: "Kesar Tea", price: "₹60" },
+          { name: "Ginger Tea", price: "₹60" },
+          { name: "Masala Tea", price: "₹60" },
+          { name: "Chocolate Tea", price: "₹60" },
+          { name: "Green Tea", desc: "Without milk", price: "₹90" },
+          { name: "Lemon Honey Tea", desc: "Without milk", price: "₹90" },
+          { name: "Special Masala Tea", desc: "Without milk", price: "₹80" }
         ]
       },
 
