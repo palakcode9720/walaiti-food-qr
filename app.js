@@ -677,7 +677,6 @@ function buildCategoryTabs(categories) {
     </button>
   `).join('');
 
-  // Re-bind click handlers
   scrollContainer.querySelectorAll('.menu-cat-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const selectedCategory = btn.dataset.category;
