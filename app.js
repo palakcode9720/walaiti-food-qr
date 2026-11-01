@@ -474,6 +474,87 @@ const outletsData = {
         ]
       },
 
+      mt_frappes: {
+        type: "cards",
+        title: "Frappes",
+        items: [
+          { name: "Classic Cold Coffee", desc: "A delightful blend of rich espresso, creamy milk, and ice cream for a refreshing indulgent treat.", price: "₹159" },
+          { name: "Choco Frappe", desc: "A creamy blend of rich chocolate and coffee, topped with ice cream.", price: "₹199" },
+          { name: "Caramel Frappe", desc: "A delightful blend of ice cream and cold coffee infused with rich caramel flavor.", price: "₹199" },
+          { name: "Hazelnut Frappe", desc: "A deliciously blended ice cream coffee drink infused with a rich hazelnut flavor.", price: "₹199" },
+          { name: "Irish Frappe", desc: "Creamy coffee frappe with a rich, smooth Irish-inspired flavor profile.", price: "₹199" },
+          { name: "Brownie Frappe", desc: "A decadent coffee blend with brownie-inspired chocolate richness.", price: "₹219" },
+          { name: "Nutella Frappe", desc: "A creamy and indulgent blend of rich espresso and Nutella, topped with ice cream.", price: "₹229" },
+          { name: "Biscoff Frappe", desc: "A deliciously creamy blend of ice cream and coffee with caramelized Biscoff flavor.", price: "₹229" }
+        ]
+      },
+
+      mt_matchas: {
+        type: "cards",
+        title: "Matcha Lattes",
+        items: [
+          { name: "Iced Matcha Latte", desc: "Cool, creamy, earthy matcha served over ice.", price: "₹200" },
+          { name: "Mango Matcha Latte", desc: "Smooth matcha blended with tropical mango sweetness.", price: "₹250" },
+          { name: "Strawberry Matcha Latte", desc: "Refreshing matcha with a fruity strawberry twist.", price: "₹250" }
+        ]
+      },
+
+      mt_coffees: {
+        type: "cards",
+        title: "Iced & Hot Coffees",
+        items: [
+          { name: "Iced Coffee", desc: "Refreshing chilled coffee over ice.", price: "₹149" },
+          { name: "Iced Americano", desc: "Espresso and water served chilled over ice.", price: "₹169" },
+          { name: "Iced Cappuccino", desc: "Chilled espresso with frothy milk and a cocoa dusting.", price: "₹149" },
+          { name: "Iced Latte", desc: "Smooth chilled espresso with cold milk.", price: "₹169" },
+          { name: "Iced Mocha", desc: "Chilled espresso, creamy milk, and chocolate syrup over ice.", price: "₹169" },
+          { name: "Iced Caramel", desc: "Espresso, milk, and sweet caramel served over ice.", price: "₹169" },
+          { name: "Iced Hazelnut", desc: "Chilled coffee infused with rich hazelnut flavor.", price: "₹169" },
+          { name: "Espresso", desc: "Freshly ground and brewed espresso.", price: "₹79" },
+          { name: "Americano", desc: "Strong and robust black coffee.", price: "₹99" },
+          { name: "Cappuccino", desc: "Velvety espresso, steamed milk, and creamy foam.", price: "₹139" },
+          { name: "Cafe Latte", desc: "Comforting espresso with steamed milk and foam.", price: "₹149" },
+          { name: "Caffe Mocha", desc: "Rich espresso, steamed milk, and velvety chocolate.", price: "₹159" },
+          { name: "Flat White", desc: "Smooth espresso with velvety milk.", price: "₹139" },
+          { name: "French Vanilla Cappuccino", desc: "Espresso cappuccino with sweet French vanilla flavor.", price: "₹149" },
+          { name: "Biscoff Latte", desc: "Creamy espresso with Biscoff spread and spice.", price: "₹179" },
+          { name: "Spl. Jaggery Latte", desc: "A comforting latte with a hint of jaggery sweetness.", price: "₹159" },
+          { name: "Turmeric Latte", desc: "Creamy golden turmeric latte with aromatic warmth.", price: "₹139" },
+          { name: "Hot Chocolate", desc: "Rich, creamy hot chocolate made with premium cocoa.", price: "₹139" },
+          { name: "Tiramisu Hot Chocolate", desc: "Hot chocolate with a hint of mascarpone-inspired sweetness.", price: "₹159" },
+          { name: "Hazelnut Hot Chocolate", desc: "Rich cocoa with warm hazelnut notes.", price: "₹159" }
+        ]
+      },
+
+      mt_teas: {
+        type: "cards",
+        title: "Hot Flavoured Teas",
+        items: [
+          { name: "Paan Tea", price: "₹199" },
+          { name: "Rose Tea", price: "₹139" },
+          { name: "Elaichi Tea", price: "₹139" },
+          { name: "Kesar Tea", price: "₹139" },
+          { name: "Ginger Tea", price: "₹139" },
+          { name: "Masala Tea", price: "₹149" },
+          { name: "Chocolate Tea", price: "₹149" },
+          { name: "Green Tea", price: "₹139" },
+          { name: "Lemon Honey Tea", price: "₹139" },
+          { name: "Special Masala Tea", price: "₹139" },
+          { name: "Hot Tea (Milk Tea)", price: "₹129" },
+          { name: "Add Jaggery", price: "₹20" },
+          { name: "Hot Flavoured Tea", price: "₹109" },
+          { name: "Black Tea", price: "₹80" },
+          { name: "English Tea", price: "₹70" },
+          { name: "Chai", price: "₹60" },
+          { name: "Lemon Tea", price: "₹60" },
+          { name: "Mint Tea", price: "₹60" },
+          { name: "Hibiscus Tea", price: "₹60" },
+          { name: "Honey Tea", price: "₹60" },
+          { name: "Cardamom Tea", price: "₹60" },
+          { name: "Vanilla Tea", price: "₹90" }
+        ]
+      },
+
       mt_drinks: {
         type: "cards",
         title: "Drinks, Mojitos & Chilli Guava",
