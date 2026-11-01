@@ -358,9 +358,15 @@ img {
   transition: all 0.2s ease;
 }
 
-.category-back-btn:hover {
-  background: rgba(212, 160, 23, 0.12);
-  border-color: rgba(212, 160, 23, 0.55);
+.category-back-btn-secondary {
+  margin-top: 0.25rem;
+}
+
+.category-back-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.25rem;
+  padding-bottom: 0.2rem;
 }
 
 .category-detail-badge {
@@ -639,9 +645,15 @@ img {
   transition: all 0.2s ease;
 }
 
-.category-back-btn:hover {
-  background: rgba(212, 160, 23, 0.12);
-  border-color: rgba(212, 160, 23, 0.55);
+.category-back-btn-secondary {
+  margin-top: 0.25rem;
+}
+
+.category-back-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.25rem;
+  padding-bottom: 0.2rem;
 }
 
 .category-detail-badge {
@@ -920,9 +932,15 @@ img {
   transition: all 0.2s ease;
 }
 
-.category-back-btn:hover {
-  background: rgba(212, 160, 23, 0.12);
-  border-color: rgba(212, 160, 23, 0.55);
+.category-back-btn-secondary {
+  margin-top: 0.25rem;
+}
+
+.category-back-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.25rem;
+  padding-bottom: 0.2rem;
 }
 
 .category-detail-badge {
@@ -1201,9 +1219,15 @@ img {
   transition: all 0.2s ease;
 }
 
-.category-back-btn:hover {
-  background: rgba(212, 160, 23, 0.12);
-  border-color: rgba(212, 160, 23, 0.55);
+.category-back-btn-secondary {
+  margin-top: 0.25rem;
+}
+
+.category-back-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.25rem;
+  padding-bottom: 0.2rem;
 }
 
 .category-detail-badge {

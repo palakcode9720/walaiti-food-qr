@@ -881,7 +881,24 @@ function renderDigitalItems() {
       </div>
   `;
 
-  const detailFooter = `</div>`;
+  const detailFooter = `</div>
+    <div class="category-back-footer">
+      <button class="category-back-btn category-back-btn-secondary" type="button">
+        <i class="fa-solid fa-arrow-left"></i> Back to menu
+      </button>
+    </div>`;
+
+  const handleBackToMenu = () => {
+    currentCategory = '';
+    isCategoryDetailOpen = false;
+    renderCurrentView();
+  };
+
+  const bindBackButtons = () => {
+    document.querySelectorAll('.category-back-btn').forEach(button => {
+      button.onclick = handleBackToMenu;
+    });
+  };
 
   if (section.type === 'pizza_table') {
     const items = section.items;
@@ -931,14 +948,7 @@ function renderDigitalItems() {
       </div>
     ` + detailFooter;
 
-    const backBtn = document.getElementById('categoryBackBtn');
-    if (backBtn) {
-      backBtn.addEventListener('click', () => {
-        currentCategory = '';
-        isCategoryDetailOpen = false;
-        renderCurrentView();
-      });
-    }
+    bindBackButtons();
     return;
   }
 
@@ -988,14 +998,7 @@ function renderDigitalItems() {
       </div>
     ` + detailFooter;
 
-    const backBtn = document.getElementById('categoryBackBtn');
-    if (backBtn) {
-      backBtn.addEventListener('click', () => {
-        currentCategory = '';
-        isCategoryDetailOpen = false;
-        renderCurrentView();
-      });
-    }
+    bindBackButtons();
     return;
   }
 
@@ -1037,14 +1040,7 @@ function renderDigitalItems() {
       </div>
     ` + detailFooter;
 
-    const backBtn = document.getElementById('categoryBackBtn');
-    if (backBtn) {
-      backBtn.addEventListener('click', () => {
-        currentCategory = '';
-        isCategoryDetailOpen = false;
-        renderCurrentView();
-      });
-    }
+    bindBackButtons();
     return;
   }
 
@@ -1067,14 +1063,7 @@ function renderDigitalItems() {
     </div>
   ` + detailFooter;
 
-  const backBtn = document.getElementById('categoryBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', () => {
-      currentCategory = '';
-      isCategoryDetailOpen = false;
-      renderCurrentView();
-    });
-  }
+  bindBackButtons();
 }
 
 function renderMenuCards() {
