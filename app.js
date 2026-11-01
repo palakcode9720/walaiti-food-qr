@@ -478,7 +478,6 @@ const outletsData = {
         type: "cards",
         title: "Frappes",
         items: [
-          { name: "Classic Cold Coffee", desc: "A delightful blend of rich espresso, creamy milk, and ice cream for a refreshing indulgent treat.", price: "₹159" },
           { name: "Choco Frappe", desc: "A creamy blend of rich chocolate and coffee, topped with ice cream.", price: "₹199" },
           { name: "Caramel Frappe", desc: "A delightful blend of ice cream and cold coffee infused with rich caramel flavor.", price: "₹199" },
           { name: "Hazelnut Frappe", desc: "A deliciously blended ice cream coffee drink infused with a rich hazelnut flavor.", price: "₹199" },
@@ -500,9 +499,10 @@ const outletsData = {
       },
 
       mt_coffees: {
-        type: "cards",
+        type: "coffee_with_addons",
         title: "Iced & Hot Coffees",
         items: [
+          { name: "Classic Cold Coffee", desc: "A delightful blend of rich espresso, creamy milk, and ice cream for a refreshing indulgent treat.", price: "₹159" },
           { name: "Iced Coffee", desc: "Refreshing chilled coffee over ice.", price: "₹149" },
           { name: "Iced Americano", desc: "Espresso and water served chilled over ice.", price: "₹169" },
           { name: "Iced Cappuccino", desc: "Chilled espresso with frothy milk and a cocoa dusting.", price: "₹149" },
@@ -523,6 +523,14 @@ const outletsData = {
           { name: "Hot Chocolate", desc: "Rich, creamy hot chocolate made with premium cocoa.", price: "₹139" },
           { name: "Tiramisu Hot Chocolate", desc: "Hot chocolate with a hint of mascarpone-inspired sweetness.", price: "₹159" },
           { name: "Hazelnut Hot Chocolate", desc: "Rich cocoa with warm hazelnut notes.", price: "₹159" }
+        ],
+        addons: [
+          { name: "Extra Shot", price: "₹30", desc: "Add an extra espresso shot for more strength." },
+          { name: "Oreo Crumble", price: "₹30", desc: "Crunchy Oreo topping for your coffee." },
+          { name: "Hazelnut Syrup", price: "₹30", desc: "Add a nutty hazelnut finish to any coffee." },
+          { name: "Caramel Syrup", price: "₹30", desc: "Sweet caramel drizzle for extra richness." },
+          { name: "Vanilla Flavour", price: "₹30", desc: "Smooth vanilla flavour boost." },
+          { name: "Chocolate Drizzle", price: "₹30", desc: "A rich chocolate drizzle on top." }
         ]
       },
 
