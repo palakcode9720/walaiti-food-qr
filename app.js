@@ -1252,6 +1252,17 @@ function setupPanelNavigation() {
     });
   });
 
+  const footerLinks = document.querySelectorAll('.footer-links a[data-open-panel]');
+  footerLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      const panelId = link.dataset.openPanel;
+      const targetPanel = document.getElementById(panelId);
+      if (!panelId || !targetPanel) return;
+      event.preventDefault();
+      activatePanel(panelId);
+    });
+  });
+
   const initialPanel = document.getElementById('dashboard');
   if (initialPanel) activatePanel('dashboard');
 }
