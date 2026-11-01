@@ -786,11 +786,11 @@ function renderBurgerSubcategories(items) {
   return `
     <div class="food-category-groups">
       ${groups.map(group => {
-        const groupItems = items.slice(group.start, group.end);
+    const groupItems = items.slice(group.start, group.end);
 
-        if (!groupItems.length) return '';
+    if (!groupItems.length) return '';
 
-        return `
+    return `
           <section class="food-subsection">
             <h3 class="food-subsection-heading">${group.title}</h3>
             <div class="menu-standard-list">
@@ -807,7 +807,7 @@ function renderBurgerSubcategories(items) {
             </div>
           </section>
         `;
-      }).join('')}
+  }).join('')}
     </div>
   `;
 }
@@ -853,15 +853,15 @@ function renderDigitalItems() {
       .filter(Boolean);
 
     if (!groupedMatches.length) {
-  container.innerHTML = `
+      container.innerHTML = `
     <div class="empty-search-state">
       <i class="fa-solid fa-magnifying-glass"></i>
       <p>No item matches “${currentSearchTerm}”. Try a different name or category.</p>
     </div>
   `;
-  return;
-}
-  
+      return;
+    }
+
 
     container.innerHTML = `
       <div class="search-results-wrap">
@@ -895,9 +895,9 @@ function renderDigitalItems() {
   }
 
   if (!section) {
-  container.innerHTML = '<p style="text-align:center; padding:2rem; color:#888;">Select a category above.</p>';
-  return;
-}
+    container.innerHTML = '<p style="text-align:center; padding:2rem; color:#888;">Select a category above.</p>';
+    return;
+  }
 
   const detailHeader = `
     <div class="category-detail-page">
@@ -935,26 +935,26 @@ function renderDigitalItems() {
       button.onclick = handleBackToMenu;
     });
   };
-  
 
-// PASTE THE NEW GROUPING CODE HERE
 
-// FIRST: Check whether the selected category is burgers
-if (
-  currentCategory === 'an_burgers' ||
-  currentCategory === 'mt_burgers'
-) {
-  container.innerHTML = `
+  // PASTE THE NEW GROUPING CODE HERE
+
+  // FIRST: Check whether the selected category is burgers
+  if (
+    currentCategory === 'an_burgers' ||
+    currentCategory === 'mt_burgers'
+  ) {
+    container.innerHTML = `
     ${detailHeader}
     ${renderBurgerSubcategories(section.items || [])}
     ${detailFooter}
   `;
 
-  bindBackButtons();
-  return;
-}
+    bindBackButtons();
+    return;
+  }
 
-// SECOND: Check whether the selected category is a pizza table
+  // SECOND: Check whether the selected category is a pizza table
 
 
   if (section.type === 'pizza_table') {
