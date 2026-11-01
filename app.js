@@ -619,3 +619,555 @@ function getCategoryImage(catId) {
 
   return imageMap[catId] || 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80';
 }
+
+// Restore dynamic menu setup after the script was truncated
+const setupOutletSwitcher = () => {
+  document.querySelectorAll('.outlet-btn').forEach(btn => {
+    btn.addEventListener('click', () => selectOutlet(btn.dataset.outlet));
+  });
+};
+
+const setupSearchBox = () => {
+  const searchInput = document.getElementById('menuSearchInput');
+  if (!searchInput) return;
+
+  searchInput.addEventListener('input', (event) => {
+    currentSearchTerm = (event.target.value || '').trim().toLowerCase();
+    renderCurrentView();
+  });
+};
+
+const setupViewModeSwitcher = () => {
+  document.querySelectorAll('.view-mode-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.view-mode-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentViewMode = btn.dataset.view;
+      renderCurrentView();
+    });
+  });
+};
+
+function selectOutlet(outletKey) {
+  currentOutlet = outletKey;
+  const data = outletsData[outletKey];
+
+  document.querySelectorAll('.outlet-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.outlet === outletKey);
+  });
+
+  const nameEl = document.getElementById('activeOutletName');
+  const addressEl = document.getElementById('activeOutletAddress');
+  if (nameEl) nameEl.textContent = data.name;
+  if (addressEl) addressEl.textContent = data.address;
+
+  const cardsBtn = document.querySelector('[data-view="cards"]');
+  if (cardsBtn) {
+    cardsBtn.innerHTML = `<i class="fa-solid fa-book-open"></i> Full Illustrated Cards (Pages 1–${data.totalPages})`;
+  }
+
+  buildCategoryTabs(data.categories);
+  currentCategory = data.categories[0].id;
+  const searchInput = document.getElementById('menuSearchInput');
+  if (searchInput) searchInput.value = '';
+  currentSearchTerm = '';
+  renderCurrentView();
+}
+
+function buildCategoryTabs(categories) {
+  const scrollContainer = document.querySelector('.menu-categories-scroll');
+  if (!scrollContainer) return;
+
+  scrollContainer.innerHTML = categories.map((cat, idx) => `
+    <button class="menu-cat-btn ${idx === 0 ? 'active' : ''}" data-category="${cat.id}">
+      <div class="menu-cat-thumb">
+        <img src="${getCategoryImage(cat.id)}" alt="${cat.name}" />
+      </div>
+      <span class="menu-cat-text">${cat.name}</span>
+    </button>
+  `).join('');
+
+  scrollContainer.querySelectorAll('.menu-cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const selectedCategory = btn.dataset.category;
+      const shouldClose = currentCategory === selectedCategory && !currentSearchTerm;
+
+      scrollContainer.querySelectorAll('.menu-cat-btn').forEach(b => {
+        const isActive = !shouldClose && b.dataset.category === selectedCategory;
+        b.classList.toggle('active', isActive);
+      });
+
+      currentCategory = shouldClose ? '' : selectedCategory;
+      renderDigitalItems();
+    });
+  });
+}
+
+function renderCurrentView() {
+  const digitalView = document.getElementById('digitalMenuView');
+  const cardsView = document.getElementById('menuCardsView');
+
+  if (currentViewMode === 'grid') {
+    if (digitalView) digitalView.style.display = 'block';
+    if (cardsView) cardsView.style.display = 'none';
+    renderDigitalItems();
+  } else {
+    if (digitalView) digitalView.style.display = 'none';
+    if (cardsView) cardsView.style.display = 'block';
+    renderMenuCards();
+  }
+}
+
+function renderDigitalItems() {
+  const container = document.getElementById('digitalItemsContainer');
+  if (!container) return;
+
+  if (!currentCategory) {
+    container.innerHTML = `
+      <div class="empty-search-state">
+        <i class="fa-solid fa-burger"></i>
+        <p>Select a menu category to view its items and prices.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const outlet = outletsData[currentOutlet];
+  const section = outlet.sections[currentCategory];
+
+  if (!section) {
+    container.innerHTML = '<p style="text-align:center; padding:2rem; color:#888;">Select a category above.</p>';
+    return;
+  }
+
+  const filterItems = (items) => {
+    if (!currentSearchTerm) return items;
+    return items.filter(item => {
+      const haystack = `${item.name} ${item.desc || ''} ${item.tag || ''}`.toLowerCase();
+      return haystack.includes(currentSearchTerm);
+    });
+  };
+
+  if (currentSearchTerm) {
+    const groupedMatches = Object.values(outlet.sections)
+      .map(sectionData => {
+        if (!sectionData || !Array.isArray(sectionData.items)) return null;
+        const matches = filterItems(sectionData.items);
+        if (!matches.length) return null;
+        return {
+          title: sectionData.title || 'Menu Items',
+          items: matches
+        };
+      })
+      .filter(Boolean);
+
+    if (!groupedMatches.length) {
+      container.innerHTML = `
+        <div class="empty-search-state">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <p>No item matches “${currentSearchTerm}”. Try a different name or category.</p>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = `
+      <div class="search-results-wrap">
+        ${groupedMatches.map(group => `
+          <div class="search-results-group">
+            <h3 class="search-results-title">${group.title}</h3>
+            <div class="items-cards-grid">
+              ${group.items.map(item => `
+                <div class="item-card">
+                  ${item.tag ? `<span class="badge-tag card-tag">${item.tag}</span>` : ''}
+                  <div class="item-card-body">
+                    <h4 class="item-title">${item.name}</h4>
+                    <p class="item-desc">${item.desc}</p>
+                    <div class="item-bottom">
+                      <span class="item-price">${item.price || (item.customPrice || `₹${item.r}`)}</span>
+                      <a href="https://wa.me/${outlet.waPhone}?text=Hi%20Walaiti%20Food%20(${encodeURIComponent(outlet.name)}),%20I%20would%20like%20to%20order%20${encodeURIComponent(item.name)}" target="_blank" class="order-wa-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Order
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    return;
+  }
+
+  if (section.type === 'pizza_table') {
+    const items = filterItems(section.items);
+    if (!items.length) {
+      container.innerHTML = `
+        <div class="empty-search-state">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <p>No item matches “${currentSearchTerm}”. Try a different name or category.</p>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = `
+      ${section.description ? `
+        <div class="category-banner-note">
+          <i class="fa-solid fa-circle-info"></i>
+          <div>
+            <strong>${section.title}</strong>
+            <p>${section.description}</p>
+          </div>
+        </div>
+      ` : ''}
+
+      <div class="pizza-table-wrapper premium-menu-table">
+        <div class="pizza-table-header">
+          <span>Item & Description</span>
+          <div class="pizza-size-cols">
+            <span>Regular</span>
+            <span>Medium</span>
+            <span>Large</span>
+          </div>
+        </div>
+        <div class="pizza-list">
+          ${items.map(p => `
+            <div class="pizza-row">
+              <div class="pizza-info">
+                <div class="pizza-title-row">
+                  <span class="pizza-name">${p.name}</span>
+                  ${p.tag ? `<span class="badge-tag">${p.tag}</span>` : ''}
+                </div>
+                <p class="pizza-desc">${p.desc}</p>
+                ${p.price ? `<span class="single-item-price">${p.price}</span>` : ''}
+              </div>
+              ${p.customPrice ? `
+                <div class="pizza-custom-price">${p.customPrice}</div>
+              ` : p.r ? `
+                <div class="pizza-prices">
+                  <span class="price-val">₹${p.r}</span>
+                  <span class="price-val">₹${p.m}</span>
+                  <span class="price-val">₹${p.l}</span>
+                </div>
+              ` : ''}
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  if (section.type === 'upgrades_dips') {
+    container.innerHTML = `
+      <div class="upgrades-dips-container">
+        <div class="upgrades-box">
+          <h3 class="box-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Upgrade Your Pizza</h3>
+          <p class="box-desc">Customise your pizza crust and toppings just the way you love it.</p>
+          <div class="upgrade-table">
+            <div class="upgrade-head">
+              <span>Upgrade Option</span>
+              <div class="size-headers">
+                <span>R</span>
+                <span>M</span>
+                <span>L</span>
+              </div>
+            </div>
+            ${section.upgrades.map(u => `
+              <div class="upgrade-row">
+                <span class="upgrade-name">${u.name}</span>
+                <div class="upgrade-vals">
+                  <span>${u.r}</span>
+                  <span>${u.m}</span>
+                  <span>${u.l}</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <div class="dips-box">
+          <h3 class="box-title"><i class="fa-solid fa-bowl-food"></i> Delicious Dips (@ ₹30 each)</h3>
+          <p class="box-desc">Pair your pizzas, breads, and fries with our signature dips.</p>
+          <div class="dips-grid">
+            ${section.dips.map(d => `
+              <div class="dip-card">
+                <div class="dip-top">
+                  <span class="dip-name">${d.name}</span>
+                  <span class="dip-price">${d.price}</span>
+                </div>
+                <p class="dip-desc">${d.desc}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  const items = filterItems(section.items);
+  if (!items.length) {
+    container.innerHTML = `
+      <div class="empty-search-state">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <p>No item matches “${currentSearchTerm}”. Try a different name or category.</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = `
+    <div class="items-cards-grid">
+      ${items.map(item => `
+        <div class="item-card">
+          ${item.tag ? `<span class="badge-tag card-tag">${item.tag}</span>` : ''}
+          <div class="item-card-body">
+            <h4 class="item-title">${item.name}</h4>
+            <p class="item-desc">${item.desc}</p>
+            <div class="item-bottom">
+              <span class="item-price">${item.price}</span>
+              <a href="https://wa.me/${outlet.waPhone}?text=Hi%20Walaiti%20Food%20(${encodeURIComponent(outlet.name)}),%20I%20would%20like%20to%20order%20${encodeURIComponent(item.name)}" target="_blank" class="order-wa-btn">
+                <i class="fa-brands fa-whatsapp"></i> Order
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderMenuCards() {
+  const container = document.getElementById('menuPagesGrid');
+  if (!container) return;
+
+  const data = outletsData[currentOutlet];
+  let html = '';
+
+  for (let i = 1; i <= data.totalPages; i++) {
+    const imgSrc = `${data.imgFolder}/page_${i}.jpg`;
+    html += `
+      <div class="menu-page-thumbnail" onclick="openLightbox('${imgSrc}', ${i}, ${data.totalPages})">
+        <img src="${imgSrc}" alt="${data.name} - Page ${i}" loading="lazy" />
+        <div class="page-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Page ${i}</span>
+        </div>
+      </div>
+    `;
+  }
+
+  container.innerHTML = html;
+}
+
+let currentLightboxIndex = 1;
+let currentLightboxTotal = 1;
+
+function setupImageLightbox() {
+  const modal = document.getElementById('lightboxModal');
+  const closeBtn = document.getElementById('lightboxClose');
+  const prevBtn = document.getElementById('lightboxPrev');
+  const nextBtn = document.getElementById('lightboxNext');
+
+  if (closeBtn && modal) {
+    closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.classList.remove('active');
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (currentLightboxIndex > 1) {
+        currentLightboxIndex--;
+        updateLightboxImage();
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (currentLightboxIndex < currentLightboxTotal) {
+        currentLightboxIndex++;
+        updateLightboxImage();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (!modal || !modal.classList.contains('active')) return;
+    if (e.key === 'Escape') modal.classList.remove('active');
+    if (e.key === 'ArrowLeft' && currentLightboxIndex > 1) {
+      currentLightboxIndex--;
+      updateLightboxImage();
+    }
+    if (e.key === 'ArrowRight' && currentLightboxIndex < currentLightboxTotal) {
+      currentLightboxIndex++;
+      updateLightboxImage();
+    }
+  });
+}
+
+window.openLightbox = function (src, pageNum, total) {
+  const modal = document.getElementById('lightboxModal');
+  currentLightboxIndex = pageNum;
+  currentLightboxTotal = total;
+  updateLightboxImage();
+  if (modal) modal.classList.add('active');
+};
+
+function updateLightboxImage() {
+  const data = outletsData[currentOutlet];
+  const img = document.getElementById('lightboxImg');
+  const caption = document.getElementById('lightboxCaption');
+  const src = `${data.imgFolder}/page_${currentLightboxIndex}.jpg`;
+
+  if (img) img.src = src;
+  if (caption) caption.textContent = `${data.name} — Page ${currentLightboxIndex} of ${currentLightboxTotal}`;
+}
+
+function setupNavLinks() {
+  const links = document.querySelectorAll('.nav-pill');
+  links.forEach(l => {
+    l.addEventListener('click', (e) => {
+      const targetId = l.getAttribute('href');
+      if (targetId && targetId.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(targetId);
+        if (target) {
+          links.forEach(x => x.classList.remove('active'));
+          l.classList.add('active');
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+}
+
+function setupThemeToggle() {
+  const themeToggle = document.getElementById('themeToggleBtn');
+  if (!themeToggle) return;
+
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  updateThemeButton(savedTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeButton(newTheme);
+  });
+}
+
+function updateThemeButton(theme) {
+  const themeToggle = document.getElementById('themeToggleBtn');
+  if (!themeToggle) return;
+
+  if (theme === 'dark') {
+    themeToggle.innerHTML = `
+      <i class="fa-solid fa-sun"></i>
+      <span>Light Mode</span>
+    `;
+  } else {
+    themeToggle.innerHTML = `
+      <i class="fa-solid fa-moon"></i>
+      <span>Dark Mode</span>
+    `;
+  }
+}
+
+function setupPanelNavigation() {
+  const panels = [...document.querySelectorAll('.page-panel')];
+  const selectors = [...document.querySelectorAll('[data-open-panel]')];
+  const hero = document.querySelector('.hero');
+
+  const activatePanel = (panelId) => {
+    panels.forEach(panel => {
+      panel.classList.toggle('active', panel.id === panelId);
+    });
+
+    selectors.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.openPanel === panelId);
+    });
+
+    document.body.classList.toggle('show-hero', panelId === 'dashboard');
+
+    if (hero) {
+      hero.style.display = panelId === 'dashboard' ? 'flex' : 'none';
+    }
+
+    const panel = document.getElementById(panelId);
+    if (panel) {
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  selectors.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panelId = btn.dataset.openPanel;
+      if (panelId) activatePanel(panelId);
+    });
+  });
+
+  const initialPanel = document.getElementById('dashboard');
+  if (initialPanel) activatePanel('dashboard');
+}
+
+function setupFoodShortcutCards() {
+  document.querySelectorAll('.feature-food-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const foodKey = (card.dataset.food || '').toLowerCase();
+      const currentData = outletsData[currentOutlet];
+
+      if (!currentData) return;
+
+      const searchMap = {
+        pizza: 'pizza',
+        burger: 'burger',
+        fries: 'fries',
+        shake: 'shake',
+        dessert: 'dessert',
+        pasta: 'pasta',
+        noodles: 'noodles',
+        coffee: 'coffee'
+      };
+
+      currentSearchTerm = searchMap[foodKey] || foodKey;
+      const matchingCategory = currentData.categories.find(cat => {
+        const catName = cat.name.toLowerCase();
+        return catName.includes(currentSearchTerm) || currentSearchTerm.includes(catName.replace(/[^a-z]/g, ''));
+      });
+
+      if (matchingCategory) {
+        currentCategory = matchingCategory.id;
+        document.querySelectorAll('.menu-cat-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.category === matchingCategory.id);
+        });
+      }
+
+      renderCurrentView();
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupOutletSwitcher();
+  setupViewModeSwitcher();
+  setupImageLightbox();
+  setupNavLinks();
+  setupThemeToggle();
+  setupSearchBox();
+  setupFoodShortcutCards();
+  setupPanelNavigation();
+
+  if (document.getElementById('dashboard')) {
+    document.getElementById('dashboard').classList.add('active');
+  }
+  selectOutlet('modelTown');
+});
