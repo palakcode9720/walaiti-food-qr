@@ -478,7 +478,6 @@ const outletsData = {
         type: "cards",
         title: "Frappes (Model Town Exclusive)",
         items: [
-          { name: "Classic Cold Coffee", desc: "A delightful blend of rich espresso, creamy milk, and ice cream served for a refreshing, indulgent treat", price: "₹159" },
           { name: "Choco Frappe", desc: "A creamy blend of rich chocolate and coffee, topped with ice cream", price: "₹199" },
           { name: "Caramel Frappe", desc: "A delightful blend of ice cream and cold coffee, infused with rich caramel", price: "₹199" },
           { name: "Hazelnut Frappe", desc: "A deliciously blended ice cream coffee drink infused with rich hazelnut flavor", price: "₹199" },
@@ -503,6 +502,7 @@ const outletsData = {
         type: "cards",
         title: "Iced & Hot Coffees, Hot Chocolates",
         items: [
+          { name: "Classic Cold Coffee", desc: "A delightful blend of rich espresso, creamy milk, and ice cream served for a refreshing, indulgent treat", price: "₹159" },
           { name: "Iced Americano", desc: "Chilled double espresso and cold water over ice for a bold pick-me-up", price: "₹149" },
           { name: "Iced Cappuccino", desc: "Chilled espresso, frothy cold milk, and a dusting of cocoa", price: "₹169" },
           { name: "Iced Latte", desc: "Chilled espresso and smooth cold milk over ice", price: "₹149" },
@@ -778,7 +778,7 @@ function renderDigitalItems() {
 
   if (currentSearchTerm) {
     const groupedMatches = Object.values(outlet.sections)
-      .map(sectionData => {
+           .map(sectionData => {
         if (!sectionData || !Array.isArray(sectionData.items)) return null;
         const matches = sectionData.items.filter(item => {
           const haystack = `${item.name} ${item.desc || ''} ${item.tag || ''}`.toLowerCase();
