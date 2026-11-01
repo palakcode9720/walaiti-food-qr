@@ -573,6 +573,7 @@ let currentOutlet = 'modelTown';
 let currentCategory = '';
 let currentViewMode = 'grid';
 let currentSearchTerm = '';
+let isCategoryDetailOpen = false;
 
 // Image thumbnails for menu items
 const getItemImage = (itemName = '') => {
@@ -589,8 +590,8 @@ const getItemImage = (itemName = '') => {
 function getCategoryImage(catId) {
   const imageMap = {
     an_pizzas: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
-    an_atta: 'https://www.shutterstock.com/image-photo/veg-extravaganza-loaded-flavorful-pizza-600w-2700208497.jpg',
-    an_upgrades_dips: 'https://www.unileverfoodsolutions.com.ph/dam/global-ufs/mcos/SEA/calcmenu/recipes/PH-recipes/appetisers/sriracha-mayo-dip/main-header.jpg',
+    an_atta: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
+    an_upgrades_dips: 'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=400&q=80',
     an_mania: 'https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/HomeProductV1/9833864c-fc79-49d3-bf3c-f5f72ff1c881_extravaganzasidejpgFull2x2702.webp',
     an_breads: 'https://www.ambitiouskitchen.com/wp-content/uploads/2023/02/Garlic-Bread-4.jpg',
     an_pastas: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=400&q=80',
@@ -614,7 +615,7 @@ function getCategoryImage(catId) {
     mt_coffees: 'https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=400&q=80',
     mt_teas: 'https://media.istockphoto.com/id/1064859392/photo/tea-served-in-a-traditional-mud-cup-in-india.jpg?s=612x612&w=0&k=20&c=vOGMGhMX20HSWfGhmaMW6Wu5ogBspkQJq3Y6cs4fu3A=',
     mt_drinks: 'https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=400&q=80',
-    mt_desserts: 'https://www.cookwithkushi.com/wp-content/uploads/2017/01/sizzling_brownie_sundae_ice_cream.jpg'
+    mt_desserts: 'https://rhubarbandcod.com/wp-content/uploads/2021/02/Hazelnut-Brownies-with-Frangelico-Ice-Cream.jpg'
   };
 
   return imageMap[catId] || 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80';
@@ -633,6 +634,7 @@ const setupSearchBox = () => {
 
   searchInput.addEventListener('input', (event) => {
     currentSearchTerm = (event.target.value || '').trim().toLowerCase();
+    isCategoryDetailOpen = false;
     renderCurrentView();
   });
 };
@@ -668,6 +670,7 @@ function selectOutlet(outletKey) {
 
   buildCategoryTabs(data.categories);
   currentCategory = data.categories[0].id;
+  isCategoryDetailOpen = false;
   const searchInput = document.getElementById('menuSearchInput');
   if (searchInput) searchInput.value = '';
   currentSearchTerm = '';
@@ -690,14 +693,23 @@ function buildCategoryTabs(categories) {
   scrollContainer.querySelectorAll('.menu-cat-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const selectedCategory = btn.dataset.category;
-      const shouldClose = currentCategory === selectedCategory && !currentSearchTerm;
+      const shouldClose = currentCategory === selectedCategory && isCategoryDetailOpen && !currentSearchTerm;
+
+      if (currentSearchTerm) {
+        currentCategory = selectedCategory;
+        isCategoryDetailOpen = false;
+        renderDigitalItems();
+        return;
+      }
+
+      currentCategory = shouldClose ? '' : selectedCategory;
+      isCategoryDetailOpen = !shouldClose;
 
       scrollContainer.querySelectorAll('.menu-cat-btn').forEach(b => {
         const isActive = !shouldClose && b.dataset.category === selectedCategory;
         b.classList.toggle('active', isActive);
       });
 
-      currentCategory = shouldClose ? '' : selectedCategory;
       renderDigitalItems();
     });
   });
@@ -720,9 +732,15 @@ function renderCurrentView() {
 
 function renderDigitalItems() {
   const container = document.getElementById('digitalItemsContainer');
+  const categoryStrip = document.querySelector('.menu-categories-scroll');
   if (!container) return;
 
-  if (!currentCategory) {
+  if (categoryStrip) {
+    const hideCategoryStrip = !currentSearchTerm && isCategoryDetailOpen && !!currentCategory;
+    categoryStrip.style.display = hideCategoryStrip ? 'none' : 'grid';
+  }
+
+  if (!currentCategory && !currentSearchTerm) {
     container.innerHTML = `
       <div class="empty-search-state">
         <i class="fa-solid fa-burger"></i>
@@ -735,24 +753,14 @@ function renderDigitalItems() {
   const outlet = outletsData[currentOutlet];
   const section = outlet.sections[currentCategory];
 
-  if (!section) {
-    container.innerHTML = '<p style="text-align:center; padding:2rem; color:#888;">Select a category above.</p>';
-    return;
-  }
-
-  const filterItems = (items) => {
-    if (!currentSearchTerm) return items;
-    return items.filter(item => {
-      const haystack = `${item.name} ${item.desc || ''} ${item.tag || ''}`.toLowerCase();
-      return haystack.includes(currentSearchTerm);
-    });
-  };
-
   if (currentSearchTerm) {
     const groupedMatches = Object.values(outlet.sections)
       .map(sectionData => {
         if (!sectionData || !Array.isArray(sectionData.items)) return null;
-        const matches = filterItems(sectionData.items);
+        const matches = sectionData.items.filter(item => {
+          const haystack = `${item.name} ${item.desc || ''} ${item.tag || ''}`.toLowerCase();
+          return haystack.includes(currentSearchTerm);
+        });
         if (!matches.length) return null;
         return {
           title: sectionData.title || 'Menu Items',
@@ -800,19 +808,32 @@ function renderDigitalItems() {
     return;
   }
 
-  if (section.type === 'pizza_table') {
-    const items = filterItems(section.items);
-    if (!items.length) {
-      container.innerHTML = `
-        <div class="empty-search-state">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <p>No item matches “${currentSearchTerm}”. Try a different name or category.</p>
-        </div>
-      `;
-      return;
-    }
+  if (!section) {
+    container.innerHTML = '<p style="text-align:center; padding:2rem; color:#888;">Select a category above.</p>';
+    return;
+  }
 
-    container.innerHTML = `
+  const detailHeader = `
+    <div class="category-detail-page">
+      <div class="category-detail-head">
+        <button class="category-back-btn" type="button" id="categoryBackBtn">
+          <i class="fa-solid fa-arrow-left"></i> Back to menu
+        </button>
+        <div class="category-detail-badge">
+          <img src="${getCategoryImage(currentCategory)}" alt="${section.title}" />
+        </div>
+        <div>
+          <span class="section-label">Category</span>
+          <h3 class="category-detail-title">${section.title}</h3>
+        </div>
+      </div>
+  `;
+
+  const detailFooter = `</div>`;
+
+  if (section.type === 'pizza_table') {
+    const items = section.items;
+    container.innerHTML = detailHeader + `
       ${section.description ? `
         <div class="category-banner-note">
           <i class="fa-solid fa-circle-info"></i>
@@ -856,12 +877,21 @@ function renderDigitalItems() {
           `).join('')}
         </div>
       </div>
-    `;
+    ` + detailFooter;
+
+    const backBtn = document.getElementById('categoryBackBtn');
+    if (backBtn) {
+      backBtn.addEventListener('click', () => {
+        currentCategory = '';
+        isCategoryDetailOpen = false;
+        renderCurrentView();
+      });
+    }
     return;
   }
 
   if (section.type === 'upgrades_dips') {
-    container.innerHTML = `
+    container.innerHTML = detailHeader + `
       <div class="upgrades-dips-container">
         <div class="upgrades-box">
           <h3 class="box-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Upgrade Your Pizza</h3>
@@ -904,24 +934,22 @@ function renderDigitalItems() {
           </div>
         </div>
       </div>
-    `;
+    ` + detailFooter;
+
+    const backBtn = document.getElementById('categoryBackBtn');
+    if (backBtn) {
+      backBtn.addEventListener('click', () => {
+        currentCategory = '';
+        isCategoryDetailOpen = false;
+        renderCurrentView();
+      });
+    }
     return;
   }
 
-  const items = filterItems(section.items);
-  if (!items.length) {
-    container.innerHTML = `
-      <div class="empty-search-state">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <p>No item matches “${currentSearchTerm}”. Try a different name or category.</p>
-      </div>
-    `;
-    return;
-  }
-
-  container.innerHTML = `
+  container.innerHTML = detailHeader + `
     <div class="items-cards-grid">
-      ${items.map(item => `
+      ${section.items.map(item => `
         <div class="item-card">
           ${item.tag ? `<span class="badge-tag card-tag">${item.tag}</span>` : ''}
           <div class="item-card-body">
@@ -937,7 +965,16 @@ function renderDigitalItems() {
         </div>
       `).join('')}
     </div>
-  `;
+  ` + detailFooter;
+
+  const backBtn = document.getElementById('categoryBackBtn');
+  if (backBtn) {
+    backBtn.addEventListener('click', () => {
+      currentCategory = '';
+      isCategoryDetailOpen = false;
+      renderCurrentView();
+    });
+  }
 }
 
 function renderMenuCards() {
