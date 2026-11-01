@@ -1177,11 +1177,11 @@ function setupThemeToggle() {
   const themeToggle = document.getElementById('themeToggleBtn');
   if (!themeToggle) return;
 
-  const savedTheme = localStorage.getItem('theme');
-  const initialTheme = savedTheme || 'light';
+  const storedTheme = localStorage.getItem('theme');
+  const initialTheme = storedTheme === 'dark' ? 'dark' : 'light';
 
   document.documentElement.setAttribute('data-theme', initialTheme);
-  if (!savedTheme) {
+  if (!storedTheme) {
     localStorage.setItem('theme', initialTheme);
   }
   updateThemeButton(initialTheme);
