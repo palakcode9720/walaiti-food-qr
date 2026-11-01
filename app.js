@@ -548,17 +548,7 @@ const outletsData = {
           { name: "Green Tea", price: "₹139" },
           { name: "Lemon Honey Tea", price: "₹139" },
           { name: "Special Masala Tea", price: "₹139" },
-          { name: "Hot Tea (Milk Tea)", price: "₹129" },
-          { name: "Add Jaggery", price: "₹20" },
-          { name: "Hot Flavoured Tea", price: "₹109" },
-          { name: "Black Tea", price: "₹80" },
-          { name: "English Tea", price: "₹70" },
-          { name: "Chai", price: "₹60" },
-          { name: "Lemon Tea", price: "₹60" },
-          { name: "Mint Tea", price: "₹60" },
-          { name: "Hibiscus Tea", price: "₹60" },
-          { name: "Cardamom Tea", price: "₹60" },
-          { name: "Vanilla Tea", price: "₹90" }
+          { name: "Add Jaggery", price: "₹20" }
         ]
       },
 
@@ -814,6 +804,7 @@ function renderDigitalItems() {
     if (!groupedMatches.length) {
       container.innerHTML = `
         <div class="empty-search-state">
+
           <i class="fa-solid fa-magnifying-glass"></i>
           <p>No item matches “${currentSearchTerm}”. Try a different name or category.</p>
         </div>
