@@ -2682,3 +2682,14 @@ img {
         padding: 13px !important;
     }
 }
+
+/* REMOVE ORDER ON WHATSAPP FROM MENU ONLY */
+
+.menu-view-container .order-wa-btn {
+    display: none !important;
+}
+
+/* Adjust item layout after removing button */
+.menu-view-container .item-bottom {
+    justify-content: flex-start !important;
+}
