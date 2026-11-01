@@ -730,6 +730,14 @@ function renderCurrentView() {
   }
 }
 
+function getCategoryDisplayName(catId, fallback = 'Menu') {
+  const outlet = outletsData[currentOutlet];
+  if (!outlet || !Array.isArray(outlet.categories)) return fallback;
+
+  const match = outlet.categories.find(category => category.id === catId);
+  return match ? match.name : fallback;
+}
+
 function renderDigitalItems() {
   const container = document.getElementById('digitalItemsContainer');
   const categoryStrip = document.querySelector('.menu-categories-scroll');
@@ -752,6 +760,7 @@ function renderDigitalItems() {
 
   const outlet = outletsData[currentOutlet];
   const section = outlet.sections[currentCategory];
+  const sectionTitle = section?.title || getCategoryDisplayName(currentCategory, 'Menu');
 
   if (currentSearchTerm) {
     const groupedMatches = Object.values(outlet.sections)
@@ -820,11 +829,11 @@ function renderDigitalItems() {
           <i class="fa-solid fa-arrow-left"></i> Back to menu
         </button>
         <div class="category-detail-badge">
-          <img src="${getCategoryImage(currentCategory)}" alt="${section.title}" />
+          <img src="${getCategoryImage(currentCategory)}" alt="${sectionTitle}" />
         </div>
         <div>
           <span class="section-label">Category</span>
-          <h3 class="category-detail-title">${section.title}</h3>
+          <h3 class="category-detail-title">${sectionTitle}</h3>
         </div>
       </div>
   `;
@@ -838,7 +847,7 @@ function renderDigitalItems() {
         <div class="category-banner-note">
           <i class="fa-solid fa-circle-info"></i>
           <div>
-            <strong>${section.title}</strong>
+            <strong>${sectionTitle}</strong>
             <p>${section.description}</p>
           </div>
         </div>
