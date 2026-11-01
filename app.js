@@ -595,7 +595,7 @@ function getCategoryImage(catId) {
     an_breads: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80',
     an_pastas: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=400&q=80',
     an_burgers: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80',
-    an_chinese: 'https://images.unsplash.com/photo-1557872943-16a0d1f7b4e0?auto=format&fit=crop&w=400&q=80',
+    an_chinese: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGIaMgfVnI1C2urOQgqMNhMmk5xTFIjB_4LpJcftlgCDijH4QdNPId96Y&s=10',
     an_shakes: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=400&q=80',
     an_drinks: 'https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=400&q=80',
     an_hot: 'https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=400&q=80',
@@ -607,14 +607,14 @@ function getCategoryImage(catId) {
     mt_breads: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80',
     mt_pastas: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=400&q=80',
     mt_burgers: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80',
-    mt_chinese: 'https://images.unsplash.com/photo-1557872943-16a0d1f7b4e0?auto=format&fit=crop&w=400&q=80',
+    mt_chinese: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGIaMgfVnI1C2urOQgqMNhMmk5xTFIjB_4LpJcftlgCDijH4QdNPId96Y&s=10',
     mt_shakes: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=400&q=80',
-    mt_frappes: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=400&q=80',
+    mt_frappes: 'https://www.thehungrybites.com/wp-content/uploads/2023/06/coffee-ice-cream-frappe-frappuccino-feat.jpg',
     mt_matchas: 'https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=400&q=80',
     mt_coffees: 'https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=400&q=80',
-    mt_teas: 'https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=400&q=80',
+    mt_teas: 'https://media.istockphoto.com/id/1064859392/photo/tea-served-in-a-traditional-mud-cup-in-india.jpg?s=612x612&w=0&k=20&c=vOGMGhMX20HSWfGhmaMW6Wu5ogBspkQJq3Y6cs4fu3A=',
     mt_drinks: 'https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=400&q=80',
-    mt_desserts: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=400&q=80'
+    mt_desserts: 'https://rhubarbandcod.com/wp-content/uploads/2021/02/Hazelnut-Brownies-with-Frangelico-Ice-Cream.jpg'
   };
 
   return imageMap[catId] || 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80';
