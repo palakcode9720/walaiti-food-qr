@@ -26,7 +26,7 @@ const outletsData = {
       { id: "an_breads", name: "Garlic Breads & Parcels", icon: "fa-bread-slice" },
       { id: "an_pastas", name: "Pastas", icon: "fa-bowl-rice" },
       { id: "an_burgers", name: "Burgers, Sandwiches & Wraps", icon: "fa-burger" },
-      { id: "an_chinese", name: "Snacks, Chinese & Soups", icon: "fa-bowl-food" },
+      { id: "an_chinese", name: "Snacks, Chinese & Salads", icon: "fa-bowl-food" },
       { id: "an_shakes", name: "Milkshakes & Cold Coffee", icon: "fa-blender" },
       { id: "an_drinks", name: "Drinks, Mojitos & Ice Teas", icon: "fa-champagne-glasses" },
       { id: "an_hot", name: "Tea, Coffee & Hot Chocolate", icon: "fa-mug-hot" },
@@ -169,7 +169,7 @@ const outletsData = {
 
       an_chinese: {
         type: "cards",
-        title: "Snacks, Chinese, Salads & Soups",
+        title: "Snacks, Chinese & Salads",
         items: [
           { name: "French Fries", desc: "Golden salted crispy fries", price: "₹80" },
           { name: "Peri Peri Fries", desc: "Tossed with fiery peri peri seasoning", price: "₹90" },
