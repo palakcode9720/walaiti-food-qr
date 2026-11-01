@@ -238,7 +238,7 @@ const outletsData = {
           { name: "Spicy Mango Mocktail", desc: "Sweet mango puree with spicy tangy chili notes", price: "₹139", tag: "Special" },
           { name: "Black Currant Mocktail", desc: "Exotic black currant fruit cooler", price: "₹139" },
           { name: "Green Apple Ice-Tea", desc: "Chilled brewed black tea with green apple flavour", price: "₹119" },
-          { name: "Strawberry Ice-Tea", desc: "Chilled iced tea infused with sweet strawberry", price: "₹119" },
+          { name: "Strawberry Ice-Tea", desc: "Chilled brewed black tea with strawberry flavour", price: "₹139" },
           { name: "Peach Ice-Tea", desc: "Classic peach flavoured iced tea", price: "₹119", tag: "Popular" },
           { name: "Lemon Ice-Tea", desc: "Citrus lemon brewed iced tea over ice", price: "₹119" },
           { name: "Lemonade", desc: "Classic sweet and salted fresh lemon cooler", price: "₹70" },
@@ -546,7 +546,8 @@ const outletsData = {
           { name: "Chocolate Tea", price: "₹60" },
           { name: "Green Tea", desc: "Without milk", price: "₹90" },
           { name: "Lemon Honey Tea", desc: "Without milk", price: "₹90" },
-          { name: "Special Masala Tea", desc: "Without milk", price: "₹80" }
+          { name: "Special Masala Tea", desc: "Without milk", price: "₹80" },
+          { name: "Add Jaggery", price: "₹20" }
         ]
       },
 
@@ -560,9 +561,7 @@ const outletsData = {
           { name: "Green Apple Mojito", desc: "Tangy green apple syrup with sparkling soda and mint", price: "₹139" },
           { name: "Watermelon Mojito", desc: "Sweet watermelon cooler with crushed mint leaves", price: "₹139" },
           { name: "Strawberry Mojito", desc: "Sweet strawberry cooler with fizzy soda", price: "₹149" },
-          { name: "Strawberry Ice-Tea", desc: "Chilled brewed black tea with strawberry flavour", price: "₹149" },
-          { name: "Spicy Mango Mocktail", desc: "Tropical mango juice infused with chatpata spices", price: "₹149", tag: "Special" },
-          { name: "Black Currant Mocktail", desc: "Exotic chilled black currant cooler", price: "₹139" },
+          { name: "Strawberry Ice-Tea", desc: "Chilled brewed black tea with strawberry flavour", price: "₹139" },
           { name: "Green Apple Ice-Tea", desc: "Chilled iced tea infused with green apple", price: "₹139" },
           { name: "Peach Ice-Tea", desc: "Aromatic peach iced tea served over ice", price: "₹139" },
           { name: "Lemon Ice-Tea", desc: "Classic fresh citrus lemon brewed iced tea", price: "₹129" },
