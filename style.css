@@ -3364,3 +3364,12 @@ font-weight: 800;
     padding: 11px;
   }
 }
+h3.food-subsection-heading {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #171717 !important;
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    min-height: 30px !important;
+}
