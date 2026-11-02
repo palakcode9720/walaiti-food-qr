@@ -5,7 +5,7 @@
 
 const outletsData = {
   // ==========================================================
-  // ADARSH NAGAR OUTLET (8 Pages Menu)
+  // ADARSH NAGAR OUTLET (12 Pages Menu)
   // ==========================================================
   adarshNagar: {
     name: "Adarsh Nagar Outlet",
@@ -13,7 +13,7 @@ const outletsData = {
     address: "38-B, Adarsh Nagar, Opp. Inderprasth Hotel, Canal Road, Jalandhar City",
     phones: ["+91 95177-97177", "+91 91155-95155"],
     pdf: "menus/menu-adarsh-nagar.pdf",
-    totalPages: 8,
+    totalPages: 12,
     imgFolder: "menu_adarsh_nagar",
     waPhone: "919517797177",
 
@@ -776,21 +776,30 @@ function renderItemPrice(item) {
   return `₹${item.r || item.m || item.l || 0}`;
 }
 function renderBurgerSubcategories(items) {
-  const groups = [
-    { title: "Burgers", start: 0, end: 8 },
-    { title: "Sandwiches", start: 8, end: 16 },
-    { title: "Wraps", start: 16, end: 21 },
-    { title: "Subwraps & Subs", start: 21, end: 24 }
-  ];
+  const groups = currentOutlet === 'adarshNagar'
+    ? [
+        { title: "Burgers", start: 0, end: 9 },
+        { title: "Sandwiches", start: 9, end: 16 },
+        { title: "Wraps", start: 16, end: 21 },
+        { title: "Subwraps", start: 21, end: 24 },
+        { title: "Add-ons", start: 24, end: 25 }
+      ]
+    : [
+        { title: "Burgers", start: 0, end: 8 },
+        { title: "Sandwiches", start: 8, end: 15 },
+        { title: "Wraps", start: 15, end: 19 },
+        { title: "Subs", start: 19, end: 22 },
+        { title: "Add-ons", start: 22, end: 23 }
+      ];
 
   return `
     <div class="food-category-groups">
       ${groups.map(group => {
-    const groupItems = items.slice(group.start, group.end);
+        const groupItems = items.slice(group.start, group.end);
 
-    if (!groupItems.length) return '';
+        if (!groupItems.length) return '';
 
-    return `
+        return `
           <section class="food-subsection">
             <h3 class="food-subsection-heading">${group.title}</h3>
             <div class="menu-standard-list">
@@ -807,7 +816,7 @@ function renderBurgerSubcategories(items) {
             </div>
           </section>
         `;
-  }).join('')}
+      }).join('')}
     </div>
   `;
 }
@@ -1384,4 +1393,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   selectOutlet('modelTown');
 });
-setupPanelNavigation();
