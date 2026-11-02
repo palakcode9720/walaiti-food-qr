@@ -22,7 +22,7 @@ const outletsData = {
       { id: "an_pizzas", name: "Pizzas & Thin Pesto", icon: "fa-pizza-slice" },
       { id: "an_atta", name: "Atta Pizzas & Breads", icon: "fa-wheat-awn" },
       { id: "an_upgrades_dips", name: "Upgrades & Dips", icon: "fa-wand-magic-sparkles" },
-      { id: "an_mania", name: "Pizza Menia", icon: "fa-tags" },
+      
       { id: "an_breads", name: "Garlic Breads & Parcels", icon: "fa-bread-slice" },
       { id: "an_pastas", name: "Pastas", icon: "fa-bowl-rice" },
       { id: "an_burgers", name: "Burgers, Sandwiches & Wraps", icon: "fa-burger" },
@@ -68,8 +68,8 @@ items: [
         description: "Wholesome atta crust packed with health, fiber, and authentic Italian taste.",
         
 items: [
-  { name: "Atta Margherita", desc: "", r: 180, m: 320, l: 460 },
-  { name: "Atta Cheese Corn", desc: "", r: 190, m: 330, l: 480 },
+  { name: "Atta Margherita", desc: "100% whole wheat crust with fresh mozzarella & herbs", r: 180, m: 320, l: 460 },
+  { name: "Atta Cheese Corn", desc: "Whole wheat base topped with golden sweet corn & mozzarella", r: 190, m: 330, l: 480 },
   { name: "Atta Farm House Pizza", desc: "Onion, Capsicum, Corn, Tomato, Mushroom", r: 220, m: 400, l: 550 },
   { name: "Atta Kadhai Paneer Pizza", desc: "Onion, Capsicum, Paneer", r: 220, m: 400, l: 550 },
   { name: "Atta Peri Peri Paneer Pizza", desc: "Onion, Capsicum, Mushroom, Red Pepper, Peri Peri Paneer", r: 240, m: 440, l: 580 },
@@ -99,19 +99,6 @@ items: [
         ]
       },
 
-      an_mania: {
-        type: "cards",
-        title: "Pizza Menia Range",
-        items: [
-          { name: "Onion Pizza", desc: "Single topping crunchy onion with mozzarella", price: "₹79" },
-          { name: "Capsicum Pizza", desc: "Single topping fresh crisp green bell peppers", price: "₹89" },
-          { name: "Corn Pizza", desc: "Single topping sweet golden corn with cheese", price: "₹89" },
-          { name: "Onion & Corn Pizza", desc: "Double topping golden corn & crunchy onions", price: "₹99" },
-          { name: "Onion & Jalapeno Pizza", desc: "Double topping spicy jalapenos & sliced onions", price: "₹99" },
-          { name: "Onion & Capsicum Pizza", desc: "Double topping classic onion and capsicum combo", price: "₹99" },
-          { name: "Jalapeno & Pineapple Pizza", desc: "Double topping sweet pineapple & hot jalapenos", price: "₹109", tag: "Sweet & Spicy" }
-        ]
-      },
 
       an_breads: {
         type: "cards",
@@ -123,10 +110,10 @@ items: [
   { name: "Veg Garlic Bread", desc: "Bread baked with Onion, Capsicum, Mushroom, Mozzarella Cheese, Jalapeno, Butter & Garlic", price: "₹200" },
   { name: "Stuffed Garlic Bread", desc: "Corn, Jalapeno, Cheese", price: "₹200" },
   { name: "Premium Stuffed Garlic Bread", desc: "Paneer, Onion, Corn, Jalapeno, Cheese", price: "₹230" },
-  { name: "Calzon", desc: "", price: "₹160" },
-  { name: "Taco", desc: "", price: "₹160" },
-  { name: "Zingy Parcel", desc: "", price: "₹70" },
-  { name: "Paneer Parcel", desc: "", price: "₹80" }
+  { name: "Calzon", desc: "A delicious folded pizza pocket stuffed with flavourful veggies and melted cheese.", price: "₹160" },
+  { name: "Taco", desc: "A crispy Mexican-style shell loaded with spicy veggies, sauces and cheese.", price: "₹160" },
+  { name: "Zingy Parcel", desc: "A crispy, flavour-packed parcel filled with spicy veggies and delicious seasoning.", price: "₹70" },
+  { name: "Paneer Parcel", desc: "A crispy parcel stuffed with juicy, spiced paneer and melted cheese.", price: "₹80" }
 ]
 
       },
@@ -750,7 +737,7 @@ function getCategoryImage(catId) {
     an_pizzas: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
     an_atta: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
     an_upgrades_dips: 'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=400&q=80',
-    an_mania: 'https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/HomeProductV1/9833864c-fc79-49d3-bf3c-f5f72ff1c881_extravaganzasidejpgFull2x2702.webp',
+   
     an_breads: 'https://www.ambitiouskitchen.com/wp-content/uploads/2023/02/Garlic-Bread-4.jpg',
     an_pastas: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=400&q=80',
     an_burgers: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80',
