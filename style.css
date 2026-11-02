@@ -412,6 +412,14 @@ img {
     width: 100%;
     justify-content: center;
   }
+  .food-subsection {
+    padding: 17px;
+    background: linear-gradient(145deg, #FFFDF8, #F3EBDD);
+    border: 2px solid #D1A84F;
+    border-radius: 23px;
+    box-shadow: 0 7px 20px rgba(150, 110, 25, 0.08);
+}
+
 }
 
 /* ============================================================
