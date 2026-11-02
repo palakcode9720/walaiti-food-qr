@@ -3381,3 +3381,11 @@ h3.food-subsection-heading {
     font-weight: 800 !important;
     min-height: 30px !important;
 }
+@media (max-width: 768px) {
+  .category-detail-head .category-back-btn {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    flex-shrink: 0;
+  }
+}
