@@ -1063,11 +1063,18 @@ function renderDigitalItems() {
       </button>
     </div>`;
 
-  const handleBackToMenu = () => {
-    currentCategory = '';
-    isCategoryDetailOpen = false;
-    renderCurrentView();
-  };
+const handleBackToMenu = () => {
+  currentCategory = '';
+  isCategoryDetailOpen = false;
+  renderCurrentView();
+
+  requestAnimationFrame(() => {
+    const categoryStrip = document.querySelector('.menu-categories-scroll');
+    if (categoryStrip) {
+      categoryStrip.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+};
 
   const bindBackButtons = () => {
     document.querySelectorAll('.category-back-btn').forEach(button => {
