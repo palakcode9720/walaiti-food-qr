@@ -1988,13 +1988,13 @@ img {
     width: 100% !important;
     max-width: 520px !important;
     margin: 0 auto !important;
-    padding: 20px !important;
+    padding: 24px !important;
     box-sizing: border-box !important;
 
-    background: linear-gradient(145deg, #191713, #0C0C0C) !important;
-    border: 2px solid #D1A84F !important;
-    border-radius: 28px !important;
-    box-shadow: 0 12px 35px rgba(209, 168, 79, 0.12) !important;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F3EDE1 100%) !important;
+    border: 3px solid #D1A84F !important;
+    border-radius: 32px !important;
+    box-shadow: 0 8px 22px rgba(150, 110, 25, 0.10) !important;
 }
 
 /* QR image area */
