@@ -1525,3 +1525,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   selectOutlet('modelTown');
 });
+// Handle iPhone Safari back navigation
+history.pushState({ page: "home" }, "", location.href);
+
+window.addEventListener("popstate", function () {
+  const homeButton = document.querySelector('[data-open-panel="dashboard"]');
+
+  if (homeButton) {
+    homeButton.click();
+  }
+
+  history.pushState({ page: "home" }, "", location.href);
+});
