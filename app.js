@@ -33,7 +33,7 @@ const outletsData = {
       { id: "an_hot", name: "Hot Flavoured Tea", icon: "fa-mug-hot" },
       { id: "an_coffee", name: "Iced Coffee", icon: "fa-coffee" },
       { id: "an_frappe", name: "Frappe", icon: "fa-blender" },
-      { id: "an_combos_desserts", name: "Combos & Desserts", icon: "fa-gift" }
+      { id: "an_combos_desserts", name: "Desserts", icon: "fa-gift" }
     ],
 
     // Data for Adarsh Nagar
@@ -372,14 +372,8 @@ an_frappe: {
 
       an_combos_desserts: {
         type: "cards",
-        title: "Combos & Desserts",
+        title: "Desserts",
         items: [
-          { name: "Combo 1: Crispy Burger + Fries + Fruit Beer", desc: "Complete solo meal deal", price: "₹200", tag: "Combo 1" },
-          { name: "Combo 2: Farm Fresh Pizza (R) + Fries + Fruit Beer", desc: "Regular pizza meal with sides & drink", price: "₹300", tag: "Combo 2" },
-          { name: "Combo 3: Veg Salad + Gym Lover Sandwich + Lemonade", desc: "Nutritious fitness friendly meal", price: "₹400", tag: "Combo 3" },
-          { name: "Combo 4: Arrabiata Pasta + Stuffed Garlic Bread + Virgin Mojito", desc: "Italian feast with bread & mocktail", price: "₹490", tag: "Combo 4" },
-          { name: "Combo 5: Farm Fresh Pizza (M) + Stuffed Garlic Bread + Virgin Mojito", desc: "Medium pizza meal with stuffed bread", price: "₹580", tag: "Combo 5" },
-          { name: "Combo 6: Farm Fresh Pizza (L) + Stuffed Garlic Bread + 2 Virgin Mojitos", desc: "Large family feast combo for 3-4 people", price: "₹830", tag: "Family Pack" },
           
           { name: "Vanilla Ice Cream", price: "₹60" },
           { name: "Choco Lava Cake", price: "₹80" },
@@ -572,7 +566,7 @@ an_frappe: {
           { name: "Sweet Corn Soup", desc: "Creamy sweet corn soup with mild herbs and comforting finish", price: "₹110" },
           { name: "Veg Salad", desc: "Fresh garden salad with crunchy vegetables and herbs", price: "₹180" },
           { name: "Pasta Salad", desc: "Chilled pasta tossed with seasonal vegetables and dressing", price: "₹190" },
-          { name: "High Protein Salad", desc: "Protein-rich salad with paneer, legumes and fresh greens", price: "₹210" }
+          { name: "High Protein Salad", desc: "Protein-rich salad with paneer, legumes and fresh greens", price: "₹220" }
         ]
       },
 
