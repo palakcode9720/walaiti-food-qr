@@ -22,7 +22,7 @@ const outletsData = {
       { id: "an_pizzas", name: "Pizzas & Thin Pesto", icon: "fa-pizza-slice" },
       { id: "an_atta", name: "Atta Pizzas & Breads", icon: "fa-wheat-awn" },
       { id: "an_upgrades_dips", name: "Upgrades & Dips", icon: "fa-wand-magic-sparkles" },
-      
+
       { id: "an_breads", name: "Garlic Breads & Parcels", icon: "fa-bread-slice" },
       { id: "an_pastas", name: "Pastas", icon: "fa-bowl-rice" },
       { id: "an_burgers", name: "Burgers, Sandwiches & Wraps", icon: "fa-burger" },
@@ -42,23 +42,23 @@ const outletsData = {
         type: "pizza_table",
         title: "Pizzas (Adarsh Nagar)",
         description: "Served on traditional crust with fresh toppings & mozzarella cheese.",
-        
-items: [
-  { name: "Margherita", desc: "Classic cheese pizza with rich tomato sauce", r: 170, m: 300, l: 430 },
-  { name: "Cheese & Mushroom", desc: "Mozzarella and fresh sliced button mushrooms", r: 170, m: 300, l: 430 },
-  { name: "Onion & Tomato", desc: "Crunchy onion, ripe juicy tomatoes and fragrant herbs", r: 170, m: 300, l: 430 },
-  { name: "Cheese & Corn", desc: "Golden sweet corn kernels smothered in mozzarella", r: 170, m: 300, l: 430 },
-  { name: "Achari Pizza", desc: "Capsicum, Corn, Paneer", r: 200, m: 340, l: 500 },
-  { name: "Farm Fresh Pizza", desc: "Onion, Capsicum, Tomato, Mushroom", r: 200, m: 340, l: 500 },
-  { name: "Tandoori Paneer", desc: "Onion, Capsicum, Tandoori Paneer", r: 200, m: 340, l: 500 },
-  { name: "Spicy Paneer Pizza", desc: "Capsicum, Red Paprika, Paneer", r: 230, m: 400, l: 560 },
-  { name: "Pasta Pizza", desc: "Onion, Capsicum, Mushroom, Pasta", r: 230, m: 400, l: 560 },
-  { name: "Veg Deluxe Pizza", desc: "Onion, Capsicum, Mushroom, Corn, Paneer", r: 230, m: 400, l: 560 },
-  { name: "Black & White Pizza", desc: "Jalapeno, Black Olive, Corn, Extra Cheese", r: 230, m: 400, l: 560 },
-  { name: "Mix Veg Pizza", desc: "Onion, Capsicum, Tomato, Mushroom, Corn, Black Olives, Jalapeno & Extra Cheese", r: 260, m: 480, l: 650 },
-  { name: "Veg Supreme Pizza", desc: "Capsicum, Mushroom, Corn, Paneer, Jalapeno, Red Pepper & Extra Cheese", r: 260, m: 480, l: 650 },
-  { name: "Pesto Pizza - Thin Crust", desc: "Pesto Sauce, Onion, Capsicum, Mushroom, Paneer, Mozzarella Cheese", customPrice: '9" - ₹550 | 12" - ₹700', tag: "New Add" }
-]
+
+        items: [
+          { name: "Margherita", desc: "Classic cheese pizza with rich tomato sauce", r: 170, m: 300, l: 430 },
+          { name: "Cheese & Mushroom", desc: "Mozzarella and fresh sliced button mushrooms", r: 170, m: 300, l: 430 },
+          { name: "Onion & Tomato", desc: "Crunchy onion, ripe juicy tomatoes and fragrant herbs", r: 170, m: 300, l: 430 },
+          { name: "Cheese & Corn", desc: "Golden sweet corn kernels smothered in mozzarella", r: 170, m: 300, l: 430 },
+          { name: "Achari Pizza", desc: "Capsicum, Corn, Paneer", r: 200, m: 340, l: 500 },
+          { name: "Farm Fresh Pizza", desc: "Onion, Capsicum, Tomato, Mushroom", r: 200, m: 340, l: 500 },
+          { name: "Tandoori Paneer", desc: "Onion, Capsicum, Tandoori Paneer", r: 200, m: 340, l: 500 },
+          { name: "Spicy Paneer Pizza", desc: "Capsicum, Red Paprika, Paneer", r: 230, m: 400, l: 560 },
+          { name: "Pasta Pizza", desc: "Onion, Capsicum, Mushroom, Pasta", r: 230, m: 400, l: 560 },
+          { name: "Veg Deluxe Pizza", desc: "Onion, Capsicum, Mushroom, Corn, Paneer", r: 230, m: 400, l: 560 },
+          { name: "Black & White Pizza", desc: "Jalapeno, Black Olive, Corn, Extra Cheese", r: 230, m: 400, l: 560 },
+          { name: "Mix Veg Pizza", desc: "Onion, Capsicum, Tomato, Mushroom, Corn, Black Olives, Jalapeno & Extra Cheese", r: 260, m: 480, l: 650 },
+          { name: "Veg Supreme Pizza", desc: "Capsicum, Mushroom, Corn, Paneer, Jalapeno, Red Pepper & Extra Cheese", r: 260, m: 480, l: 650 },
+          { name: "Pesto Pizza - Thin Crust", desc: "Pesto Sauce, Onion, Capsicum, Mushroom, Paneer, Mozzarella Cheese", customPrice: '9" - ₹550 | 12" - ₹700', tag: "New Add" }
+        ]
       },
 
 
@@ -66,18 +66,18 @@ items: [
         type: "pizza_table",
         title: "100% Whole Wheat (Atta) Pizzas & Breads",
         description: "Wholesome atta crust packed with health, fiber, and authentic Italian taste.",
-        
-items: [
-  { name: "Atta Margherita", desc: "100% whole wheat crust with fresh mozzarella & herbs", r: 180, m: 320, l: 460 },
-  { name: "Atta Cheese Corn", desc: "Whole wheat base topped with golden sweet corn & mozzarella", r: 190, m: 330, l: 480 },
-  { name: "Atta Farm House Pizza", desc: "Onion, Capsicum, Corn, Tomato, Mushroom", r: 220, m: 400, l: 550 },
-  { name: "Atta Kadhai Paneer Pizza", desc: "Onion, Capsicum, Paneer", r: 220, m: 400, l: 550 },
-  { name: "Atta Peri Peri Paneer Pizza", desc: "Onion, Capsicum, Mushroom, Red Pepper, Peri Peri Paneer", r: 240, m: 440, l: 580 },
-  { name: "Atta Makhani Pasta Pizza", desc: "Onion, Capsicum, Mushroom, Pasta", r: 240, m: 440, l: 580 },
-  { name: "Atta Super Veg", desc: "Onion, Capsicum, Corn, Mushroom, Red Pepper, Black Olives, Jalapeno", r: 270, m: 520, l: 680 },
-  { name: "Atta Stuffed Garlic Bread", desc: "Corn, Jalapeno, Cheese", price: "₹220" },
-  { name: "Atta Premium Stuffed Garlic Bread", desc: "Onion, Paneer, Corn, Jalapeno, Cheese", price: "₹250" }
-]
+
+        items: [
+          { name: "Atta Margherita", desc: "100% whole wheat crust with fresh mozzarella & herbs", r: 180, m: 320, l: 460 },
+          { name: "Atta Cheese Corn", desc: "Whole wheat base topped with golden sweet corn & mozzarella", r: 190, m: 330, l: 480 },
+          { name: "Atta Farm House Pizza", desc: "Onion, Capsicum, Corn, Tomato, Mushroom", r: 220, m: 400, l: 550 },
+          { name: "Atta Kadhai Paneer Pizza", desc: "Onion, Capsicum, Paneer", r: 220, m: 400, l: 550 },
+          { name: "Atta Peri Peri Paneer Pizza", desc: "Onion, Capsicum, Mushroom, Red Pepper, Peri Peri Paneer", r: 240, m: 440, l: 580 },
+          { name: "Atta Makhani Pasta Pizza", desc: "Onion, Capsicum, Mushroom, Pasta", r: 240, m: 440, l: 580 },
+          { name: "Atta Super Veg", desc: "Onion, Capsicum, Corn, Mushroom, Red Pepper, Black Olives, Jalapeno", r: 270, m: 520, l: 680 },
+          { name: "Atta Stuffed Garlic Bread", desc: "Corn, Jalapeno, Cheese", price: "₹220" },
+          { name: "Atta Premium Stuffed Garlic Bread", desc: "Onion, Paneer, Corn, Jalapeno, Cheese", price: "₹250" }
+        ]
 
       },
 
@@ -103,278 +103,278 @@ items: [
       an_breads: {
         type: "cards",
         title: "Garlic Breads & More",
-        
-items: [
-  { name: "Garlic Bread", desc: "Bread baked with Butter & Garlic", price: "₹130" },
-  { name: "Cheese Garlic Bread", desc: "Bread baked with Mozzarella Cheese, Butter & Garlic", price: "₹190" },
-  { name: "Veg Garlic Bread", desc: "Bread baked with Onion, Capsicum, Mushroom, Mozzarella Cheese, Jalapeno, Butter & Garlic", price: "₹200" },
-  { name: "Stuffed Garlic Bread", desc: "Corn, Jalapeno, Cheese", price: "₹200" },
-  { name: "Premium Stuffed Garlic Bread", desc: "Paneer, Onion, Corn, Jalapeno, Cheese", price: "₹230" },
-  { name: "Calzon", desc: "A delicious folded pizza pocket stuffed with flavourful veggies and melted cheese.", price: "₹160" },
-  { name: "Taco", desc: "A crispy Mexican-style shell loaded with spicy veggies, sauces and cheese.", price: "₹160" },
-  { name: "Zingy Parcel", desc: "A crispy, flavour-packed parcel filled with spicy veggies and delicious seasoning.", price: "₹70" },
-  { name: "Paneer Parcel", desc: "A crispy parcel stuffed with juicy, spiced paneer and melted cheese.", price: "₹80" }
-]
+
+        items: [
+          { name: "Garlic Bread", desc: "Bread baked with Butter & Garlic", price: "₹130" },
+          { name: "Cheese Garlic Bread", desc: "Bread baked with Mozzarella Cheese, Butter & Garlic", price: "₹190" },
+          { name: "Veg Garlic Bread", desc: "Bread baked with Onion, Capsicum, Mushroom, Mozzarella Cheese, Jalapeno, Butter & Garlic", price: "₹200" },
+          { name: "Stuffed Garlic Bread", desc: "Corn, Jalapeno, Cheese", price: "₹200" },
+          { name: "Premium Stuffed Garlic Bread", desc: "Paneer, Onion, Corn, Jalapeno, Cheese", price: "₹230" },
+          { name: "Calzon", desc: "A delicious folded pizza pocket stuffed with flavourful veggies and melted cheese.", price: "₹160" },
+          { name: "Taco", desc: "A crispy Mexican-style shell loaded with spicy veggies, sauces and cheese.", price: "₹160" },
+          { name: "Zingy Parcel", desc: "A crispy, flavour-packed parcel filled with spicy veggies and delicious seasoning.", price: "₹70" },
+          { name: "Paneer Parcel", desc: "A crispy parcel stuffed with juicy, spiced paneer and melted cheese.", price: "₹80" }
+        ]
 
       },
 
       an_pastas: {
         type: "cards",
         title: "Pastas (Served with 2 pcs Garlic Bread)",
-        
-items: [
-  {
-    name: "Pesto Pasta",
-    desc: "Boiled pasta with corn, capsicum, mushrooms, and cheese, tossed in our in-house basil sauce and served with two pieces of garlic bread.",
-    price: "₹300",
-    tag: "New Add"
-  },
-  {
-    name: "Arrabiata Pasta (Mix)",
-    desc: "Boiled Pasta, Garlic, Corns, Capsicum, Mushroom, Chilly Flakes, In house sauce served with two pieces of garlic bread",
-    price: "₹250"
-  },
-  {
-    name: "White Sauce Pasta",
-    desc: "Boiled Pasta, Corns, Capsicum, Mushroom, Chilly Flakes, In house sauce served with two pieces of garlic bread",
-    price: "₹250"
-  },
-  {
-    name: "Makhani",
-    desc: "Boiled Pasta, Garlic, Corns, Capsicum, Mushroom, Chilly Flakes, In house sauce served with two pieces of garlic bread",
-    price: "₹270"
-  },
-  {
-    name: "Tandoori Paneer",
-    desc: "Boiled Pasta, Garlic, Corns, Capsicum, Mushroom, Paneer, Chilly Flakes, In house sauce served with two pieces of garlic bread",
-    price: "₹280"
-  },
-  {
-    name: "Mix Sauce, Bake Pasta",
-    desc: "Boiled Pasta, Corns, Capsicum, Mushroom, Chilly Flakes, Cheese, In house sauce served with two pieces of garlic bread",
-    price: "₹300"
-  },
-  {
-    name: "White Sauce Baked Pasta",
-    desc: "Boiled Pasta, Corns, Capsicum, Mushroom, Chilly Flakes, Cheese, In house sauce served baked with two pieces of garlic bread",
-    price: "₹300"
-  }
-]
+
+        items: [
+          {
+            name: "Pesto Pasta",
+            desc: "Boiled pasta with corn, capsicum, mushrooms, and cheese, tossed in our in-house basil sauce and served with two pieces of garlic bread.",
+            price: "₹300",
+            tag: "New Add"
+          },
+          {
+            name: "Arrabiata Pasta (Mix)",
+            desc: "Boiled Pasta, Garlic, Corns, Capsicum, Mushroom, Chilly Flakes, In house sauce served with two pieces of garlic bread",
+            price: "₹250"
+          },
+          {
+            name: "White Sauce Pasta",
+            desc: "Boiled Pasta, Corns, Capsicum, Mushroom, Chilly Flakes, In house sauce served with two pieces of garlic bread",
+            price: "₹250"
+          },
+          {
+            name: "Makhani",
+            desc: "Boiled Pasta, Garlic, Corns, Capsicum, Mushroom, Chilly Flakes, In house sauce served with two pieces of garlic bread",
+            price: "₹270"
+          },
+          {
+            name: "Tandoori Paneer",
+            desc: "Boiled Pasta, Garlic, Corns, Capsicum, Mushroom, Paneer, Chilly Flakes, In house sauce served with two pieces of garlic bread",
+            price: "₹280"
+          },
+          {
+            name: "Mix Sauce, Bake Pasta",
+            desc: "Boiled Pasta, Corns, Capsicum, Mushroom, Chilly Flakes, Cheese, In house sauce served with two pieces of garlic bread",
+            price: "₹300"
+          },
+          {
+            name: "White Sauce Baked Pasta",
+            desc: "Boiled Pasta, Corns, Capsicum, Mushroom, Chilly Flakes, Cheese, In house sauce served baked with two pieces of garlic bread",
+            price: "₹300"
+          }
+        ]
 
       },
 
       an_burgers: {
-  type: "cards",
-  title: "Burgers, Sandwiches, Wraps & Subwraps",
-  items: [
+        type: "cards",
+        title: "Burgers, Sandwiches, Wraps & Subwraps",
+        items: [
 
-    // Burgers
-    { name: "Delight Burger", desc: "Aloo patty, onion, lettuces with our sauces", price: "₹70" },
-    { name: "Crispy Burger", desc: "Veg patty, onion, lettuces with our sauces", price: "₹80" },
-    { name: "Achari Burger", desc: "Veg patty, gherkins pickle, onion, lettuces with our sauces", price: "₹90" },
-    { name: "Pasta Burger", desc: "Veg patty, pasta, onion, lettuces with our sauces", price: "₹90" },
-    { name: "Tandoori Burger", desc: "Roasted paneer cubes, onion, lettuces with our sauces", price: "₹100" },
-    { name: "Gym Burger", desc: "Veg patty, paneer slice, onion, cucumber, tomato, lettuces with our sauces", price: "₹110" },
-    { name: "Spicy Paneer Burger", desc: "Spicy paneer patty, onion, lettuces with our sauces", price: "₹120" },
-    { name: "American Burger", desc: "Paneer patty, aloo patty, onion, cucumber, tomato, lettuces with our sauces", price: "₹140" },
+          // Burgers
+          { name: "Delight Burger", desc: "Aloo patty, onion, lettuces with our sauces", price: "₹70" },
+          { name: "Crispy Burger", desc: "Veg patty, onion, lettuces with our sauces", price: "₹80" },
+          { name: "Achari Burger", desc: "Veg patty, gherkins pickle, onion, lettuces with our sauces", price: "₹90" },
+          { name: "Pasta Burger", desc: "Veg patty, pasta, onion, lettuces with our sauces", price: "₹90" },
+          { name: "Tandoori Burger", desc: "Roasted paneer cubes, onion, lettuces with our sauces", price: "₹100" },
+          { name: "Gym Burger", desc: "Veg patty, paneer slice, onion, cucumber, tomato, lettuces with our sauces", price: "₹110" },
+          { name: "Spicy Paneer Burger", desc: "Spicy paneer patty, onion, lettuces with our sauces", price: "₹120" },
+          { name: "American Burger", desc: "Paneer patty, aloo patty, onion, cucumber, tomato, lettuces with our sauces", price: "₹140" },
 
-    // Sandwiches
-    { name: "Pesto Sandwich", desc: "Pesto sauce, onion, capsicum, mushrooms, paneer, and mozzarella cheese", price: "₹250", tag: "New Add" },
-    { name: "Walaiti Special Sandwich", desc: "Paneer cubes, mushroom, black olives, onion, capsicum, sweet corn, mozzarella cheese, with our house sauces", price: "₹220" },
-    { name: "Mushroom Sandwich", desc: "Roasted mushroom, onion, capsicum, mozzarella cheese with our house sauces", price: "₹220" },
-    { name: "Gym Lover Sandwich", desc: "Paneer slice, onion, cucumber, tomato, with our house sauces", price: "₹200" },
-    { name: "Tandoori Sandwich", desc: "Roast paneer cubes, onion, capsicum, mozzarella cheese, with our house sauces", price: "₹200" },
-    { name: "Farm Fresh Sandwich", desc: "Onion, capsicum, sweet corn, mozzarella cheese, with our house sauces", price: "₹180" },
-    { name: "Cheese Corn Sandwich", desc: "Sweet corn, mozzarella cheese, with our sauces", price: "₹170" },
+          // Sandwiches
+          { name: "Pesto Sandwich", desc: "Pesto sauce, onion, capsicum, mushrooms, paneer, and mozzarella cheese", price: "₹250", tag: "New Add" },
+          { name: "Walaiti Special Sandwich", desc: "Paneer cubes, mushroom, black olives, onion, capsicum, sweet corn, mozzarella cheese, with our house sauces", price: "₹220" },
+          { name: "Mushroom Sandwich", desc: "Roasted mushroom, onion, capsicum, mozzarella cheese with our house sauces", price: "₹220" },
+          { name: "Gym Lover Sandwich", desc: "Paneer slice, onion, cucumber, tomato, with our house sauces", price: "₹200" },
+          { name: "Tandoori Sandwich", desc: "Roast paneer cubes, onion, capsicum, mozzarella cheese, with our house sauces", price: "₹200" },
+          { name: "Farm Fresh Sandwich", desc: "Onion, capsicum, sweet corn, mozzarella cheese, with our house sauces", price: "₹180" },
+          { name: "Cheese Corn Sandwich", desc: "Sweet corn, mozzarella cheese, with our sauces", price: "₹170" },
 
-    // Wraps
-    { name: "Spicy Paneer Wrap", desc: "Tortilla, spicy Paneer patty, onion, lettuces with our house sauces", price: "₹190" },
-    { name: "Tandoori Wrap", desc: "Roast paneer cube, onion, lettuce with our house sauces", price: "₹180" },
-    { name: "Makhani Pasta Wrap", desc: "Tortilla, cooked pasta, onion, lettuces with our house sauces", price: "₹170" },
-    { name: "Tikki Wrap", desc: "Tortilla, veg patty, onion, lettuces with our house sauces", price: "₹150" },
+          // Wraps
+          { name: "Spicy Paneer Wrap", desc: "Tortilla, spicy Paneer patty, onion, lettuces with our house sauces", price: "₹190" },
+          { name: "Tandoori Wrap", desc: "Roast paneer cube, onion, lettuce with our house sauces", price: "₹180" },
+          { name: "Makhani Pasta Wrap", desc: "Tortilla, cooked pasta, onion, lettuces with our house sauces", price: "₹170" },
+          { name: "Tikki Wrap", desc: "Tortilla, veg patty, onion, lettuces with our house sauces", price: "₹150" },
 
-    // Subs
-    { name: "Simply Veg Sub", desc: "Onion, cucumber, tomato, corn, capsicum, lettuces, mozzarella cheese with our sauces", price: "₹140" },
-    { name: "Veg Tikki Sub", desc: "Veg patty, onion, cucumber, tomato, corn, capsicum, lettuces, mozzarella cheese with our sauces", price: "₹150" },
-    { name: "Paneer Tikka Sub", desc: "Paneer, onion, cucumber, tomato, corn, capsicum, lettuces, mozzarella cheese with our sauces", price: "₹160" }
+          // Subs
+          { name: "Simply Veg Sub", desc: "Onion, cucumber, tomato, corn, capsicum, lettuces, mozzarella cheese with our sauces", price: "₹140" },
+          { name: "Veg Tikki Sub", desc: "Veg patty, onion, cucumber, tomato, corn, capsicum, lettuces, mozzarella cheese with our sauces", price: "₹150" },
+          { name: "Paneer Tikka Sub", desc: "Paneer, onion, cucumber, tomato, corn, capsicum, lettuces, mozzarella cheese with our sauces", price: "₹160" }
 
-  ]
-},
+        ]
+      },
 
       an_chinese: {
-  type: "cards",
-  title: "Chinese, Soup, Salad & Snacks",
-  items: [
-    // Chinese (0–9)
-    { name: "Walaiti Special Noodles", price: "₹220" },
-    { name: "Honey Chilli Potato", price: "₹250" },
-    { name: "Cheese Chilli", price: "₹300" },
-    { name: "Manchurian (Dry/Gravy)", price: "₹250" },
-    { name: "Mushroom Chilli", price: "₹300" },
-    { name: "Spring Rolls (2 Pcs)", price: "₹180" },
-    { name: "Paneer Pops (20 Pcs)", price: "₹200" },
-    { name: "Cheese Corn Roll (6 Pcs)", price: "₹180" },
-    { name: "Fried Rice", price: "₹230" },
-    { name: "Schezwan Fried Rice", price: "₹250" },
+        type: "cards",
+        title: "Chinese, Soup, Salad & Snacks",
+        items: [
+          // Chinese (0–9)
+          { name: "Walaiti Special Noodles", price: "₹220" },
+          { name: "Honey Chilli Potato", price: "₹250" },
+          { name: "Cheese Chilli", price: "₹300" },
+          { name: "Manchurian (Dry/Gravy)", price: "₹250" },
+          { name: "Mushroom Chilli", price: "₹300" },
+          { name: "Spring Rolls (2 Pcs)", price: "₹180" },
+          { name: "Paneer Pops (20 Pcs)", price: "₹200" },
+          { name: "Cheese Corn Roll (6 Pcs)", price: "₹180" },
+          { name: "Fried Rice", price: "₹230" },
+          { name: "Schezwan Fried Rice", price: "₹250" },
 
-    // Soup (10–12)
-    { name: "Veg Manchow Soup", price: "₹100" },
-    { name: "Lemon Coriander Soup", price: "₹110" },
-    { name: "Sweet Corn Soup", price: "₹110" },
+          // Soup (10–12)
+          { name: "Veg Manchow Soup", price: "₹100" },
+          { name: "Lemon Coriander Soup", price: "₹110" },
+          { name: "Sweet Corn Soup", price: "₹110" },
 
-    // Salad (13–15)
-    { name: "High Protein Salad", desc: "Salad from GYMers", price: "₹220" },
-    { name: "Pasta Salad", desc: "Healthy Salad infused with veggies and pasta", price: "₹190" },
-    { name: "Veg Salad", desc: "Healthy Salad loaded with veggies", price: "₹180" },
+          // Salad (13–15)
+          { name: "High Protein Salad", desc: "Salad from GYMers", price: "₹220" },
+          { name: "Pasta Salad", desc: "Healthy Salad infused with veggies and pasta", price: "₹190" },
+          { name: "Veg Salad", desc: "Healthy Salad loaded with veggies", price: "₹180" },
 
-    // Snacks (16–21)
-    { name: "French Fries", desc: "M: ₹90 | L: ₹170", price: "₹90 / ₹170" },
-    { name: "Peri Peri Fries", desc: "M: ₹100 | L: ₹180", price: "₹100 / ₹180" },
-    { name: "Peri Peri Cheesy Fries", desc: "M: ₹110 | L: ₹200", price: "₹110 / ₹200" },
-    { name: "Cheese Masala Fries", desc: "M: ₹110 | L: ₹200", price: "₹110 / ₹200" },
-    { name: "Peri Peri V Crisper", price: "₹180" },
-    { name: "Cheesy V Crisper", price: "₹200" }
-  ]
-},
+          // Snacks (16–21)
+          { name: "French Fries", desc: "M: ₹90 | L: ₹170", price: "₹90 / ₹170" },
+          { name: "Peri Peri Fries", desc: "M: ₹100 | L: ₹180", price: "₹100 / ₹180" },
+          { name: "Peri Peri Cheesy Fries", desc: "M: ₹110 | L: ₹200", price: "₹110 / ₹200" },
+          { name: "Cheese Masala Fries", desc: "M: ₹110 | L: ₹200", price: "₹110 / ₹200" },
+          { name: "Peri Peri V Crisper", price: "₹180" },
+          { name: "Cheesy V Crisper", price: "₹200" }
+        ]
+      },
 
       an_shakes: {
         type: "cards",
         title: "Milkshakes & Cold Coffee",
-        
-items: [
-  { name: "Bubble Gum Shake", price: "₹149" },
-  { name: "Mango Shake", price: "₹149" },
-  { name: "Vanilla Shake", price: "₹149" },
-  { name: "Strawberry Shake", price: "₹149" },
-  { name: "Butterscotch Shake", price: "₹149" },
-  { name: "Black Currant Shake", price: "₹149" },
-  { name: "Chocolate Shake", price: "₹149" },
 
-  { name: "Oreo Shake", price: "₹179" },
-  { name: "KitKat Shake", price: "₹179" },
-  { name: "Brownie Shake", price: "₹179" },
-  { name: "Red Velvet Shake", price: "₹179" },
-  { name: "Blue Croco Cheesecake", price: "₹179" },
-  { name: "Strawberry with Oreo", price: "₹179" },
-  { name: "Caramel Shake", price: "₹179" }
-]
+        items: [
+          { name: "Bubble Gum Shake", price: "₹149" },
+          { name: "Mango Shake", price: "₹149" },
+          { name: "Vanilla Shake", price: "₹149" },
+          { name: "Strawberry Shake", price: "₹149" },
+          { name: "Butterscotch Shake", price: "₹149" },
+          { name: "Black Currant Shake", price: "₹149" },
+          { name: "Chocolate Shake", price: "₹149" },
 
-          
+          { name: "Oreo Shake", price: "₹179" },
+          { name: "KitKat Shake", price: "₹179" },
+          { name: "Brownie Shake", price: "₹179" },
+          { name: "Red Velvet Shake", price: "₹179" },
+          { name: "Blue Croco Cheesecake", price: "₹179" },
+          { name: "Strawberry with Oreo", price: "₹179" },
+          { name: "Caramel Shake", price: "₹179" }
+        ]
+
+
       },
 
       an_drinks: {
         type: "cards",
         title: "Drinks, Mojitos & Ice Teas",
         items: [
-  { name: "Chilli Guava", price: "₹199", tag: "New Add" },
-  { name: "Virgin Mojito", price: "₹139" },
-  { name: "Blue Berry", price: "₹139" },
-  { name: "Green Apple", price: "₹139" },
-  { name: "Watermelon", price: "₹139" },
-  { name: "Strawberry", price: "₹149" },
-  { name: "Spicy Mango", price: "₹149" },
-  { name: "Black Currant", price: "₹139" },
-  { name: "Green Apple Ice-Tea", price: "₹139" },
-  { name: "Strawberry Ice-Tea", price: "₹139" },
-  { name: "Peach Ice-Tea", price: "₹139" },
-  { name: "Lemon Ice-Tea", price: "₹129" },
-  { name: "Lemonade", price: "₹109" },
-  { name: "Fruit Beer", price: "₹80" },
-  { name: "Coke", price: "₹40" }
-]
+          { name: "Chilli Guava", price: "₹199", tag: "New Add" },
+          { name: "Virgin Mojito", price: "₹139" },
+          { name: "Blue Berry", price: "₹139" },
+          { name: "Green Apple", price: "₹139" },
+          { name: "Watermelon", price: "₹139" },
+          { name: "Strawberry", price: "₹149" },
+          { name: "Spicy Mango", price: "₹149" },
+          { name: "Black Currant", price: "₹139" },
+          { name: "Green Apple Ice-Tea", price: "₹139" },
+          { name: "Strawberry Ice-Tea", price: "₹139" },
+          { name: "Peach Ice-Tea", price: "₹139" },
+          { name: "Lemon Ice-Tea", price: "₹129" },
+          { name: "Lemonade", price: "₹109" },
+          { name: "Fruit Beer", price: "₹80" },
+          { name: "Coke", price: "₹40" }
+        ]
       },
       an_matchas: {
-  type: "cards",
-  title: "Matcha Lattes",
-  items: [
-    { name: "Iced Matcha Latte", desc: "Cool, creamy, earthy matcha served over ice.", price: "₹200" },
-    { name: "Mango Matcha Latte", desc: "Smooth matcha blended with tropical mango sweetness.", price: "₹250" },
-    { name: "Strawberry Matcha Latte", desc: "Refreshing matcha with a fruity strawberry twist.", price: "₹250" }
-  ]
-},
+        type: "cards",
+        title: "Matcha Lattes",
+        items: [
+          { name: "Iced Matcha Latte", desc: "Cool, creamy, earthy matcha served over ice.", price: "₹200" },
+          { name: "Mango Matcha Latte", desc: "Smooth matcha blended with tropical mango sweetness.", price: "₹250" },
+          { name: "Strawberry Matcha Latte", desc: "Refreshing matcha with a fruity strawberry twist.", price: "₹250" }
+        ]
+      },
 
       an_hot: {
         type: "cards",
         title: "Tea, Coffee & Hot Chocolate",
         items: [
-  { name: "Paan Tea", price: "₹60" },
-  { name: "Rose Tea", price: "₹60" },
-  { name: "Elaichi Tea", price: "₹70" },
-  { name: "Kesar Tea", price: "₹60" },
-  { name: "Ginger Tea", price: "₹60" },
-  { name: "Masala Tea", price: "₹60" },
-  { name: "Chocolate Tea", price: "₹60" },
-  { name: "Green Tea", desc: "Without milk", price: "₹90" },
-  { name: "Lemon Honey Tea", desc: "Without milk", price: "₹90" },
-  { name: "Special Masala Tea", desc: "Without milk", price: "₹80" },
-  { name: "Coffee", price: "₹100" }
-]
+          { name: "Paan Tea", price: "₹60" },
+          { name: "Rose Tea", price: "₹60" },
+          { name: "Elaichi Tea", price: "₹70" },
+          { name: "Kesar Tea", price: "₹60" },
+          { name: "Ginger Tea", price: "₹60" },
+          { name: "Masala Tea", price: "₹60" },
+          { name: "Chocolate Tea", price: "₹60" },
+          { name: "Green Tea", desc: "Without milk", price: "₹90" },
+          { name: "Lemon Honey Tea", desc: "Without milk", price: "₹90" },
+          { name: "Special Masala Tea", desc: "Without milk", price: "₹80" },
+          { name: "Coffee", price: "₹100" }
+        ]
       },
       an_coffee: {
-  type: "cards",
-  title: "Iced Coffee",
-  items: [
-    { name: "Iced Coffee", price: "₹149" },
-    { name: "Iced Americano", desc: "A refreshing blend of chilled espresso and water, served over ice for a bold and invigorating coffee experience.", price: "₹169" },
-    { name: "Iced Cappuccino", desc: "A refreshing blend of chilled espresso, frothy milk, and a dusting of cocoa or cinnamon, perfect for a cool pick-me-up", price: "₹149" },
-    { name: "Iced Latte", desc: "A refreshing blend of chilled espresso and cold milk, creating a smooth and creamy coffee beverage perfect for any time of day.", price: "₹169" },
-    { name: "Iced Mocha", desc: "A refreshing blend of chilled espresso, creamy milk, and rich chocolate syrup, served over ice for a deliciously satisfying treat", price: "₹169" },
-    { name: "Iced Caramel", desc: "It features rich layers of espresso, milk, and sweet caramel, served over ice for a refreshing treat.", price: "₹169" },
-    { name: "Iced Hazelnut", desc: "A refreshing blend of chilled coffee infused with rich hazelnut flavor, served over ice for a smooth and nutty experience.", price: "₹169" }
-  ]
-},
-an_frappe: {
-  type: "cards",
-  title: "Frappe",
-  items: [
-    {
-      name: "Classic Cold Coffee",
-      desc: "A delightful blend of rich espresso, creamy milk, and ice cream, served for a refreshing treat.",
-      price: "₹159"
-    },
-    {
-      name: "Choco Frappe",
-      desc: "A creamy blend of rich chocolate and coffee, topped with ice cream for an indulgent treat.",
-      price: "₹199"
-    },
-    {
-      name: "Caramel Frappe",
-      desc: "A delightful blend of ice cream and cold coffee, infused with a rich caramel flavor for a sweet and refreshing treat.",
-      price: "₹199"
-    },
-    {
-      name: "Hazelnut Frappe",
-      desc: "A deliciously blended ice cream coffee drink infused with a rich hazelnut flavor.",
-      price: "₹199"
-    },
-    {
-      name: "Irish Frappe",
-      desc: "A delightful blend of rich coffee, creamy texture, and a hint of Irish cream flavoured syrup, topped with ice cream for a decadent finish.",
-      price: "₹199"
-    },
-    {
-      name: "Brownie Frappe",
-      desc: "A rich and creamy brownie frappe, blending velvety chocolate flavors with a refreshing iced coffee base, topped with a decadent chocolate drizzle.",
-      price: "₹219"
-    },
-    {
-      name: "Nutella Frappe",
-      desc: "A creamy and indulgent blend of rich espresso and Nutella, topped with ice cream for a delightful chocolatey treat.",
-      price: "₹229"
-    },
-    {
-      name: "Biscoff Frappe",
-      desc: "A deliciously creamy blend of ice cream and coffee, infused with the rich, caramelized flavor of Biscoff spread.",
-      price: "₹229"
-    }
-  ]
-},
+        type: "cards",
+        title: "Iced Coffee",
+        items: [
+          { name: "Iced Coffee", price: "₹149" },
+          { name: "Iced Americano", desc: "A refreshing blend of chilled espresso and water, served over ice for a bold and invigorating coffee experience.", price: "₹169" },
+          { name: "Iced Cappuccino", desc: "A refreshing blend of chilled espresso, frothy milk, and a dusting of cocoa or cinnamon, perfect for a cool pick-me-up", price: "₹149" },
+          { name: "Iced Latte", desc: "A refreshing blend of chilled espresso and cold milk, creating a smooth and creamy coffee beverage perfect for any time of day.", price: "₹169" },
+          { name: "Iced Mocha", desc: "A refreshing blend of chilled espresso, creamy milk, and rich chocolate syrup, served over ice for a deliciously satisfying treat", price: "₹169" },
+          { name: "Iced Caramel", desc: "It features rich layers of espresso, milk, and sweet caramel, served over ice for a refreshing treat.", price: "₹169" },
+          { name: "Iced Hazelnut", desc: "A refreshing blend of chilled coffee infused with rich hazelnut flavor, served over ice for a smooth and nutty experience.", price: "₹169" }
+        ]
+      },
+      an_frappe: {
+        type: "cards",
+        title: "Frappe",
+        items: [
+          {
+            name: "Classic Cold Coffee",
+            desc: "A delightful blend of rich espresso, creamy milk, and ice cream, served for a refreshing treat.",
+            price: "₹159"
+          },
+          {
+            name: "Choco Frappe",
+            desc: "A creamy blend of rich chocolate and coffee, topped with ice cream for an indulgent treat.",
+            price: "₹199"
+          },
+          {
+            name: "Caramel Frappe",
+            desc: "A delightful blend of ice cream and cold coffee, infused with a rich caramel flavor for a sweet and refreshing treat.",
+            price: "₹199"
+          },
+          {
+            name: "Hazelnut Frappe",
+            desc: "A deliciously blended ice cream coffee drink infused with a rich hazelnut flavor.",
+            price: "₹199"
+          },
+          {
+            name: "Irish Frappe",
+            desc: "A delightful blend of rich coffee, creamy texture, and a hint of Irish cream flavoured syrup, topped with ice cream for a decadent finish.",
+            price: "₹199"
+          },
+          {
+            name: "Brownie Frappe",
+            desc: "A rich and creamy brownie frappe, blending velvety chocolate flavors with a refreshing iced coffee base, topped with a decadent chocolate drizzle.",
+            price: "₹219"
+          },
+          {
+            name: "Nutella Frappe",
+            desc: "A creamy and indulgent blend of rich espresso and Nutella, topped with ice cream for a delightful chocolatey treat.",
+            price: "₹229"
+          },
+          {
+            name: "Biscoff Frappe",
+            desc: "A deliciously creamy blend of ice cream and coffee, infused with the rich, caramelized flavor of Biscoff spread.",
+            price: "₹229"
+          }
+        ]
+      },
 
       an_combos_desserts: {
         type: "cards",
         title: "Desserts",
         items: [
-          
+
           { name: "Vanilla Ice Cream", price: "₹60" },
           { name: "Choco Lava Cake", price: "₹80" },
           { name: "Choco Lava Cake with Ice Cream", price: "₹110" },
@@ -528,7 +528,7 @@ an_frappe: {
           { name: "Spicy Paneer Wrap", desc: "Tortilla, spicy paneer patty, onion, lettuce with house sauces", price: "₹190" },
           { name: "Tandoori Wrap", desc: "Roast paneer cube, onion, lettuce with tandoori dressing", price: "₹180" },
           { name: "Makhani Pasta Wrap", desc: "Tortilla, cooked creamy pasta, onion, lettuce with sauces", price: "₹170" },
-          
+
           { name: "Spicy Paneer Wrap", desc: "Tortilla, spicy Paneer patty, onion, lettuces with our house sauces", price: "₹190" },
           { name: "Tandoori Wrap", desc: "Roast paneer cube, onion, lettuce with our house sauces", price: "₹180" },
           { name: "Makhani Pasta Wrap", desc: "Tortilla, cooked pasta, onion, lettuces with our house sauces", price: "₹170" },
@@ -731,7 +731,7 @@ function getCategoryImage(catId) {
     an_pizzas: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
     an_atta: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
     an_upgrades_dips: 'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=400&q=80',
-   
+
     an_breads: 'https://www.ambitiouskitchen.com/wp-content/uploads/2023/02/Garlic-Bread-4.jpg',
     an_pastas: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=400&q=80',
     an_burgers: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80',
@@ -741,7 +741,7 @@ function getCategoryImage(catId) {
     an_matchas: 'https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=400&q=80',
     an_hot: 'https://media.istockphoto.com/id/1064859392/photo/tea-served-in-a-traditional-mud-cup-in-india.jpg?s=612x612&w=0&k=20&c=vOGMGhMX20HSWfGhmaMW6Wu5ogBspkQJq3Y6cs4fu3A=',
     an_coffee: 'https://frostingandfettuccine.com/wp-content/uploads/2022/12/Caramel-Iced-Coffee-6.jpg',
-    an_frappe :'https://www.thehungrybites.com/wp-content/uploads/2023/06/coffee-ice-cream-frappe-frappuccino-feat.jpg',
+    an_frappe: 'https://www.thehungrybites.com/wp-content/uploads/2023/06/coffee-ice-cream-frappe-frappuccino-feat.jpg',
     an_combos_desserts: 'https://www.cookwithkushi.com/wp-content/uploads/2017/01/sizzling_brownie_sundae_ice_cream.jpg',
 
     mt_pizzas: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80',
@@ -896,32 +896,32 @@ function renderItemPrice(item) {
 }
 function renderBurgerSubcategories(items) {
   const groups = currentCategory === 'an_shakes'
-  ? [
+    ? [
       { title: "Milkshakes", start: 0, end: 7 },
       { title: "Premium Shakes", start: 7, end: 14 }
     ]
-  : currentCategory === 'an_chinese'
-  ? [
-      { title: "Chinese", start: 0, end: 10 },
-      { title: "Soup", start: 10, end: 13 },
-      { title: "Salad", start: 13, end: 16 },
-      { title: "Snacks", start: 16, end: 22 }
-    ]
-  : currentOutlet === 'adarshNagar'
-  ? [
-      { title: "Burgers", start: 0, end: 8 },
-      { title: "Sandwiches", start: 8, end: 15 },
-      { title: "Wraps", start: 15, end: 19 },
-      { title: "Sub", start: 19, end: 22 },
-      { title: "Add-ons", start: 22, end: 23 }
-    ]
-  : [
-      { title: "Burgers", start: 0, end: 8 },
-      { title: "Sandwiches", start: 8, end: 15 },
-      { title: "Wraps", start: 15, end: 19 },
-      { title: "Subs", start: 19, end: 22 },
-      { title: "Add-ons", start: 22, end: 23 }
-    ];
+    : currentCategory === 'an_chinese'
+      ? [
+        { title: "Chinese", start: 0, end: 10 },
+        { title: "Soup", start: 10, end: 13 },
+        { title: "Salad", start: 13, end: 16 },
+        { title: "Snacks", start: 16, end: 22 }
+      ]
+      : currentOutlet === 'adarshNagar'
+        ? [
+          { title: "Burgers", start: 0, end: 8 },
+          { title: "Sandwiches", start: 8, end: 15 },
+          { title: "Wraps", start: 15, end: 19 },
+          { title: "Sub", start: 19, end: 22 },
+          { title: "Add-ons", start: 22, end: 23 }
+        ]
+        : [
+          { title: "Burgers", start: 0, end: 8 },
+          { title: "Sandwiches", start: 8, end: 15 },
+          { title: "Wraps", start: 15, end: 19 },
+          { title: "Subs", start: 19, end: 22 },
+          { title: "Add-ons", start: 22, end: 23 }
+        ];
   return `
     <div class="food-category-groups">
       ${groups.map(group => {
@@ -1063,18 +1063,18 @@ function renderDigitalItems() {
       </button>
     </div>`;
 
-const handleBackToMenu = () => {
-  currentCategory = '';
-  isCategoryDetailOpen = false;
-  renderCurrentView();
+  const handleBackToMenu = () => {
+    currentCategory = '';
+    isCategoryDetailOpen = false;
+    renderCurrentView();
 
-  requestAnimationFrame(() => {
-    const categoryStrip = document.querySelector('.menu-categories-scroll');
-    if (categoryStrip) {
-      categoryStrip.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-};
+    requestAnimationFrame(() => {
+      const categoryStrip = document.querySelector('.menu-categories-scroll');
+      if (categoryStrip) {
+        categoryStrip.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  };
 
   const bindBackButtons = () => {
     document.querySelectorAll('.category-back-btn').forEach(button => {
@@ -1087,11 +1087,11 @@ const handleBackToMenu = () => {
 
   // FIRST: Check whether the selected category is burgers
   if (
-  currentCategory === 'an_burgers' ||
-  currentCategory === 'mt_burgers' ||
-  currentCategory === 'an_shakes' ||
-  currentCategory === 'an_chinese'
-) {
+    currentCategory === 'an_burgers' ||
+    currentCategory === 'mt_burgers' ||
+    currentCategory === 'an_shakes' ||
+    currentCategory === 'an_chinese'
+  ) {
     container.innerHTML = `
     ${detailHeader}
     ${renderBurgerSubcategories(section.items || [])}
@@ -1378,18 +1378,19 @@ function setupNavLinks() {
   });
 }
 
+
 function setupThemeToggle() {
   const themeToggle = document.getElementById('themeToggleBtn');
-  if (!themeToggle) return;
 
-  const storedTheme = localStorage.getItem('theme');
-  const initialTheme = storedTheme === 'dark' ? 'dark' : 'light';
+  // LIGHT MODE DEFAULT FOR THE ENTIRE WEBSITE
+  const initialTheme = 'light';
 
   document.documentElement.setAttribute('data-theme', initialTheme);
-  if (!storedTheme) {
-    localStorage.setItem('theme', initialTheme);
-  }
+  localStorage.setItem('theme', initialTheme);
+
   updateThemeButton(initialTheme);
+
+  if (!themeToggle) return;
 
   themeToggle.addEventListener('click', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -1400,6 +1401,7 @@ function setupThemeToggle() {
     updateThemeButton(newTheme);
   });
 }
+
 
 function updateThemeButton(theme) {
   const themeToggle = document.getElementById('themeToggleBtn');
