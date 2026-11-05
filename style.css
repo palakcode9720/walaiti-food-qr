@@ -3429,3 +3429,72 @@ h3.food-subsection-heading {
     opacity: 1 !important;
     filter: none !important;
 }
+
+/* =========================================
+   TABLE QR - FIX FADED TEXT
+========================================= */
+
+#qr-standee {
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+#qr-standee .qr-home-card {
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+#qr-standee .qr-home-details,
+#qr-standee .qr-home-details * {
+    opacity: 1 !important;
+    filter: none !important;
+    text-shadow: none !important;
+    -webkit-text-fill-color: currentColor;
+}
+
+/* Status badge */
+#qr-standee .qr-status-badge {
+    color: #946500 !important;
+    background: #FFF3D6 !important;
+}
+
+/* Main heading */
+#qr-standee .qr-home-details h3 {
+    color: #A87508 !important;
+    font-weight: 800 !important;
+}
+
+/* Description */
+#qr-standee .qr-home-details p {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+#qr-standee .qr-home-details p strong {
+    color: #946500 !important;
+    font-weight: 800 !important;
+}
+
+/* Feature list */
+#qr-standee .qr-specs-list,
+#qr-standee .qr-specs-list div {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+#qr-standee .qr-specs-list i {
+    color: #B98512 !important;
+}
+
+/* Download buttons */
+#qr-standee .qr-home-actions .btn {
+    opacity: 1 !important;
+    filter: none !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+}
+
+#qr-standee .qr-home-actions .btn-outline-gold {
+    color: #946500 !important;
+    border-color: #B98512 !important;
+}
